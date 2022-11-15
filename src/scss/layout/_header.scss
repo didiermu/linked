@@ -1,0 +1,144 @@
+.header {
+    height: 72px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    z-index: 9;
+    padding: 0 1em;
+    transition: 0.3s ease-in-out all;
+
+    &-home {
+        .logo-header {
+            width: 10%;
+        }
+    }
+
+    &--navegacion {
+        justify-content: flex-end;
+        align-items: center;
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+
+            li {
+                font-size: var(--h5);
+                margin-left: 40px;
+                font-family: var(--primaria-bold);
+                font-weight: 600;
+                transition: 0.3s ease-in-out all;
+                color: var(--txt-sec);
+
+                &.active {
+                    border-bottom: 1px solid;
+                    color: var(--txt-prm);
+                }
+
+                @media (hover: hover) {
+                    &:hover {
+                        color: var(--txt-prm);
+                    }
+                }
+
+                a {
+                    color: inherit;
+                }
+            }
+        }
+
+        .boton {
+            margin-left: 2em;
+        }
+    }
+
+    .btn-ham {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        .btn-ham {
+            width: 30px;
+            height: 20px;
+            z-index: 9;
+            position: relative;
+            display: block;
+            margin-left: 1.5em;
+            transition: 0.3s ease-in-out all;
+
+            span {
+                width: 100%;
+                height: 3px;
+                background: var(--bg-prm);
+                transition: 0.3s ease-in-out all;
+                position: absolute;
+                &.ham-top {
+                    top: 0;
+                }
+                &.ham-mid {
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                }
+                &.ham-btm {
+                    bottom: 0;
+                }
+            }
+            &.ham-on {
+                .ham-top {
+                    transform: rotateZ(45deg);
+                    top: 12px;
+                }
+                .ham-mid {
+                    opacity: 0;
+                }
+                .ham-btm {
+                    transform: rotateZ(-45deg);
+                    bottom: 5px;
+                }
+            }
+        }
+
+        #navbarNav {
+            position: absolute;
+            right: 0;
+            left: 0;
+            height: 100vh;
+            background: var(--bg-prm);
+            top: 72px;
+            width: 100vw;
+            transition: 0.3s ease-in-out all;
+        }
+
+        &--navegacion {
+            ul {
+                flex-direction: column;
+                justify-content: center;
+                height: calc(100vh - 72px);
+
+                li {
+                    margin: 0 0 2em;
+
+                    color: #fff;
+                    font-size: var(--h4);
+
+                    &.active {
+                        border-bottom: 1px solid;
+                        color: #fff;
+                    }
+                }
+            }
+
+            .boton {
+                margin-left: 0;
+                padding: 0 1em;
+            }
+        }
+    }
+}

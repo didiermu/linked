@@ -1,0 +1,59 @@
+& {
+    overflow-x: hidden;
+    position: relative;
+    font-family: var(--primaria-regular);
+    background: var(--gris-claro);
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        margin-bottom: 0;
+        line-height: normal;
+    }
+    h1 {
+        font-size: var(--h1);
+        font-family: var(--secundaria-regular);
+        line-height: 1;
+    }
+    h2 {
+        font-size: var(--h2);
+    }
+    h3 {
+        font-size: var(--h3);
+    }
+    h4 {
+        font-size: var(--h4);
+    }
+    h5 {
+        font-size: var(--h5);
+    }
+    h6 {
+        font-size: var(--h6);
+    }
+    p {
+        font-size: var(--h4);
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+
+        @media (hover: hover) {
+            &:hover {
+                color: inherit;
+            }
+        }
+    }
+}
+
+// /// TABLET
+// @media (max-width:1024px) {
+//     & {}
+// }
+
+// /// MOBILE
+// @media (max-width:640px) {
+//     & {}
+// }
