@@ -1,0 +1,99 @@
+.projects {
+    padding: 5em 0;
+
+    .grid {
+        h1 {
+            font-size: var(--h5);
+            color: var(--gris);
+            font-family: var(--primaria-regular);
+        }
+
+        &--head {
+            .grid__item {
+                display: flex;
+                width: auto;
+                padding: 0;
+            }
+        }
+
+        &--wrap {
+            margin-bottom: 10em;
+            .grid__item {
+                &:nth-child(odd) {
+                    top: 10em;
+                    position: relative;
+                }
+            }
+        }
+
+        &__item {
+            padding: 4em 0;
+            width: 50%;
+            display: inline-flex;
+
+            & > div {
+                padding: 0;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                list-style-position: inside;
+
+                li {
+                    font-size: var(--h6);
+                    &::before {
+                        content: "\2192";
+                        margin-right: 0.5em;
+                    }
+                }
+            }
+            picture {
+                width: 100%;
+                height: 450px;
+                display: block;
+
+                img {
+                    object-fit: cover;
+                    object-position: center;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        &__place {
+            align-self: flex-end;
+            padding-left: 0.5em !important;
+
+            ul {
+                margin-bottom: 0;
+            }
+        }
+
+        &__description {
+            color: var(--gris);
+            font-family: var(--secundaria-regular);
+
+            sup {
+                font-size: var(--h6);
+                font-family: var(--primaria-regular);
+                color: var(--naranja);
+                text-transform: uppercase;
+                top: -1.5em;
+
+                &::before {
+                    content: "\2192";
+                    font-family: x-large;
+                    margin-right: 0.5em;
+                }
+            }
+        }
+    }
+
+    &__quotes {
+        font-size: var(--h1);
+        color: var(--gris);
+        font-family: var(--secundaria-regular);
+    }
+}

@@ -1,0 +1,32 @@
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+
+    @media (hover: hover) {
+        &:hover {
+            h5::after {
+                transform: translateX(20px);
+            }
+        }
+    }
+
+    a {
+        background: var(--verde-limon);
+        padding: 1em 3em;
+    }
+
+    h5 {
+        display: flex;
+        justify-content: space-between;
+
+        &::after {
+            content: "\2192";
+            font-family: x-large;
+            transition: 0.3s ease-in-out all;
+        }
+    }
+}

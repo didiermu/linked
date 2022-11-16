@@ -9,30 +9,98 @@
     padding: 0 1em;
     transition: 0.3s ease-in-out all;
 
-    &-home {
-        .logo-header {
-            width: 10%;
-        }
+    .logo-header {
+        visibility: hidden;
+        width: 125px;
     }
 
     &--navegacion {
         justify-content: flex-end;
         align-items: center;
 
+        .btn-ham {
+            width: 70px;
+            height: 15px;
+            z-index: 9;
+            position: relative;
+            display: block;
+            cursor: pointer;
+            transition: 0.3s ease-in-out all;
+
+            &[aria-expanded="false"] {
+                span {
+                    &.ham-top {
+                        top: 0;
+                    }
+
+                    &.ham-btm {
+                        bottom: 0;
+                    }
+                }
+            }
+
+            &[aria-expanded="true"] {
+                span {
+                    &.ham-top {
+                        transform: rotateZ(45deg);
+                        top: 6px;
+                    }
+                    &.ham-btm {
+                        transform: rotateZ(-45deg);
+                        bottom: 5px;
+                    }
+                }
+            }
+
+            &.collapsed {
+                span {
+                    &.ham-top {
+                        top: 0;
+                    }
+
+                    &.ham-btm {
+                        bottom: 0;
+                    }
+                }
+            }
+
+            span {
+                width: 100%;
+                height: 3px;
+                background: var(--gris);
+                transition: 0.3s ease-in-out all;
+                position: absolute;
+            }
+        }
+
+        #navbarNav {
+            position: absolute;
+            right: 0;
+            background: #fff;
+            width: 40%;
+            top: 0;
+            z-index: 0;
+            align-items: flex-start;
+        }
+
         ul {
-            padding: 0;
-            margin: 0;
+            margin: 1.2em 0 0;
             list-style: none;
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            height: 100vh;
 
             li {
-                font-size: var(--h5);
-                margin-left: 40px;
-                font-family: var(--primaria-bold);
-                font-weight: 600;
+                font-size: var(--h2);
                 transition: 0.3s ease-in-out all;
                 color: var(--txt-sec);
+                margin-bottom: 1em;
+
+                sup {
+                    font-size: var(--h5);
+                    top: -1em;
+                    left: 0.5em;
+                }
 
                 &.active {
                     border-bottom: 1px solid;
@@ -41,7 +109,7 @@
 
                 @media (hover: hover) {
                     &:hover {
-                        color: var(--txt-prm);
+                        color: var(--rosa-dark);
                     }
                 }
 
@@ -55,56 +123,10 @@
             margin-left: 2em;
         }
     }
-
-    .btn-ham {
-        display: none;
-    }
 }
 
 @media (max-width: 768px) {
     .header {
-        .btn-ham {
-            width: 30px;
-            height: 20px;
-            z-index: 9;
-            position: relative;
-            display: block;
-            margin-left: 1.5em;
-            transition: 0.3s ease-in-out all;
-
-            span {
-                width: 100%;
-                height: 3px;
-                background: var(--bg-prm);
-                transition: 0.3s ease-in-out all;
-                position: absolute;
-                &.ham-top {
-                    top: 0;
-                }
-                &.ham-mid {
-                    top: 0;
-                    bottom: 0;
-                    margin: auto;
-                }
-                &.ham-btm {
-                    bottom: 0;
-                }
-            }
-            &.ham-on {
-                .ham-top {
-                    transform: rotateZ(45deg);
-                    top: 12px;
-                }
-                .ham-mid {
-                    opacity: 0;
-                }
-                .ham-btm {
-                    transform: rotateZ(-45deg);
-                    bottom: 5px;
-                }
-            }
-        }
-
         #navbarNav {
             position: absolute;
             right: 0;

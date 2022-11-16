@@ -20,7 +20,8 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve("./src", "index.html"),
-                // contacto: resolve("./src/", "contacto.html"),
+                projects: resolve("./src/", "projects.html"),
+                projectsDetail: resolve("./src/", "project-detail.html"),
             },
 
             // output: {

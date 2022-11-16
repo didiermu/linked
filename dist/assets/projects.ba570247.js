@@ -1,6 +1,4 @@
-// import "./style.css";
-
-document.querySelector("header").innerHTML = `
+import"./bootstrap.esm.b1fee876.js";document.querySelector("header").innerHTML=`
   
         <div class="container-fluid">
           <div class="row">
@@ -38,5 +36,11 @@ document.querySelector("header").innerHTML = `
             </div>
           </div>
         </div>
+      
+`;document.querySelector(".footer").innerHTML=`
+    
+        <a href="contact.html" class="col-lg-4">
+            <h5>CONNECT</h5>
+        </a>
       
 `;
