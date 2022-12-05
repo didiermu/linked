@@ -17,7 +17,7 @@
             padding-top: 9em;
             position: relative;
 
-            & > div {
+            &>div {
                 padding-left: 3em;
             }
 
@@ -68,37 +68,38 @@
                     img {
                         transform: scale(0);
                         opacity: 0;
-                        max-width: calc(
-                            500px + 400 * ((100vw - 1280px) / 1920)
-                        );
-                        max-height: calc(
-                            400px + 400 * ((100vw - 1280px) / 1920)
-                        );
+                        max-width: calc(500px + 400 * ((100vw - 1280px) / 1920));
+                        max-height: calc(400px + 400 * ((100vw - 1280px) / 1920));
                     }
 
                     &:nth-child(1) {
                         left: 0;
                         top: 12em;
                     }
+
                     &:nth-child(2) {
                         left: 15%;
                         top: 5em;
                         z-index: 1;
                     }
+
                     &:nth-child(3) {
                         left: 20%;
                         top: 0;
                     }
+
                     &:nth-child(4) {
                         left: 40%;
                         top: 12em;
                         z-index: 2;
                     }
+
                     &:nth-child(5) {
                         right: 5%;
                         top: 3em;
                         z-index: 1;
                     }
+
                     &:nth-child(6) {
                         right: 0;
                         top: 15em;
@@ -111,8 +112,8 @@
 
                 .swiper-pagination-bullet {
                     background: var(--naranja);
-                    width: 20px;
-                    height: 20px;
+                    width: calc(14px + 18 * ((100vw - 1280px) / 1920));
+                    height: calc(14px + 18 * ((100vw - 1280px) / 1920));
                     margin: 1em 0;
                 }
             }
@@ -131,6 +132,7 @@
                         left: 70px;
                     }
                 }
+
                 // .swiper-button-prev,
                 // .swiper-button-next {
                 // }
@@ -157,60 +159,61 @@
 }
 
 
-@media(max-width:768px){
-    .project-detail{
-        .project__item{
+@media(max-width:768px) {
+    .project-detail {
+        .project__item {
             margin-bottom: 1em;
 
-            h1{
+            h1 {
                 top: 2em;
             }
 
-            &--info{
+            &--info {
                 padding: 2em 30px 0;
                 order: 2;
                 display: flex;
 
-                &--cat{
+                &--cat {
                     display: none;
                 }
 
-                > div{
+                >div {
                     padding: 0.5em;
                 }
 
-                ul{
+                ul {
                     display: none;
                 }
             }
 
-            &--row{
+            &--row {
                 justify-content: center;
             }
-        
+
         }
 
-       .gallery{
-        .swiper{
-            padding-right: 20px;
-        }
-        .swiper-wrapper{
-            height:calc(430px + 400 * (100vw - 360px)/ 768)
-        }
+        .gallery {
+            .swiper {
+                padding-right: 20px;
+            }
 
-        .swiper-pagination{
-            right: 0;
+            .swiper-wrapper {
+                height: calc(430px + 400 * (100vw - 360px)/ 768)
+            }
 
-            &-bullet{
-                width: 12px !important;
-                height: 12px !important;
+            .swiper-pagination {
+                right: 0;
+
+                &-bullet {
+                    width: 12px !important;
+                    height: 12px !important;
+                }
+            }
+
+            .swiper-slide a img {
+                max-width: calc(200px + 400 * (100vw - 360px)/ 768);
+                max-height: calc(200px + 400 * (100vw - 360px)/ 768);
             }
         }
-
-        .swiper-slide a img{
-            max-width: calc(200px + 400 * (100vw - 360px)/ 768);
-            max-height: calc(200px + 400 * (100vw - 360px)/ 768);
-        }
-       } 
     }
 }
