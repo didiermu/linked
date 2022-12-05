@@ -3,6 +3,12 @@
     position: relative;
     font-family: var(--primaria-regular);
     background: var(--gris-claro);
+
+    .container-fluid {
+        padding-right: var(--bs-gutter-x, 2rem);
+        padding-left: var(--bs-gutter-x, 2rem);
+    }
+
     h1,
     h2,
     h3,
@@ -12,11 +18,12 @@
     p {
         margin-bottom: 0;
         line-height: normal;
+        color: var(--gris);
     }
     h1 {
         font-size: var(--h1);
         font-family: var(--secundaria-regular);
-        line-height: 0.8;
+        line-height: 1;
     }
     h2 {
         font-size: var(--h2);
@@ -53,7 +60,12 @@
 //     & {}
 // }
 
-// /// MOBILE
-// @media (max-width:640px) {
-//     & {}
-// }
+/// MOBILE
+@media (max-width: 768px) {
+    & {
+        .container-fluid {
+            padding-right: var(--bs-gutter-x, 0.75rem);
+            padding-left: var(--bs-gutter-x, 0.75rem);
+        }
+    }
+}
