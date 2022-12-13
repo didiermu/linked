@@ -21,10 +21,14 @@ const animMenu = () => {
 };
 
 const nav = () => {
-
     const navLinks = document.querySelectorAll("#navbarNav li");
+    const btnHam = document.querySelector(".btn-ham");
+    const btnSearch = document.querySelector(".btn-search");
 
-    btnHam = document.querySelector(".btn-ham");
+    btnSearch.onclick = function () {
+        document.querySelector("header").classList.toggle("search-on");
+    };
+
     btnHam.onclick = function () {
         document.querySelector("header").classList.toggle("nav-on");
         btnHam.classList.toggle("ham-on");
@@ -93,8 +97,28 @@ const nav = () => {
         );
         observer.observe(seccionesElem);
     }
-
-
 };
+
+const focusInput = () => {
+    const inputs = document.querySelectorAll(".input__group input");
+
+    for (const inputsElem of inputs) {
+        inputsElem.addEventListener("click", () => {
+            inputsElem.focus();
+            inputsElem.parentNode.classList.add("active");
+            inputsElem.parentNode.classList.remove("valid");
+        });
+
+        inputsElem.addEventListener("blur", () => {
+            if (inputsElem.value == "") {
+                inputsElem.parentNode.classList.remove("active");
+            } else {
+                inputsElem.parentNode.classList.replace("active", "valid");
+            }
+        });
+    }
+};
+
+focusInput();
 
 nav();

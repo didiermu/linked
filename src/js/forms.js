@@ -1,5 +1,5 @@
 const focusInput = () => {
-    const inputs = document.querySelectorAll(".input input");
+    const inputs = document.querySelectorAll(".input__group input");
 
     for (const inputsElem of inputs) {
         inputsElem.addEventListener("click", () => {

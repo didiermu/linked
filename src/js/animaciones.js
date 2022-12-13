@@ -188,7 +188,6 @@ const animElem = (trigger, elem) => {
         .addTo(controller);
 };
 
-
 // const contentSections = gsap.utils.toArray("li");
 // contentSections.forEach((target) => {
 //     ScrollTrigger.create({
@@ -202,7 +201,6 @@ const animElem = (trigger, elem) => {
 
 const objParallaxArray = (trigger, elem) => {
     let boletosArr = gsap.utils.toArray(elem);
-
 
     boletosArr.forEach((target) => {
         gsap.fromTo(
@@ -233,8 +231,6 @@ const objParallaxArray = (trigger, elem) => {
     });
 };
 
-
-
 gsap.fromTo(
     ".header--logo",
     {
@@ -248,10 +244,7 @@ gsap.fromTo(
     }
 );
 
-
-
 const objParallaxArrayOk = (elem) => {
-
     gsap.utils.toArray(elem).forEach(function (e) {
         gsap.from(e, {
             duration: 0.6,
@@ -272,3 +265,12 @@ const objParallaxArrayOk = (elem) => {
 };
 
 objParallaxArrayOk(".projects-home .col-lg-4");
+
+//////////// EVENTS LISTENERS ////////////
+
+const btnMobileHoverHero = document.querySelector(".btnHover");
+
+btnMobileHoverHero.onclick = () => {
+    document.querySelector(".hero--wrap--hover").classList.toggle("active");
+    btnMobileHoverHero.classList.toggle("active");
+};

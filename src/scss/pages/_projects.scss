@@ -1,81 +1,146 @@
-.projects {
+.projects-home {
     padding: 5em 0;
 
-    .grid {
-        h1 {
-            font-size: var(--h5);
-            color: var(--gris);
-            font-family: var(--primaria-regular);
-        }
-
-        &--head {
-            .project__item {
-                display: flex !important;
-                width: auto !important;
-                padding: 0 !important;
-            }
-        }
-
-        &--wrap {
-            // margin-bottom: 10em;
-
-            &>a {
-                &:nth-child(odd) {
-                    // top: 10em;
-                    position: relative;
-
-                    .project__item {
-                        margin-left: 40%;
-                    }
-                }
-            }
-        }
-
-        .project__item {
-            width: 58.33333333% !important;
-            padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
-            padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
-
-            .row {
-                padding-top: 4em;
-                padding-bottom: 4em;
-                // width: 50%;
-                display: inline-flex;
-
-                picture {
-                    height: calc(450px + 620 * ((100vw - 1280px) / 1920));
-                }
-            }
-        }
-
-        &__description {
-            h3 {
-                color: var(--gris);
-                font-family: var(--secundaria-regular);
-
-                sup {
-                    font-size: var(--h6);
-                    font-family: var(--primaria-regular);
-                    color: var(--naranja);
-                    text-transform: uppercase;
-                    top: -1.5em;
-                    margin-right: 1.5em;
-
-                    &::before {
-                        content: "\2192";
-                        font-family: x-large;
-                        margin-right: 0.5em;
-                    }
-                }
-            }
-        }
+    h1 {
+        font-size: var(--h5);
+        color: var(--gris);
+        font-family: var(--primaria-regular);
+        margin-bottom: 5em;
     }
 
-    &__quotes {
-        font-size: var(--h1);
-        color: var(--gris);
-        font-family: var(--secundaria-regular);
-        margin: 1em 0;
+    .col-lg-4 {
+        transition: 0.4s ease-in-out all;
+    }
+
+    &__card {
+        margin-bottom: 3em;
+        position: relative;
+        overflow: hidden;
+
+        &.tipo-uno {
+            align-items: flex-end;
+
+            .projects-home__card__title {
+                margin: 0 0 0.5em 0;
+            }
+        }
+
+        &.tipo-dos {
+            align-items: flex-start;
+
+            .projects-home__card__title {
+                margin: 0.5em 0 0 0;
+            }
+        }
+
+        &.tipo-tres {
+            align-items: flex-start;
+            flex-direction: row-reverse;
+
+            .projects-home__card__title {
+                margin: 0.5em 0.3em 0 0;
+            }
+        }
+
+        &.tipo-cuatro {
+            align-items: flex-end;
+            flex-direction: row-reverse;
+
+            .projects-home__card__title {
+                margin: 0.5em 0.3em 0 0;
+            }
+        }
+
+        @media (hover: hover) {
+            &:hover {
+                .projects-home__card__hover {
+                    opacity: 1;
+                    transform: rotateZ(180deg) translateX(0);
+                }
+            }
+        }
+
+        &__images {
+            flex-basis: 90%;
+
+            &__img {
+                height: 200px;
+                width: 100%;
+                overflow: hidden;
+                margin: 0.2em 0;
+                border-radius: 5px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        &__title {
+            flex-basis: 10%;
+            transform: rotateZ(180deg);
+            writing-mode: vertical-lr;
+            font-family: var(--secundaria-regular);
+            color: var(--gris);
+            text-transform: capitalize;
+            // margin: 0 0 0.5em 0;
+        }
+
+        &__hover {
+            position: absolute;
+            transform: rotateZ(180deg) translateX(-100%);
+            writing-mode: vertical-rl;
+            background: rgba($color: #000, $alpha: 0.8);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            border-radius: 5px;
+            overflow: hidden;
+            opacity: 0;
+
+            transition: 0.3s ease-in-out all;
+
+            > h5 {
+                margin: 0;
+                color: #fff;
+                padding: 0.5em 0;
+            }
+
+            &__projects {
+                display: flex;
+                padding: 0.5em 0;
+                margin-left: 0.5em;
+            }
+
+            &__title {
+                margin: 0 0 0.5em 0;
+                color: #fff;
+
+                &::after {
+                    content: "\2192";
+                }
+
+                &:last-child {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+
+            h4 {
+                font-size: var(--h3);
+                color: #fff;
+                text-transform: capitalize;
+                background: var(--gris-dark);
+                margin: 0;
+                font-family: var(--secundaria-regular);
+                padding: 0.3em 0.5em;
+            }
+        }
     }
 }
 
@@ -94,7 +159,9 @@
                 }
 
                 picture {
-                    height: calc(300px + 620 * (100vw - 360px) / 768) !important;
+                    height: calc(
+                        300px + 620 * (100vw - 360px) / 768
+                    ) !important;
                 }
 
                 &__place {
@@ -118,7 +185,7 @@
             &--wrap {
                 margin-bottom: 0em;
 
-                >a {
+                > a {
                     top: 2em !important;
                     margin-bottom: 5em;
                     display: block;

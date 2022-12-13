@@ -13,9 +13,42 @@
         width: 125px;
     }
 
+    &.search-on {
+        .btn-ham {
+            z-index: 0;
+        }
+    }
+
+    &.nav-on {
+        .btn-search {
+            z-index: 0;
+        }
+    }
+
     &--navegacion {
         justify-content: flex-end;
         align-items: center;
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .btn-search {
+            appearance: none;
+            border: 0;
+            width: 50px;
+            height: 40px;
+            background: url(../img/icon-close.png) no-repeat center / contain;
+            z-index: 9;
+            transition: 0.3s ease-in-out all;
+
+            &[aria-expanded="false"],
+            &.collapsed {
+                background-image: url(../img/icon-search.png);
+            }
+        }
 
         .btn-ham {
             width: 65px;
@@ -61,14 +94,34 @@
             }
         }
 
-        #navbarNav {
+        .navbar-collapse {
             position: absolute;
             right: 0;
-            background: #fff;
-            width: 33.33333333%;
+            width: 100%;
             top: 0;
             z-index: 0;
             align-items: flex-start;
+            background: var(--gris-medio);
+
+            // &#searchNav {
+            //     background: var(--gris-medio);
+            // }
+
+            .container--search {
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                gap: 100px;
+
+                h1 {
+                    color: #fff;
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-size: var(--xl);
+                }
+            }
         }
 
         ul {
@@ -83,7 +136,7 @@
                 transition: 0.3s ease-in-out all;
                 color: var(--txt-sec);
                 margin-bottom: 1em;
-                //opacity: 0;
+                opacity: 0;
 
                 sup {
                     font-size: var(--h5);

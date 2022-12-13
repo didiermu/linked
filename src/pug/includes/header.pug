@@ -1,30 +1,47 @@
 header.header
-	.container-fluid
-		.row
-			.col-6.col-lg-2.header--logo
-				a(href='../')
-					img.img-fluid.logo-header(src='img/logo-linked-blanco.svg' alt)
-			.col-lg-10.col-6.header--navegacion.d-flex
-				nav
-					.btn-ham(data-bs-toggle='collapse', data-bs-target='#navbarNav', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
-						span.ham-top
-						span.ham-btm
-					.collapse.navbar-collapse#navbarNav
-						ul
-							a#li-projects(href='projects.html')
-								li
-									| Projects
-									sup (100)
-							a#li-writing(href='writing.html')
-								li
-									| Writing
-									sup (100)
-							a#li-about(href='about.html')
-								li
-									| About
-									sup (100)
-							a#li-teaching(href='teaching.html')
-								li
-									| Teaching
-									sup (100)
+    .container-fluid
+        .row
+            .col-6.col-lg-2.header--logo
+                a(href='../')
+                    img.img-fluid.logo-header(src='img/logo-linked-blanco.svg' alt)
+
+            .col-lg-10.col-6.header--navegacion.d-flex
+                nav
+                    button.btn-search(data-bs-toggle='collapse', data-bs-target='#searchNav', aria-controls='searchNavContent', aria-expanded='false', aria-label='Toggle navigation')
+
+                    .btn-ham(data-bs-toggle='collapse', data-bs-target='#navbarNav', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+                        span.ham-top
+                        span.ham-btm
+
+                    .collapse.navbar-collapse#searchNav
+                        .container.container--search
+                            .col-lg-10.input__group.input-search
+                                label found something interesting
+                                .input-search--wrap
+                                    input#input-search(type="search", name="search", placeholder="there are many ways you could know what we do")
+                                    button.btn-search
+
+                            h1 are you seeking for something special?
+
+                    .collapse.navbar-collapse#navbarNav
+                        ul
+                            a#li-projects(href='projects.html')
+                                li
+                                    | Projects
+                                    sup (100)
+                            //- a#li-writing(href='writing.html')
+                            //- 	li
+                            //- 		| Writing
+                            //- 		sup (100)
+
+                            a#li-about(href='about.html')
+                                li
+                                    | About
+                                    sup (100)
+
+                            //- a#li-teaching(href='teaching.html')
+                            //- 	li
+                            //- 		| Teaching
+                            //- 		sup (100)
+
 
