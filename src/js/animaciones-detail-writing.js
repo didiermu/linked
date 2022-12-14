@@ -40,5 +40,13 @@ const objLoadVertical = (elem) => {
     });
 };
 
+const limitChar = () => {
+    console.log("pa");
+    const parrafos = document.querySelector(".writing-detail--paragraph .p");
+    parrafos.textContent = parrafos.textContent.slice(0, 1100) + "[...]";
+};
+
+limitChar();
+
 objLoad(".writing-detail--wrap-info *");
 objLoadVertical(".writing-detail--images *");

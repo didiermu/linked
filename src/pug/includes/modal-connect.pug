@@ -1,0 +1,54 @@
+.modal.fade#exampleModal(tabindex='-1', aria-labelledby='exampleModalLabel', aria-hidden='true')
+    .modal-dialog.modal-fullscreen.modal-dialog-scrollable
+        .modal-content.connect
+            .col-6.col-lg-2.header--logo
+                a(href='../')
+                    img.img-fluid.logo-header(src='img/logo-linked-blanco.svg' alt)
+
+            button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+
+            .modal-body 
+                .container-xl 
+                    .row 
+                        .col-lg-4.connect--title
+                            h1 what can
+                                br 
+                                | we do 
+                                br
+                                | together
+
+                            h5.connect--disclaimer By submitting this form, I agree to receive communications from linked in connection with my inquiry. My information will be processed in accordance with linked’s 
+                                a(href="") Privacy Policy.
+
+                        .col-lg-4.connect--form
+                            form(id="form-contacto", action="", method="post")
+                                .input__group
+                                    span
+                                        input(id="input-name", type="text", name="", placeholder="FULL NAME" required)
+                                    label Nombre
+                                    span.error-input Campo requerido
+                                .input__group
+                                    span
+                                        input(id="input-email", type="text", name="", placeholder="ENTER A VALID NAME" required)
+                                    label Email*
+                                    span.error-input Campo requerido
+                                .input__group
+                                    span
+                                        input(id="input-phone", type="text", name="", placeholder="VALID PHONE NUMBER W/ DIALING CODE" required)
+                                    label Phone number
+                                    span.error-input Campo requerido
+                                .input__group
+                                    span
+                                        input(id="input-country", type="text", name="", placeholder="WHERE ARE YOU COME FROM?" required)
+                                    label Country*
+                                    span.error-input Campo requerido
+
+                                .input__group
+                                    span
+                                        textarea#msj-contacto(placeholder="DESCRIBE YOUR IDEA")
+                                    label MESSAGE*
+                                    h6.error-input *Campo requerido
+
+
+                                button.boton.big.sec(id="btn-connect", type="submit") SEND IT
+

@@ -2,11 +2,16 @@ extends includes/head.pug
 block head-page
     title Linked | Project Detail
     <!- SLIDER -->
+    //- JQUERY
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js")
+
     link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css' defer)
     script(src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer)
+    script(type="text/javascript", src="js/lightbox.min.min.js" defer)
     script(src="js/sliders.min.js" defer)
     script(src="js/animaciones-detail-project.min.js" defer)
     script(src="js/nav.min.js" defer)
+
 
 block content
     -ruta = ""
@@ -63,9 +68,7 @@ block content
                         picture
                             img.img-fluid(src='img/layout6.jpg' alt)
         .container-fluid
-            p.projects__quotes.
-
-                The capacity to maintain or improve the state and availability of desirable materials or conditions over the long terms into environments.
+            p.projects__quotes The capacity to maintain or improve the state and availability of desirable materials or conditions over the long terms into environments.
 
         section.gallery
             .container
@@ -74,42 +77,52 @@ block content
                         .swiper.slider-detail
                             .swiper-wrapper
                                 .swiper-slide
-                                    a(href="") 
+                                    a(href="img/layout6.jpg", data-lightbox="galeria-desktop")
                                         picture
                                             img.img-fluid(src='img/layout5.jpg' alt)
-                                    a(href="") 
+
+                                    a(href="img/layout6.jpg", data-lightbox="galeria-desktop")
                                         picture
                                             img.img-fluid(src='img/layout2.jpg' alt)
-                                    a(href="") 
+
+                                    a(href="img/layout6.jpg", data-lightbox="galeria-desktop")
                                         picture
                                             img.img-fluid(src='img/layout3.jpg' alt)
-                                    a(href="") 
+
+                                    a(href="img/layout6.jpg", data-lightbox="galeria-desktop")
                                         picture
                                             img.img-fluid(src='img/layout.jpg' alt)
-                                    a(href="") 
+
+                                    a(href="img/layout6.jpg", data-lightbox="galeria-desktop")
                                         picture
                                             img.img-fluid(src='img/layout4.jpg' alt)
-                                    a(href="") 
+
+                                    a(href="img/layout6.jpg", data-lightbox="galeria-desktop")
                                         picture
                                             img.img-fluid(src='img/layout6.jpg' alt)
 
                                 .swiper-slide
-                                    a(href="") 
+                                    a(href="img/layout6.jpg", data-lightbox="galeria-desktop")
                                         picture
                                             img.img-fluid(src='img/layout5.jpg' alt)
-                                    a(href="") 
+
+                                    a(href="img/layout6.jpg", data-lightbox="galeria-desktop")
                                         picture
                                             img.img-fluid(src='img/layout2.jpg' alt)
-                                    a(href="") 
+
+                                    a(href="img/layout6.jpg", data-lightbox="galeria-desktop")
                                         picture
                                             img.img-fluid(src='img/layout3.jpg' alt)
-                                    a(href="") 
+
+                                    a(href="img/layout6.jpg", data-lightbox="galeria-desktop")
                                         picture
                                             img.img-fluid(src='img/layout.jpg' alt)
-                                    a(href="") 
+
+                                    a(href="img/layout6.jpg", data-lightbox="galeria-desktop")
                                         picture
                                             img.img-fluid(src='img/layout4.jpg' alt)
-                                    a(href="") 
+
+                                    a(href="img/layout6.jpg", data-lightbox="galeria-desktop")
                                         picture
                                             img.img-fluid(src='img/layout6.jpg' alt)
 
@@ -218,8 +231,5 @@ block content
                                             Agricultura
 
                                     h4 Terrain
-
-
-        include includes/footer.pug
 
     include includes/footer.pug

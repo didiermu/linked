@@ -17,8 +17,12 @@ footer.footer
                     a(href="#!", target="_blank", rel="noopener noreferrer") 
                         img.ing-fluid(src="../img/icon-in.svg", alt="")
 
-            a.col-lg-4.col-12.footer--connect(href='connect.html')
-                h5 CONNECT
+
+            .col-lg-4.col-12.footer--connect(data-bs-toggle="modal", data-bs-target="#exampleModal")
+                button CONNECT
+
+
+include ../includes/modal-connect.pug
 
 
 

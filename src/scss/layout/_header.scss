@@ -46,7 +46,7 @@
 
             &[aria-expanded="false"],
             &.collapsed {
-                background-image: url(../img/icon-search.png);
+                background-image: url(../img/icon-search.svg);
             }
         }
 
@@ -107,6 +107,10 @@
             //     background: var(--gris-medio);
             // }
 
+            &#navbarNav {
+                width: 33.33333%;
+            }
+
             .container--search {
                 height: 100vh;
                 display: flex;
@@ -120,6 +124,7 @@
                     text-transform: uppercase;
                     text-align: center;
                     font-size: var(--xl);
+                    font-family: var(--primaria-regular);
                 }
             }
         }

@@ -5,30 +5,34 @@
     text-transform: uppercase;
     transition: 0.3s ease-in-out all;
 
-    &.prm {
-        background: var(--gris-claro);
-        color: var(--gris-dark);
-        border: 1px solid var(--gris-dark);
-        height: 40px;
-        font-size: var(--h6);
+    &.big {
+        height: 140px;
+        padding: 0 1em;
+        font-size: var(--ls);
 
-        @media (hover: hover) {
-            &:hover {
-                background: var(--azul);
-            }
-        }
-
-        &.big {
-            background: var(--rosa-dark);
-            color: #fff;
-            height: 100px;
-            padding: 0 1em;
-            font-size: var(--h4);
+        &.prm {
+            background: var(--gris-claro);
+            color: var(--gris-dark);
+            border: 1px solid var(--gris-dark);
+            height: 40px;
+            font-size: var(--h6);
 
             @media (hover: hover) {
                 &:hover {
-                    background: #fff;
-                    color: var(--rosa-dark);
+                    background: var(--azul);
+                }
+            }
+        }
+
+        &.sec {
+            background: var(--verde-limon);
+            color: var(--gris-dark);
+            border: 1px solid var(--gris-dark);
+
+            @media (hover: hover) {
+                &:hover {
+                    color: #fff;
+                    background: var(--rosa-dark);
                 }
             }
         }

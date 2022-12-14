@@ -1,6 +1,13 @@
 .writing-detail {
-    &--content {
-        padding-bottom: 5em;
+    h1:not(.writing-detail--name) {
+        font-size: var(--h5);
+        color: var(--gris-dark);
+        font-family: var(--primaria-regular);
+        position: absolute;
+        top: 5em;
+        left: 0;
+        right: 0;
+        z-index: 1;
     }
 
     &--wrap-info {
@@ -41,6 +48,7 @@
         margin: 1em 0;
         font-family: var(--secundaria-regular);
         width: 85%;
+        font-size: var(--h2);
     }
 
     &--wrap-text {
@@ -57,7 +65,7 @@
         font-size: var(--h5);
         font-family: var(--secundaria-regular);
         color: var(--gris);
-        padding-left: 6em;
+        padding-left: 5em;
         // width: 80%;
         flex-basis: 80%;
 
@@ -94,7 +102,7 @@
     }
 }
 
-@media(max-width:768px) {
+@media (max-width: 768px) {
     .writing-detail {
         &--images {
             position: relative;

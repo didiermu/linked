@@ -43,7 +43,7 @@
                 display: inline-flex;
 
                 picture {
-                    height: calc(450px + 620 * ((100vw - 1280px) / 1920));
+                    height: calc(624px + 620 * ((100vw - 1920px) / 1280));
                 }
             }
         }
@@ -51,10 +51,11 @@
         &__description {
             h3 {
                 color: var(--gris);
+                font-size: var(--xl);
                 font-family: var(--secundaria-regular);
 
                 sup {
-                    font-size: var(--h6);
+                    font-size: var(--l);
                     font-family: var(--primaria-regular);
                     color: var(--naranja);
                     text-transform: uppercase;

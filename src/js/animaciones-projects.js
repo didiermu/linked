@@ -45,11 +45,11 @@ objLoad(".project__item__place *");
 objLoadVertical(".project__item picture");
 objLoadVertical(".grid__description");
 
-const animContenido = (trigger, elem) => {
+const animContenido = (trigger, elem, triggerHook) => {
     const controller = new ScrollMagic.Controller();
     const info = new ScrollMagic.Scene({
         triggerElement: trigger,
-        triggerHook: 0.8,
+        triggerHook: triggerHook,
     })
         .setTween(
             TweenMax.fromTo(
@@ -67,28 +67,10 @@ const animContenido = (trigger, elem) => {
             )
         )
         .addTo(controller);
-
-    // gsap.from(elem, {
-    //     yPercent: 10,
-    //     opacity: 0,
-    // });
-    // gsap.to(elem, {
-    //     yPercent: 0,
-    //     opacity: 1,
-    //     ease: "none",
-    //     scrollTrigger: {
-    //         trigger: trigger,
-    //         start: "-=200 center",
-    //         end: "+=300",
-    //         scrub: 1,
-    //         toggleActions: "restart pause reverse pause",
-    //         // markers: true,
-    //     },
-    // });
 };
 
-animContenido("#quotes-one", "#quotes-one .projects__quotes");
-animContenido("#quotes-two", "#quotes-two .projects__quotes");
+animContenido("#quotes-one", "#quotes-one .project-home__quotes", 0.9);
+animContenido("#quotes-two", "#quotes-two .project-home__quotes", 1);
 
 const objParallax = (trigger, elem, posicion) => {
     gsap.from(elem, {

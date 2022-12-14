@@ -17,7 +17,17 @@
 
     &--connect {
         background: var(--verde-limon);
-        padding: 1em 3em;
+
+        button {
+            appearance: none;
+            background: transparent;
+            outline: 0;
+            border: 0;
+            padding: 1em 3em;
+            width: 100%;
+            text-align: left;
+            font-size: var(--h5);
+        }
     }
 
     h5 {

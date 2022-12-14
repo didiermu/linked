@@ -36,6 +36,7 @@
 
                 h3 {
                     margin-bottom: 0.5em;
+                    font-size: var(--h2);
                 }
 
                 &::after {
@@ -62,6 +63,14 @@
                     h5,
                     h4 {
                         color: #fff;
+                    }
+
+                    h6 {
+                        font-size: var(--h6);
+                    }
+
+                    &--title {
+                        font-size: var(--ls);
                     }
 
                     &--data {
@@ -183,6 +192,7 @@
 
             h3 {
                 color: #fff;
+                font-size: var(--h2);
             }
 
             a {

@@ -20,9 +20,9 @@ const swiperPromos = new Swiper(".slider-detail", {
 
 window.onresize = () => {};
 
-swiperPromos.on("slideChange", function () {
-    animContenidoScale(".swiper-slide", ".swiper-slide img");
-});
+// swiperPromos.on("slideChange", function () {
+//     animContenidoScale(".swiper-slide", ".swiper-slide img");
+// });
 
 const animContenidoScale = (trigger, elem) => {
     const controller = new ScrollMagic.Controller();

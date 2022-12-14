@@ -44,7 +44,7 @@ const animContenido = (trigger, elem) => {
     const controller = new ScrollMagic.Controller();
     const info = new ScrollMagic.Scene({
         triggerElement: trigger,
-        triggerHook: 0.8,
+        triggerHook: 0.7,
     })
         .setTween(
             TweenMax.fromTo(
@@ -100,3 +100,19 @@ objParallaxArray(".related", ".related .projects-home__card");
 objLoad(".project__item .project__item--info *");
 objLoadVertical(".project__item .project__item--image *");
 animContenido(".projects__quotes", ".projects__quotes");
+
+const modalGaleria = () => {
+    lightbox.option({
+        albumLabel: "",
+        fadeDuration: 300,
+        imageFadeDuration: 300,
+        resizeDuration: 300,
+        disableScrolling: true,
+        fitImagesInViewport: true,
+        wrapAround: true,
+        maxWidth: 700,
+        maxHeight: 700,
+    });
+};
+
+modalGaleria();

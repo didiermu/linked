@@ -33,7 +33,7 @@
               <div class="btn-ham" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="ham-top"></span><span class="ham-btm"></span></div>
               <div class="collapse navbar-collapse" id="searchNav">
                 <div class="container container--search">
-                  <div class="col-lg-10 input__group input-search">
+                  <div class="col-lg-9 input__group input-search">
                     <label>found something interesting</label>
                     <div class="input-search--wrap">
                       <input id="input-search" type="search" name="search" placeholder="there are many ways you could know what we do">
@@ -61,7 +61,7 @@
             <div class="col-lg-7 project__item"><a href="project-detail.html">
                 <div class="row">
                   <div class="col-lg-3 col-4 project__info">
-                    <h6>PROJECT</h6>
+                    <h6 class="project__title">PROJECT</h6>
                     <h4 class="project__name">Pitesti</h4>
                     <ul>
                       <li>Sustainable</li>
@@ -97,7 +97,7 @@
           </div>
         </div>
         <div class="container-fluid" id="quotes-one">
-          <p class="projects__quotes">The capacity to maintain or improve the state and availability of desirable materials or conditions over the long terms into environments.</p>
+          <p class="project-home__quotes">The capacity to maintain or improve the state and availability of desirable materials or conditions over the long terms into environments.</p>
         </div>
         <div class="container grid--wrap" id="grid--wrap-one"><a href="project-detail.html">
             <div class="row project__item">
@@ -159,73 +159,58 @@
               </div>
             </div></a></div>
         <div class="container-fluid" id="quotes-two">
-          <p class="projects__quotes">
-            The capacity to maintain or improve the state and availability of desirable materials or conditions over the long terms into environments.
-            
-          </p>
+          <p class="project-home__quotes">The long terms into environment. Improve the state and availability of desirable materials or conditions over.</p>
         </div>
-        <div class="container grid--wrap" id="grid--wrap-two"><a href="project-detail.html">
-            <div class="row project__item">
-              <div class="col-lg-3 col-4 project__info">
-                <h6>PROJECT</h6>
-                <h4 class="project__name">Pitesti</h4>
-                <ul>
-                  <li>Sustainable</li>
-                  <li>Builded</li>
-                  <li>Enviromental</li>
-                </ul>
-                <h6 class="project__date">2015</h6>
-                <h6 class="project__country">Romania</h6>
-                <h6 class="project__location">
-                  21 273, 92 sqm
-                  
-                </h6>
-              </div>
-              <div class="col-lg-7 col-8">
-                <picture>
-                  <source srcset="img/images1.jpg" type="image/webp"><img class="img-fluid" src="img/images1.jpg" alt>
-                </picture>
-              </div>
-              <div class="col-lg-2 project__item__place">
-                <ul>
-                  <li>Sustainable</li>
-                  <li>Builded</li>
-                  <li>Enviromental</li>
-                </ul>
-              </div>
-            </div></a><a href="project-detail.html">
-            <div class="row project__item">
-              <div class="col-lg-3 col-4 project__info">
-                <h6>PROJECT</h6>
-                <h4 class="project__name">Pitesti</h4>
-                <ul>
-                  <li>Sustainable</li>
-                  <li>Builded</li>
-                  <li>Enviromental</li>
-                </ul>
-                <h6 class="project__date">2015</h6>
-                <h6 class="project__country">Romania</h6>
-                <h6 class="project__location">
-                  21 273, 92 sqm
-                  
-                </h6>
-              </div>
-              <div class="col-lg-7 col-8">
-                <picture>
-                  <source srcset="img/images1.jpg" type="image/webp"><img class="img-fluid" src="img/images1.jpg" alt>
-                </picture>
-              </div>
-              <div class="col-lg-2 project__item__place">
-                <ul>
-                  <li>Sustainable</li>
-                  <li>Builded</li>
-                  <li>Enviromental</li>
-                </ul>
-              </div>
-            </div></a></div>
       </section>
     </main>
-    <footer class="footer"><a class="col-lg-4 col-12 footer--connect" href="connect.html">
-        <h5>CONNECT</h5></a></footer>
+    <footer class="footer">
+      <div class="col-lg-4 col-12 footer--connect" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button>CONNECT</button>
+      </div>
+    </footer>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+        <div class="modal-content connect">
+          <div class="col-6 col-lg-2 header--logo"><a href="../"><img class="img-fluid logo-header" src="img/logo-linked-blanco.svg" alt></a></div>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="modal-body"> 
+            <div class="container-xl"> 
+              <div class="row"> 
+                <div class="col-lg-4 connect--title">
+                  <h1>what can<br>we do <br>together</h1>
+                  <h5 class="connect--disclaimer">By submitting this form, I agree to receive communications from linked in connection with my inquiry. My information will be processed in accordance with linked’s <a href="">Privacy Policy.</a></h5>
+                </div>
+                <div class="col-lg-4 connect--form">
+                  <form id="form-contacto" action="" method="post">
+                    <div class="input__group"><span>
+                        <input id="input-name" type="text" name="" placeholder="FULL NAME" required></span>
+                      <label>Nombre</label><span class="error-input">Campo requerido</span>
+                    </div>
+                    <div class="input__group"><span>
+                        <input id="input-email" type="text" name="" placeholder="ENTER A VALID NAME" required></span>
+                      <label>Email*</label><span class="error-input">Campo requerido</span>
+                    </div>
+                    <div class="input__group"><span>
+                        <input id="input-phone" type="text" name="" placeholder="VALID PHONE NUMBER W/ DIALING CODE" required></span>
+                      <label>Phone number</label><span class="error-input">Campo requerido</span>
+                    </div>
+                    <div class="input__group"><span>
+                        <input id="input-country" type="text" name="" placeholder="WHERE ARE YOU COME FROM?" required></span>
+                      <label>Country*</label><span class="error-input">Campo requerido</span>
+                    </div>
+                    <div class="input__group"><span>
+                        <textarea id="msj-contacto" placeholder="DESCRIBE YOUR IDEA"></textarea></span>
+                      <label>MESSAGE*</label>
+                      <h6 class="error-input">*Campo requerido</h6>
+                    </div>
+                    <button class="boton big sec" id="btn-connect" type="submit">SEND IT</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

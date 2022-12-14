@@ -33,7 +33,7 @@
               <div class="btn-ham" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="ham-top"></span><span class="ham-btm"></span></div>
               <div class="collapse navbar-collapse" id="searchNav">
                 <div class="container container--search">
-                  <div class="col-lg-10 input__group input-search">
+                  <div class="col-lg-9 input__group input-search">
                     <label>found something interesting</label>
                     <div class="input-search--wrap">
                       <input id="input-search" type="search" name="search" placeholder="there are many ways you could know what we do">
@@ -77,10 +77,56 @@
               <h6>© Linked Space 2022</h6><a href="#°" target="_blank" rel="noopener noreferrer">Terms of Service</a><a href="#°" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
             </div>
             <div class="footer--redes"> <a href="#!" target="_blank" rel="noopener noreferrer"> <img class="ing-fluid" src="../img/instagram-solid.svg" alt=""></a><a href="#!" target="_blank" rel="noopener noreferrer"> <img class="ing-fluid" src="../img/icon-fb.svg" alt=""></a><a href="#!" target="_blank" rel="noopener noreferrer"> <img class="ing-fluid" src="../img/icon-in.svg" alt=""></a></div>
-          </div><a class="col-lg-4 col-12 footer--connect" href="connect.html">
-            <h5>CONNECT</h5></a>
+          </div>
+          <div class="col-lg-4 col-12 footer--connect" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button>CONNECT</button>
+          </div>
         </div>
       </div>
     </footer>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+        <div class="modal-content connect">
+          <div class="col-6 col-lg-2 header--logo"><a href="../"><img class="img-fluid logo-header" src="img/logo-linked-blanco.svg" alt></a></div>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="modal-body"> 
+            <div class="container-xl"> 
+              <div class="row"> 
+                <div class="col-lg-4 connect--title">
+                  <h1>what can<br>we do <br>together</h1>
+                  <h5 class="connect--disclaimer">By submitting this form, I agree to receive communications from linked in connection with my inquiry. My information will be processed in accordance with linked’s <a href="">Privacy Policy.</a></h5>
+                </div>
+                <div class="col-lg-4 connect--form">
+                  <form id="form-contacto" action="" method="post">
+                    <div class="input__group"><span>
+                        <input id="input-name" type="text" name="" placeholder="FULL NAME" required></span>
+                      <label>Nombre</label><span class="error-input">Campo requerido</span>
+                    </div>
+                    <div class="input__group"><span>
+                        <input id="input-email" type="text" name="" placeholder="ENTER A VALID NAME" required></span>
+                      <label>Email*</label><span class="error-input">Campo requerido</span>
+                    </div>
+                    <div class="input__group"><span>
+                        <input id="input-phone" type="text" name="" placeholder="VALID PHONE NUMBER W/ DIALING CODE" required></span>
+                      <label>Phone number</label><span class="error-input">Campo requerido</span>
+                    </div>
+                    <div class="input__group"><span>
+                        <input id="input-country" type="text" name="" placeholder="WHERE ARE YOU COME FROM?" required></span>
+                      <label>Country*</label><span class="error-input">Campo requerido</span>
+                    </div>
+                    <div class="input__group"><span>
+                        <textarea id="msj-contacto" placeholder="DESCRIBE YOUR IDEA"></textarea></span>
+                      <label>MESSAGE*</label>
+                      <h6 class="error-input">*Campo requerido</h6>
+                    </div>
+                    <button class="boton big sec" id="btn-connect" type="submit">SEND IT</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
