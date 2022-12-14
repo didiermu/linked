@@ -188,8 +188,12 @@
     }
 
     .projects-home {
+        .row {
+            row-gap: 60px;
+        }
+
         &__acceso {
-            margin-bottom: 3em;
+            // margin-bottom: 3em;
 
             h3 {
                 color: #fff;
@@ -201,6 +205,7 @@
                 display: grid;
                 place-items: center;
                 height: 100%;
+                width: 100%;
 
                 @media (hover: hover) {
                     &:hover {
@@ -373,6 +378,59 @@
             }
         }
     }
+
+    .projects-home {
+        .row {
+            row-gap: 60px;
+        }
+
+        .col-lg-4 {
+            transition: 0.4s ease-in-out all;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            cursor: pointer;
+
+            &:nth-child(even) {
+                align-items: flex-start;
+            }
+
+            &:nth-child(3n + 4) {
+                flex-direction: row-reverse;
+
+                .projects-home__card__title {
+                    margin: 0.5em 0.5em 0 0;
+                }
+            }
+
+            @media (hover: hover) {
+                &:hover {
+                    .projects-home__card__hover__projects {
+                        opacity: 1;
+                        transform: rotateZ(180deg) translateX(0);
+                    }
+                }
+            }
+        }
+
+        &--wrap {
+            width: 100%;
+        }
+
+        .projects-home__card__title {
+            flex-basis: 10%;
+            transform: rotateZ(180deg);
+            writing-mode: vertical-lr;
+            font-family: var(--secundaria-regular);
+            color: var(--gris);
+            text-transform: capitalize;
+            margin: 0 0 0.5em 0;
+        }
+
+        .projects-home__card__images {
+            flex-basis: auto;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -477,13 +535,17 @@
 
         .projects-home {
             padding: 3em 0;
+            .row {
+                row-gap: 10px;
+            }
+
             &__acceso {
-                margin-bottom: 1em;
+                margin-bottom: 10px;
                 height: calc(160px + 10 * ((100vw - 360px) / 768));
             }
 
             &__card {
-                margin-bottom: 1em !important;
+                // margin-bottom: 1em !important;
                 flex-direction: row !important;
 
                 &__images {
@@ -494,6 +556,17 @@
                         height: calc(50px + 10 * ((100vw - 360px) / 768));
                     }
                 }
+            }
+        }
+
+        .projects-home {
+            .row {
+                row-gap: 30px;
+            }
+
+            .col-lg-4 {
+                align-items: flex-end !important;
+                flex-direction: row !important;
             }
         }
     }
