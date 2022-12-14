@@ -591,6 +591,7 @@
                     place-items: center;
                     color: #fff;
                     font-size: x-large;
+                    will-change: auto;
 
                     &::after {
                         content: "+";
