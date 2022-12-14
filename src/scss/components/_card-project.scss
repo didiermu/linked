@@ -210,6 +210,21 @@
                     height: calc(50px + 10 * ((100vw - 360px) / 768));
                 }
             }
+
+            &__hover {
+                &__projects {
+                    flex-direction: column;
+                }
+
+                &__title {
+                    display: flex;
+                    align-items: center;
+
+                    &::after {
+                        margin-top: 5px;
+                    }
+                }
+            }
         }
     }
 }

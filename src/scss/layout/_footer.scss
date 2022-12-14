@@ -26,7 +26,15 @@
             padding: 1em 3em;
             width: 100%;
             text-align: left;
+            display: flex;
+            justify-content: space-between;
             font-size: var(--h5);
+
+            &::after {
+                content: "\2192";
+                font-family: x-large;
+                transition: 0.3s ease-in-out all;
+            }
         }
     }
 
