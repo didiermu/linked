@@ -14,6 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" defer> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js" defer> </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js" defer></script><!-- GLOBALS -->
+    <script src="js/forms.min.js" defer></script>
     <link rel="stylesheet" type="text/css" href="css/styles.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +30,7 @@
           <div class="col-6 col-lg-2 header--logo"><a href="./"><img class="img-fluid logo-header" src="img/logo-linked-blanco.svg" alt></a></div>
           <div class="col-lg-10 col-6 header--navegacion d-flex">
             <nav>
-              <button class="btn-search" data-bs-toggle="collapse" data-bs-target="#searchNav" aria-controls="searchNavContent" aria-expanded="false" aria-label="Toggle navigation"></button>
+              <button class="btn-search" id="btn-search-header" data-bs-toggle="collapse" data-bs-target="#searchNav" aria-controls="searchNavContent" aria-expanded="false" aria-label="Toggle navigation"></button>
               <div class="btn-ham" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="ham-top"></span><span class="ham-btm"></span></div>
               <div class="collapse navbar-collapse" id="searchNav">
                 <div class="container container--search">
@@ -98,31 +99,31 @@
             <div class="container-xl"> 
               <div class="row"> 
                 <div class="col-lg-4 connect--title">
-                  <h1>what can<br>we do <br>together</h1>
+                  <h1>what can <br>we do <br>together</h1>
                   <h5 class="connect--disclaimer">By submitting this form, I agree to receive communications from linked in connection with my inquiry. My information will be processed in accordance with linked’s <a href="">Privacy Policy.</a></h5>
                 </div>
                 <div class="col-lg-4 connect--form">
-                  <form id="form-contacto" action="" method="post">
-                    <div class="input__group"><span>
-                        <input id="input-name" type="text" name="" placeholder="FULL NAME" required></span>
-                      <label>Nombre</label><span class="error-input">Campo requerido</span>
+                  <form id="form-contacto" action="">
+                    <div class="input__group">
+                      <label>Nombre</label><span>
+                        <input id="input-name" type="text" name="" placeholder="FULL NAME"></span><span class="error-input">Required</span>
                     </div>
-                    <div class="input__group"><span>
-                        <input id="input-email" type="text" name="" placeholder="ENTER A VALID NAME" required></span>
-                      <label>Email*</label><span class="error-input">Campo requerido</span>
+                    <div class="input__group">
+                      <label>Email*</label><span>
+                        <input id="input-email" type="text" name="" placeholder="ENTER A VALID NAME"></span><span class="error-input">Required</span>
                     </div>
-                    <div class="input__group"><span>
-                        <input id="input-phone" type="text" name="" placeholder="VALID PHONE NUMBER W/ DIALING CODE" required></span>
-                      <label>Phone number</label><span class="error-input">Campo requerido</span>
+                    <div class="input__group">
+                      <label>Phone number</label><span>
+                        <input id="input-phone" type="text" name="" placeholder="VALID PHONE NUMBER W/ DIALING CODE"></span><span class="error-input">Required</span>
                     </div>
-                    <div class="input__group"><span>
-                        <input id="input-country" type="text" name="" placeholder="WHERE ARE YOU COME FROM?" required></span>
-                      <label>Country*</label><span class="error-input">Campo requerido</span>
+                    <div class="input__group">
+                      <label>Country*</label><span>
+                        <input id="input-country" type="text" name="" placeholder="WHERE ARE YOU COME FROM?"></span><span class="error-input">Required</span>
                     </div>
-                    <div class="input__group"><span>
+                    <div class="input__group">
+                      <label>MESSAGE*</label><span>
                         <textarea id="msj-contacto" placeholder="DESCRIBE YOUR IDEA"></textarea></span>
-                      <label>MESSAGE*</label>
-                      <h6 class="error-input">*Campo requerido</h6>
+                      <h6 class="error-input">Required</h6>
                     </div>
                     <button class="boton big sec" id="btn-connect" type="submit">SEND IT</button>
                   </form>
