@@ -293,3 +293,5 @@ btnMobileHoverGridInt.onclick = () => {
     btnMobileHoverGrid.classList.toggle("active");
     btnMobileHoverGridInt.classList.toggle("active");
 };
+
+console.log("vw");
