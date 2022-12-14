@@ -63,7 +63,7 @@
         h6,
         a {
             color: #fff;
-            font-size: var(--h6);
+            font-size: var(--l);
             font-family: var(--secundaria-regular);
         }
     }
@@ -75,7 +75,7 @@
         flex-basis: 20%;
 
         img {
-            max-width: 15px;
+            max-width: 22px;
             width: 100%;
         }
     }
@@ -85,16 +85,26 @@
     .footer {
         &--info {
             width: 100%;
-            padding: 0.5em 2em;
+            padding: 0.5em 2em 1em;
+            flex-direction: column;
         }
 
         &--legales {
             padding: 0;
+            width: 100%;
+            margin-bottom: 1em;
 
             h6,
             a {
                 color: var(--dark);
+                text-align: center;
+                font-size: var(--h5);
             }
+        }
+
+        &--redes {
+            width: 100%;
+            justify-content: space-evenly;
         }
 
         img {

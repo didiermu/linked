@@ -43,7 +43,7 @@
                 display: inline-flex;
 
                 picture {
-                    height: calc(624px + 620 * ((100vw - 1920px) / 1280));
+                    height: calc(624px + 350 * ((100vw - 1920px) / 1280));
                 }
             }
         }
@@ -81,8 +81,12 @@
 }
 
 @media (max-width: 768px) {
-    .projects {
-        padding-top: 2em;
+    .project-home {
+        padding-top: 6em !important;
+
+        h1 {
+            margin-bottom: 2.5em;
+        }
 
         .grid {
             .project__item {
@@ -114,6 +118,7 @@
 
                     sup {
                         top: -0.5em;
+                        font-size: var(--h5);
                     }
                 }
             }

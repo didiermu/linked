@@ -174,6 +174,21 @@
 
 @media (max-width: 768px) {
     .header {
+        z-index: 999;
+
+        &.search-on {
+            #btn-search-header {
+                right: 20px;
+                position: absolute;
+            }
+        }
+
+        // &.nav-on {
+        //     .btn-search {
+        //         z-index: 0;
+        //     }
+        // }
+
         .logo-header {
             width: calc(90px + 10 * ((100vw - 360px) / 768));
         }
@@ -189,6 +204,25 @@
         }
 
         &--navegacion {
+            .navbar-collapse {
+                .container--search {
+                    row-gap: 30px;
+                }
+
+                &#navbarNav {
+                    width: 100%;
+                }
+            }
+
+            nav {
+                column-gap: 20px;
+            }
+
+            .btn-search {
+                width: 25px;
+                height: 25px;
+            }
+
             .btn-ham {
                 width: 40px;
             }

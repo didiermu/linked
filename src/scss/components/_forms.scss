@@ -6,13 +6,13 @@
     transition: 0.3s ease-in-out all;
 
     &.big {
-        height: 140px;
+        height: calc(140px + 100 * ((100vw - 1920px) / 1280));
         padding: 0 1em;
         font-size: var(--ls);
 
         &.prm {
-            background: var(--gris-claro);
-            color: var(--gris-dark);
+            background: var(--rosa-dark);
+            color: #fff;
             border: 1px solid var(--gris-dark);
             height: 40px;
             font-size: var(--h6);
@@ -29,24 +29,24 @@
             color: var(--gris-dark);
             border: 1px solid var(--gris-dark);
 
+            &.active {
+                background: var(--rosa-dark) !important;
+                color: #fff;
+            }
+
             @media (hover: hover) {
                 &:hover {
                     color: #fff;
-                    background: var(--rosa-dark);
+                    background: var(--verde);
                 }
             }
         }
     }
 
     @media (max-width: 768px) {
-        &.prm {
-            font-size: var(--h5);
-            height: 30px;
-
-            &.big {
-                height: 80px;
-                font-size: var(--h3);
-            }
+        &.big {
+            font-size: var(--h3);
+            height: calc(80px + 10 * ((100vw - 360px) / 768));
         }
     }
 }
@@ -75,7 +75,7 @@
 }
 
 @mixin input {
-    flex-direction: column-reverse;
+    flex-direction: column;
     display: flex;
     justify-content: center;
     position: relative;
@@ -91,15 +91,13 @@
     }
 
     .error-input {
-        color: #000;
-        font-size: var(--h6);
+        color: red;
+        font-size: var(--h5);
         order: 1;
         margin-top: 0.4em;
         display: none;
         text-align: right;
-        position: absolute;
         right: 0;
-        bottom: -1.8em;
 
         &.show {
             display: block;
@@ -162,7 +160,7 @@
 
     textarea {
         resize: none;
-        height: calc(235px - 120 * ((100vw - 1280px) / 1920));
+        height: calc(180px + 140 * ((100vw - 1920px) / 1280));
 
         // &:focus {
         //     border: 1px solid var(--rosa-dark);
@@ -327,6 +325,25 @@
                     top: -1.5em;
                 }
             }
+        }
+        &.input-search {
+            width: 100%;
+
+            .input-search--wrap {
+                column-gap: 20px;
+            }
+
+            input {
+                height: 50px;
+            }
+
+            .btn-search {
+                background-image: url(../../img/icon-search-white.png);
+            }
+        }
+
+        textarea {
+            height: calc(80px + 10 * ((100vw - 360px) / 768));
         }
     }
 }

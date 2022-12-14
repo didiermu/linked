@@ -21,6 +21,7 @@ block content
                     img.img-fluid(src='img/layout5.jpg' alt)
                 picture
                     img.img-fluid(src='img/layout6.jpg' alt)
+
                 .hero--wrap--hover
                     h3 SUSTAINABILITY
                     a(href="project-home.html") 
@@ -32,11 +33,9 @@ block content
 
                             .hero--wrap--hover--project--data
                                 h5.hero--wrap--hover--project--status.
-
                                     Unbuilded
 
                                 h5.hero--wrap--hover--project--subcat.
-
                                     Experimental
 
                     a(href="project-home.html")
@@ -82,7 +81,7 @@ block content
                     li PROJECTS
                 a(href='about.html')
                     li ABOUT
-                a(href='connect.html')
+                a#li-connect(data-bs-toggle="modal", data-bs-target="#exampleModal")
                     li CONNECT
 
         section.cita-home
@@ -471,8 +470,8 @@ block content
 
                                     h4 Typology
 
-                    .col-lg-4.col-12.projects-home__acceso.projects-home__acceso--connect
-                        a(href='connect.html')
+                    .col-lg-4.col-12.projects-home__acceso.projects-home__acceso--connect(data-bs-toggle="modal", data-bs-target="#exampleModal")
+                        a
                             h3 CONNECT
 
-
+    include includes/modal-connect.pug

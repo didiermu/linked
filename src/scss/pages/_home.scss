@@ -173,6 +173,7 @@
                     border-radius: 10px 10px 0 10px;
                     background: var(--verde-limon);
                     color: var(--txt-prm);
+                    cursor: pointer;
                 }
             }
         }
@@ -229,6 +230,8 @@
 
             &--connect a {
                 background: var(--verde-limon);
+                cursor: pointer;
+
                 h3 {
                     color: var(--gris-dark);
                 }

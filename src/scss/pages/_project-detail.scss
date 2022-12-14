@@ -71,10 +71,10 @@
                         transform: scale(0);
                         opacity: 0;
                         max-width: calc(
-                            500px + 400 * ((100vw - 1280px) / 1920)
+                            400px + 600 * ((100vw - 1280px) / 1920)
                         );
                         max-height: calc(
-                            400px + 400 * ((100vw - 1280px) / 1920)
+                            350px + 600 * ((100vw - 1280px) / 1920)
                         );
                     }
 
@@ -118,8 +118,8 @@
 
                 .swiper-pagination-bullet {
                     background: var(--rosa-dark);
-                    width: calc(14px + 18 * ((100vw - 1920px) / 1280));
-                    height: calc(14px + 18 * ((100vw - 1920px) / 1280));
+                    width: calc(14px - 5 * ((100vw - 1920px) / 1280));
+                    height: calc(14px - 5 * ((100vw - 1920px) / 1280));
                     margin: 1em 0;
                 }
             }
@@ -188,12 +188,19 @@
 }
 
 @media (max-width: 768px) {
+    .lightbox {
+        .lb-outerContainer {
+            min-height: calc(700px + 60 * ((100vw - 768px) / 360));
+            min-width: calc(700px + 300 * ((100vw - 768px) / 360));
+        }
+    }
+
     .project-detail {
         .project__item {
             margin-bottom: 1em;
 
             h1 {
-                top: 2em;
+                top: 2.5em;
             }
 
             &--info {
@@ -222,9 +229,6 @@
         .gallery {
             .swiper {
                 padding-right: 20px;
-            }
-
-            .swiper-wrapper {
                 height: calc(430px + 400 * (100vw - 360px) / 768);
             }
 
@@ -240,6 +244,31 @@
             .swiper-slide a img {
                 max-width: calc(200px + 400 * (100vw - 360px) / 768);
                 max-height: calc(200px + 400 * (100vw - 360px) / 768);
+            }
+        }
+
+        .related {
+            padding-bottom: 5em;
+            .projects-home {
+                padding: 3em 0;
+                &__acceso {
+                    margin-bottom: 1em;
+                    height: calc(160px + 10 * ((100vw - 360px) / 768));
+                }
+
+                &__card {
+                    margin-bottom: 1em;
+                    flex-direction: row !important;
+
+                    &__images {
+                        flex-basis: auto;
+                        width: 100%;
+
+                        &__img {
+                            height: calc(50px + 10 * ((100vw - 360px) / 768));
+                        }
+                    }
+                }
             }
         }
     }

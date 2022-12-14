@@ -11,7 +11,7 @@
                 .container-xl 
                     .row 
                         .col-lg-4.connect--title
-                            h1 what can
+                            h1 what can 
                                 br 
                                 | we do 
                                 br
@@ -21,33 +21,33 @@
                                 a(href="") Privacy Policy.
 
                         .col-lg-4.connect--form
-                            form(id="form-contacto", action="", method="post")
+                            form(id="form-contacto", action="")
                                 .input__group
-                                    span
-                                        input(id="input-name", type="text", name="", placeholder="FULL NAME" required)
                                     label Nombre
-                                    span.error-input Campo requerido
-                                .input__group
                                     span
-                                        input(id="input-email", type="text", name="", placeholder="ENTER A VALID NAME" required)
+                                        input(id="input-name", type="text", name="", placeholder="FULL NAME")
+                                    span.error-input Required
+                                .input__group
                                     label Email*
-                                    span.error-input Campo requerido
-                                .input__group
                                     span
-                                        input(id="input-phone", type="text", name="", placeholder="VALID PHONE NUMBER W/ DIALING CODE" required)
+                                        input(id="input-email", type="text", name="", placeholder="ENTER A VALID NAME")
+                                    span.error-input Required
+                                .input__group
                                     label Phone number
-                                    span.error-input Campo requerido
-                                .input__group
                                     span
-                                        input(id="input-country", type="text", name="", placeholder="WHERE ARE YOU COME FROM?" required)
+                                        input(id="input-phone", type="text", name="", placeholder="VALID PHONE NUMBER W/ DIALING CODE")
+                                    span.error-input Required
+                                .input__group
                                     label Country*
-                                    span.error-input Campo requerido
+                                    span
+                                        input(id="input-country", type="text", name="", placeholder="WHERE ARE YOU COME FROM?")
+                                    span.error-input Required
 
                                 .input__group
+                                    label MESSAGE*
                                     span
                                         textarea#msj-contacto(placeholder="DESCRIBE YOUR IDEA")
-                                    label MESSAGE*
-                                    h6.error-input *Campo requerido
+                                    h6.error-input Required
 
 
                                 button.boton.big.sec(id="btn-connect", type="submit") SEND IT
