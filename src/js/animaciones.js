@@ -274,3 +274,22 @@ btnMobileHoverHero.onclick = () => {
     document.querySelector(".hero--wrap--hover").classList.toggle("active");
     btnMobileHoverHero.classList.toggle("active");
 };
+
+const btnMobileHoverGrid = document.querySelector(".btnHoverGrid");
+const btnMobileHoverGridInt = document.querySelector(".btnHoverGridInt");
+
+btnMobileHoverGrid.onclick = () => {
+    document
+        .querySelector(".projects-home__card__hover__projects")
+        .classList.toggle("active");
+    btnMobileHoverGrid.classList.toggle("active");
+    btnMobileHoverGridInt.classList.toggle("active");
+};
+
+btnMobileHoverGridInt.onclick = () => {
+    document
+        .querySelector(".projects-home__card__hover__projects")
+        .classList.toggle("active");
+    btnMobileHoverGrid.classList.toggle("active");
+    btnMobileHoverGridInt.classList.toggle("active");
+};

@@ -245,6 +245,10 @@
 
         .col-lg-4 {
             transition: 0.4s ease-in-out all;
+
+            .btnHoverGrid {
+                display: none;
+            }
         }
 
         &__card {
@@ -567,6 +571,58 @@
             .col-lg-4 {
                 align-items: flex-end !important;
                 flex-direction: row !important;
+
+                .projects-home__card__title {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                .btnHoverGrid,
+                .btnHoverGridInt {
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    bottom: 20px;
+                    background: var(--gris-dark);
+                    right: 20px;
+                    margin-top: 10px;
+                    display: grid;
+                    place-items: center;
+                    color: #fff;
+                    font-size: x-large;
+
+                    &::after {
+                        content: "+";
+                    }
+
+                    &.active {
+                        background: var(--gris);
+                        z-index: 1;
+
+                        &::after {
+                            content: "-";
+                        }
+                    }
+                }
+
+                .projects-home__card__hover__projects {
+                    h4 {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    &.active {
+                        opacity: 1;
+                        transform: rotateZ(180deg) translateX(0);
+                    }
+
+                    &__links {
+                        flex-direction: column;
+                        align-items: flex-start;
+                        row-gap: 10px;
+                    }
+                }
             }
         }
     }
