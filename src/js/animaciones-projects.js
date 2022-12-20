@@ -132,3 +132,35 @@ const objParallaxArray = (trigger, elem) => {
 
 objParallaxArray("#grid--wrap-one", "#grid--wrap-one .project__item");
 objParallaxArray("#grid--wrap-two", "#grid--wrap-two .project__item");
+
+//////////// EVENTS LISTENERS ////////////
+
+const btnMobileHoverGrid = document.querySelectorAll(".btnHoverGrid");
+const btnMobileHoverGridInt = document.querySelectorAll(".btnHoverGridInt");
+
+for (const btnMobileHoverGridElem of btnMobileHoverGrid) {
+    btnMobileHoverGridElem.onclick = () => {
+        btnMobileHoverGridElem.parentNode.nextElementSibling.classList.toggle(
+            "active"
+        );
+    };
+}
+
+for (const btnMobileHoverGridIntElem of btnMobileHoverGridInt) {
+    btnMobileHoverGridIntElem.onclick = () => {
+        btnMobileHoverGridIntElem.parentNode.parentNode.classList.toggle(
+            "active"
+        );
+    };
+}
+
+/// RANDOM COLUMNS
+
+let numero = Math.floor(Math.random() * 100);
+const row1 = document.querySelector(".grid--head .row");
+const row2 = document.querySelector(".grid--wrap");
+
+if (numero % 2 == 0) {
+    row1.classList.add("par");
+    row2.classList.add("par");
+}

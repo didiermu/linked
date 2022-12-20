@@ -142,17 +142,17 @@
         display: flex;
         cursor: pointer;
 
-        &:nth-child(even) {
-            align-items: flex-start;
-        }
+        // &:nth-child(even) {
+        //     align-items: flex-start;
+        // }
 
-        &:nth-child(3n + 4) {
-            flex-direction: row-reverse;
+        // &:nth-child(3n) {
+        //     flex-direction: row-reverse;
 
-            .projects-home__card__title {
-                margin: 0.5em 0.5em 0 0;
-            }
-        }
+        //     .projects-home__card__title {
+        //         margin: 0.5em 0.5em 0 0;
+        //     }
+        // }
 
         @media (hover: hover) {
             &:hover {

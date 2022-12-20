@@ -397,13 +397,54 @@
 
             &:nth-child(even) {
                 align-items: flex-start;
+
+                .projects-home__card__hover__projects {
+                    direction: rtl;
+
+                    .title-categoria {
+                        margin: 0.5em 0 0.5em 0.5em;
+                    }
+                }
             }
 
-            &:nth-child(3n + 4) {
+            &:nth-child(4n) {
                 flex-direction: row-reverse;
 
                 .projects-home__card__title {
                     margin: 0.5em 0.5em 0 0;
+                }
+
+                .projects-home__card__hover__projects {
+                    flex-direction: column-reverse;
+
+                    h4 {
+                        margin-left: 0.5em;
+                        order: 3;
+                    }
+
+                    .title-categoria {
+                        order: 2;
+                    }
+                }
+            }
+
+            &:nth-child(5n) {
+                flex-direction: row-reverse;
+
+                .projects-home__card__title {
+                    margin: 0.5em 0.5em 0 0;
+                }
+
+                .projects-home__card__hover__projects {
+                    flex-direction: column-reverse;
+                    h4 {
+                        margin-left: 0.5em;
+                        order: 3;
+                    }
+
+                    .title-categoria {
+                        order: 2;
+                    }
                 }
             }
 
@@ -593,10 +634,6 @@
                     font-size: x-large;
                     will-change: auto;
 
-                    &::after {
-                        content: "+";
-                    }
-
                     &.active {
                         background: var(--gris);
                         z-index: 1;
@@ -607,10 +644,35 @@
                     }
                 }
 
+                .btnHoverGrid {
+                    &::after {
+                        content: "+";
+                    }
+                }
+
+                .btnHoverGridInt {
+                    border: 1px solid #fff;
+                    font-size: revert;
+                    &::after {
+                        content: "-";
+                    }
+                }
+
                 .projects-home__card__hover__projects {
+                    width: 96%;
+                    direction: ltr !important;
+                    flex-direction: column !important;
+                    opacity: 0;
+
                     h4 {
                         display: flex;
                         align-items: center;
+                        order: 3 !important;
+                        margin-left: 0 !important;
+                    }
+
+                    .title-categoria {
+                        order: 0 !important;
                     }
 
                     &.active {

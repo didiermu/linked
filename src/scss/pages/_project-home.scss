@@ -9,6 +9,12 @@
         }
 
         &--head {
+            & > .row {
+                &.par {
+                    flex-direction: row-reverse;
+                }
+            }
+
             .project__item {
                 display: flex !important;
                 width: auto !important;
@@ -18,6 +24,13 @@
 
         &--wrap {
             // margin-bottom: 10em;
+            display: flex;
+            flex-direction: column;
+            row-gap: 80px;
+
+            &.par {
+                flex-direction: column-reverse;
+            }
 
             & > a {
                 &:nth-child(odd) {
@@ -89,6 +102,14 @@
         }
 
         .grid {
+            &--head {
+                & > .par {
+                    .project__item .row {
+                        flex-direction: row-reverse;
+                    }
+                }
+            }
+
             .project__item {
                 width: 100% !important;
                 order: 2;
@@ -102,6 +123,7 @@
                     height: calc(
                         300px + 620 * (100vw - 360px) / 768
                     ) !important;
+                    padding-left: 15px;
                 }
 
                 &__place {
@@ -125,6 +147,36 @@
 
             &--wrap {
                 margin-bottom: 0em;
+                row-gap: 30px;
+
+                &.par {
+                    flex-direction: column !important;
+
+                    a:nth-child(1) {
+                        .project__item {
+                            flex-direction: row;
+
+                            .project__info {
+                                padding-right: 15px;
+                            }
+
+                            picture {
+                                padding-right: 0;
+                                padding-left: 15px;
+                            }
+                        }
+                    }
+
+                    a:nth-child(2) {
+                        .project__item {
+                            flex-direction: row-reverse;
+
+                            .project__info {
+                                padding-left: 15px;
+                            }
+                        }
+                    }
+                }
 
                 > a {
                     top: 2em !important;
@@ -139,8 +191,9 @@
                         flex-direction: row-reverse;
                         margin-left: 0;
 
-                        .project__info {
-                            padding-left: 15px;
+                        picture {
+                            padding-right: 15px;
+                            padding-left: 0;
                         }
 
                         &__place {
