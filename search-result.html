@@ -20,90 +20,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
   </head><!-- End Google Tag Manager -->
-  <title>Linked </title>
-  <script src="js/animaciones.min.js" defer></script>
+  <title>Linked | Search Result</title>
+  <script src="js/animaciones-projects.min.js" defer></script>
+  <script src="js/nav.min.js" defer></script>
   <body>
     <header class="header">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-6 col-lg-2 header--logo"><a href="../"><img class="img-fluid logo-header" src="img/logo-linked-blanco.svg" alt></a></div>
+          <div class="col-6 col-lg-2 header--logo"><a href="./"><img class="img-fluid logo-header" src="img/logo-linked-blanco.svg" alt></a></div>
+          <div class="col-lg-10 col-6 header--navegacion d-flex">
+            <nav>
+              <button class="btn-search" id="btn-search-header" data-bs-toggle="collapse" data-bs-target="#searchNav" aria-controls="searchNavContent" aria-expanded="false" aria-label="Toggle navigation"></button>
+              <div class="btn-ham" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="ham-top"></span><span class="ham-btm"></span></div>
+              <div class="collapse navbar-collapse" id="searchNav">
+                <div class="container container--search">
+                  <div class="col-lg-9 input__group input-search">
+                    <label>found something interesting</label>
+                    <div class="input-search--wrap">
+                      <input id="input-search" type="search" name="search" placeholder="there are many ways you could know what we do"><a href="search-result.html"> 
+                        <button class="btn-search"></button></a>
+                    </div>
+                  </div>
+                  <h1>are you seeking for something special?</h1>
+                </div>
+              </div>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul><a id="li-projects" href="projects.html">
+                    <li>Projects<sup>(100)</sup></li></a><a id="li-about" href="about.html">
+                    <li>About<sup>(100)</sup></li></a></ul>
+              </div>
+            </nav>
+          </div>
         </div>
       </div>
     </header>
     <main class="home">
-      <section class="hero">
-        <div class="hero--wrap">
-          <picture><img class="img-fluid" src="img/images1.jpg" alt></picture>
-          <picture><img class="img-fluid" src="img/layout5.jpg" alt></picture>
-          <picture><img class="img-fluid" src="img/layout6.jpg" alt></picture>
-          <div class="hero--wrap--hover"><a href="projects.html"> 
-              <h3>SUSTAINABILITY</h3></a><a href="project-home.html"> 
-              <div class="hero--wrap--hover--project">
-                <h6>PROJECT</h6>
-                <h4 class="hero--wrap--hover--project--title">
-                  Richar Prince
-                  
-                </h4>
-                <div class="hero--wrap--hover--project--data">
-                  <h5 class="hero--wrap--hover--project--status">
-                    Unbuilded
-                    
-                  </h5>
-                  <h5 class="hero--wrap--hover--project--subcat">
-                    Experimental
-                    
-                  </h5>
-                </div>
-              </div></a><a href="project-home.html">
-              <div class="hero--wrap--hover--project">
-                <h6>PROJECT</h6>
-                <h4 class="hero--wrap--hover--project--title">
-                  Pitesti
-                  
-                </h4>
-                <div class="hero--wrap--hover--project--data">
-                  <h5 class="hero--wrap--hover--project--status">
-                    Sustainable
-                    
-                  </h5>
-                  <h5 class="hero--wrap--hover--project--subcat">
-                    Builded
-                    
-                  </h5>
-                  <h5 class="hero--wrap--hover--project--type">
-                    Enviromental
-                    
-                  </h5>
-                </div>
-              </div></a><a href="project-home.html"> 
-              <div class="hero--wrap--hover--project">
-                <h6>PROJECT</h6>
-                <h4 class="hero--wrap--hover--project--title">
-                  Big Daddy
-                  
-                </h4>
-                <div class="hero--wrap--hover--project--data">
-                  <h5 class="hero--wrap--hover--project--subcat">
-                    Builded
-                    
-                  </h5>
-                  <h5 class="hero--wrap--hover--project--type">
-                    Personal
-                    
-                  </h5>
-                </div>
-              </div></a></div>
-          <div class="btnHover"></div>
-        </div>
-        <ul class="sidenav"><a href="projects.html">
-            <li>PROJECTS</li></a><a href="about.html">
-            <li>ABOUT</li></a><a id="li-connect" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <li>CONNECT</li></a></ul>
-      </section>
-      <section class="cita-home">
-        <h1>Sometimes I do write for the sake of argument, because I think it is an interesting topic and I want to see how the discussion can go, a sort of devil’s advocateand the text goes further here.</h1>
-      </section>
-      <section class="projects-home">
+      <section class="projects-home projects-grid">
+        <h1 class="text-center">RESULT: <span>CONTRAST</span></h1>
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-4 col-12">
@@ -157,14 +110,19 @@
                   </div>
                 </div>
               </div>
-              <h3 class="projects-home__card__title">Contrast</h3>
+              <h3 class="projects-home__card__title">
+                 Contrast
+                <div class="btnHoverGrid"></div>
+              </h3>
               <div class="projects-home__card__hover__projects">
                 <h5 class="title-categoria">PROJECTS</h5>
                 <div class="projects-home__card__hover__projects__links"><a href="project-home.html">
                     <h5 class="projects-home__card__hover__title">Worl Trade Center</h5></a><a href="project-home.html">
                     <h5 class="projects-home__card__hover__title">Transparencias</h5></a><a href="project-home.html"> 
                     <h5 class="projects-home__card__hover__title">Agricultura</h5></a></div>
-                <h4>Contrast</h4>
+                <h4>Contrast
+                  <div class="btnHoverGridInt"></div>
+                </h4>
               </div>
             </div>
             <div class="col-lg-4 col-12">
@@ -185,14 +143,19 @@
                   </div>
                 </div>
               </div>
-              <h3 class="projects-home__card__title">Terrain</h3>
+              <h3 class="projects-home__card__title">
+                 Terrain
+                <div class="btnHoverGrid"></div>
+              </h3>
               <div class="projects-home__card__hover__projects">
                 <h5 class="title-categoria">PROJECTS</h5>
                 <div class="projects-home__card__hover__projects__links"><a href="project-home.html">
                     <h5 class="projects-home__card__hover__title">Worl Trade Center</h5></a><a href="project-home.html">
                     <h5 class="projects-home__card__hover__title">Transparencias</h5></a><a href="project-home.html"> 
                     <h5 class="projects-home__card__hover__title">Agricultura</h5></a></div>
-                <h4>Terrain</h4>
+                <h4>Terrain
+                  <div class="btnHoverGridInt"></div>
+                </h4>
               </div>
             </div>
             <div class="col-lg-4 col-12">
@@ -213,14 +176,19 @@
                   </div>
                 </div>
               </div>
-              <h3 class="projects-home__card__title">Typology</h3>
+              <h3 class="projects-home__card__title">
+                 Typology 
+                <div class="btnHoverGrid"></div>
+              </h3>
               <div class="projects-home__card__hover__projects">
                 <h5 class="title-categoria">PROJECTS</h5>
                 <div class="projects-home__card__hover__projects__links"><a href="project-home.html">
                     <h5 class="projects-home__card__hover__title">Worl Trade Center</h5></a><a href="project-home.html">
                     <h5 class="projects-home__card__hover__title">Transparencias</h5></a><a href="project-home.html"> 
                     <h5 class="projects-home__card__hover__title">Agricultura</h5></a></div>
-                <h4>Typology</h4>
+                <h4>Typology 
+                  <div class="btnHoverGridInt"></div>
+                </h4>
               </div>
             </div>
             <div class="col-lg-4 col-12">
@@ -241,44 +209,19 @@
                   </div>
                 </div>
               </div>
-              <h3 class="projects-home__card__title">Contrast</h3>
+              <h3 class="projects-home__card__title">
+                 Contrast
+                <div class="btnHoverGrid"></div>
+              </h3>
               <div class="projects-home__card__hover__projects">
                 <h5 class="title-categoria">PROJECTS</h5>
                 <div class="projects-home__card__hover__projects__links"><a href="project-home.html">
                     <h5 class="projects-home__card__hover__title">Worl Trade Center</h5></a><a href="project-home.html">
                     <h5 class="projects-home__card__hover__title">Transparencias</h5></a><a href="project-home.html"> 
                     <h5 class="projects-home__card__hover__title">Agricultura</h5></a></div>
-                <h4>Contrast</h4>
-              </div>
-            </div>
-            <div class="col-lg-4 col-12 projects-home__acceso projects-home__acceso--projects"><a href="projects.html">
-                <h3>PROJECTS</h3></a></div>
-            <div class="col-lg-4 col-12">
-              <div class="projects-grid--wrap">
-                <div class="projects-home__card tipo-uno" categoria="Typology">
-                  <div class="projects-home__card__images">
-                    <div class="projects-home__card__images__img" titulo="Worl Trade Center"><img class="img-fluid" src="img/images1.jpg" alt></div>
-                  </div>
-                </div>
-                <div class="projects-home__card tipo-dos" categoria="Contrast">
-                  <div class="projects-home__card__images">
-                    <div class="projects-home__card__images__img"><img class="img-fluid" src="img/images1.jpg" alt></div>
-                  </div>
-                </div>
-                <div class="projects-home__card tipo-uno" categoria="Terrain">
-                  <div class="projects-home__card__images">
-                    <div class="projects-home__card__images__img"><img class="img-fluid" src="img/images1.jpg" alt></div>
-                  </div>
-                </div>
-              </div>
-              <h3 class="projects-home__card__title">Terrain</h3>
-              <div class="projects-home__card__hover__projects">
-                <h5 class="title-categoria">PROJECTS</h5>
-                <div class="projects-home__card__hover__projects__links"><a href="project-home.html">
-                    <h5 class="projects-home__card__hover__title">Worl Trade Center</h5></a><a href="project-home.html">
-                    <h5 class="projects-home__card__hover__title">Transparencias</h5></a><a href="project-home.html"> 
-                    <h5 class="projects-home__card__hover__title">Agricultura</h5></a></div>
-                <h4>Terrain</h4>
+                <h4>Contrast
+                  <div class="btnHoverGridInt"></div>
+                </h4>
               </div>
             </div>
             <div class="col-lg-4 col-12">
@@ -299,14 +242,19 @@
                   </div>
                 </div>
               </div>
-              <h3 class="projects-home__card__title">Typology</h3>
+              <h3 class="projects-home__card__title">
+                 Terrain
+                <div class="btnHoverGrid"></div>
+              </h3>
               <div class="projects-home__card__hover__projects">
                 <h5 class="title-categoria">PROJECTS</h5>
                 <div class="projects-home__card__hover__projects__links"><a href="project-home.html">
                     <h5 class="projects-home__card__hover__title">Worl Trade Center</h5></a><a href="project-home.html">
                     <h5 class="projects-home__card__hover__title">Transparencias</h5></a><a href="project-home.html"> 
                     <h5 class="projects-home__card__hover__title">Agricultura</h5></a></div>
-                <h4>Typology</h4>
+                <h4>Terrain
+                  <div class="btnHoverGridInt"></div>
+                </h4>
               </div>
             </div>
             <div class="col-lg-4 col-12">
@@ -327,44 +275,19 @@
                   </div>
                 </div>
               </div>
-              <h3 class="projects-home__card__title">Contrast</h3>
+              <h3 class="projects-home__card__title">
+                 Typology 
+                <div class="btnHoverGrid"></div>
+              </h3>
               <div class="projects-home__card__hover__projects">
                 <h5 class="title-categoria">PROJECTS</h5>
                 <div class="projects-home__card__hover__projects__links"><a href="project-home.html">
                     <h5 class="projects-home__card__hover__title">Worl Trade Center</h5></a><a href="project-home.html">
                     <h5 class="projects-home__card__hover__title">Transparencias</h5></a><a href="project-home.html"> 
                     <h5 class="projects-home__card__hover__title">Agricultura</h5></a></div>
-                <h4>Contrast</h4>
-              </div>
-            </div>
-            <div class="col-lg-4 col-12 projects-home__acceso projects-home__acceso--about"><a href="about.html">
-                <h3>ABOUT</h3></a></div>
-            <div class="col-lg-4 col-12">
-              <div class="projects-grid--wrap">
-                <div class="projects-home__card tipo-uno" categoria="Typology">
-                  <div class="projects-home__card__images">
-                    <div class="projects-home__card__images__img" titulo="Worl Trade Center"><img class="img-fluid" src="img/images1.jpg" alt></div>
-                  </div>
-                </div>
-                <div class="projects-home__card tipo-dos" categoria="Contrast">
-                  <div class="projects-home__card__images">
-                    <div class="projects-home__card__images__img"><img class="img-fluid" src="img/images1.jpg" alt></div>
-                  </div>
-                </div>
-                <div class="projects-home__card tipo-uno" categoria="Terrain">
-                  <div class="projects-home__card__images">
-                    <div class="projects-home__card__images__img"><img class="img-fluid" src="img/images1.jpg" alt></div>
-                  </div>
-                </div>
-              </div>
-              <h3 class="projects-home__card__title">Typology</h3>
-              <div class="projects-home__card__hover__projects">
-                <h5 class="title-categoria">PROJECTS</h5>
-                <div class="projects-home__card__hover__projects__links"><a href="project-home.html">
-                    <h5 class="projects-home__card__hover__title">Worl Trade Center</h5></a><a href="project-home.html">
-                    <h5 class="projects-home__card__hover__title">Transparencias</h5></a><a href="project-home.html"> 
-                    <h5 class="projects-home__card__hover__title">Agricultura</h5></a></div>
-                <h4>Typology</h4>
+                <h4>Typology 
+                  <div class="btnHoverGridInt"></div>
+                </h4>
               </div>
             </div>
             <div class="col-lg-4 col-12">
@@ -385,14 +308,19 @@
                   </div>
                 </div>
               </div>
-              <h3 class="projects-home__card__title">Contrast</h3>
+              <h3 class="projects-home__card__title">
+                 Contrast
+                <div class="btnHoverGrid"></div>
+              </h3>
               <div class="projects-home__card__hover__projects">
                 <h5 class="title-categoria">PROJECTS</h5>
                 <div class="projects-home__card__hover__projects__links"><a href="project-home.html">
                     <h5 class="projects-home__card__hover__title">Worl Trade Center</h5></a><a href="project-home.html">
                     <h5 class="projects-home__card__hover__title">Transparencias</h5></a><a href="project-home.html"> 
                     <h5 class="projects-home__card__hover__title">Agricultura</h5></a></div>
-                <h4>Contrast</h4>
+                <h4>Contrast
+                  <div class="btnHoverGridInt"></div>
+                </h4>
               </div>
             </div>
             <div class="col-lg-4 col-12">
@@ -413,50 +341,30 @@
                   </div>
                 </div>
               </div>
-              <h3 class="projects-home__card__title">Terrain</h3>
+              <h3 class="projects-home__card__title">
+                 Terrain
+                <div class="btnHoverGrid"></div>
+              </h3>
               <div class="projects-home__card__hover__projects">
                 <h5 class="title-categoria">PROJECTS</h5>
                 <div class="projects-home__card__hover__projects__links"><a href="project-home.html">
                     <h5 class="projects-home__card__hover__title">Worl Trade Center</h5></a><a href="project-home.html">
                     <h5 class="projects-home__card__hover__title">Transparencias</h5></a><a href="project-home.html"> 
                     <h5 class="projects-home__card__hover__title">Agricultura</h5></a></div>
-                <h4>Terrain</h4>
+                <h4>Terrain
+                  <div class="btnHoverGridInt"></div>
+                </h4>
               </div>
             </div>
-            <div class="col-lg-4 col-12">
-              <div class="projects-grid--wrap">
-                <div class="projects-home__card tipo-uno" categoria="Typology">
-                  <div class="projects-home__card__images">
-                    <div class="projects-home__card__images__img" titulo="Worl Trade Center"><img class="img-fluid" src="img/images1.jpg" alt></div>
-                  </div>
-                </div>
-                <div class="projects-home__card tipo-dos" categoria="Contrast">
-                  <div class="projects-home__card__images">
-                    <div class="projects-home__card__images__img"><img class="img-fluid" src="img/images1.jpg" alt></div>
-                  </div>
-                </div>
-                <div class="projects-home__card tipo-uno" categoria="Terrain">
-                  <div class="projects-home__card__images">
-                    <div class="projects-home__card__images__img"><img class="img-fluid" src="img/images1.jpg" alt></div>
-                  </div>
-                </div>
-              </div>
-              <h3 class="projects-home__card__title">Typology</h3>
-              <div class="projects-home__card__hover__projects">
-                <h5 class="title-categoria">PROJECTS</h5>
-                <div class="projects-home__card__hover__projects__links"><a href="project-home.html">
-                    <h5 class="projects-home__card__hover__title">Worl Trade Center</h5></a><a href="project-home.html">
-                    <h5 class="projects-home__card__hover__title">Transparencias</h5></a><a href="project-home.html"> 
-                    <h5 class="projects-home__card__hover__title">Agricultura</h5></a></div>
-                <h4>Typology</h4>
-              </div>
-            </div>
-            <div class="col-lg-4 col-12 projects-home__acceso projects-home__acceso--connect" data-bs-toggle="modal" data-bs-target="#exampleModal"><a>
-                <h3>CONNECT</h3></a></div>
           </div>
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="col-lg-4 col-12 footer--connect" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button>CONNECT</button>
+      </div>
+    </footer>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
         <div class="modal-content connect">
