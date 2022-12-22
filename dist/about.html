@@ -21,6 +21,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
   </head><!-- End Google Tag Manager -->
   <title>Linked | About</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" defer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
   <script src="js/nav.min.js" defer></script>
   <script src="js/animaciones-about.min.js" defer></script>
   <body>
@@ -57,32 +59,45 @@
     <main class="about">
       <section> 
         <div class="container-fluid"> 
-          <div class="row"> 
-            <div class="offset-lg-1 col-lg-5 about--image"> 
-              <picture> 
-                <source srcset="img/about.webp" type="image/webp"><img class="img-fluid" src="img/about.jpg" alt="">
-              </picture>
+          <div class="swiper slider-about">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="row">
+                  <div class="offset-lg-1 col-lg-5 about--image"> 
+                    <picture> 
+                      <source srcset="img/about.webp" type="image/webp"><img class="img-fluid" src="img/about.jpg" alt="">
+                    </picture>
+                  </div>
+                  <div class="col-lg-5 about--info">
+                    <h1><sup>Matei Denes</sup>“We are not men and women, we are humans, we are nature, we are things, projects are things, they are nature, they are human, they are us.”</h1>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-lg-5 about--info">
-              <h1><sup>Matei Denes</sup>“We are not men and women, we are humans, we are nature, we are things, projects are things, they are nature, they are human, they are us.”</h1>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-navigation">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about--footer"> 
+        <div class="container-fluid p-0">
+          <div class="row about--footer--row">
+            <div class="col-12 about--footer--info">
+              <div class="about--footer--legales">
+                <h6>© Linked Space 2022</h6><a href="#°" target="_blank" rel="noopener noreferrer">Terms of Service</a><a href="#°" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+              </div>
+              <div class="about--footer--redes"> <a href="#!" target="_blank" rel="noopener noreferrer"> <img class="ing-fluid" src="img/instagram-solid.svg" alt=""></a><a href="#!" target="_blank" rel="noopener noreferrer"> <img class="ing-fluid" src="img/icon-fb.svg" alt=""></a><a href="#!" target="_blank" rel="noopener noreferrer"> <img class="ing-fluid" src="img/icon-in.svg" alt=""></a></div>
             </div>
           </div>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="container-fluid p-0">
-        <div class="row footer--row">
-          <div class="col-lg-7 footer--info">
-            <div class="footer--legales">
-              <h6>© Linked Space 2022</h6><a href="#°" target="_blank" rel="noopener noreferrer">Terms of Service</a><a href="#°" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-            </div>
-            <div class="footer--redes"> <a href="#!" target="_blank" rel="noopener noreferrer"> <img class="ing-fluid" src="img/instagram-solid.svg" alt=""></a><a href="#!" target="_blank" rel="noopener noreferrer"> <img class="ing-fluid" src="img/icon-fb.svg" alt=""></a><a href="#!" target="_blank" rel="noopener noreferrer"> <img class="ing-fluid" src="img/icon-in.svg" alt=""></a></div>
-          </div>
-          <div class="col-lg-4 col-12 footer--connect" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <button>CONNECT</button>
-          </div>
-        </div>
+      <div class="col-lg-4 col-12 footer--connect" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button>CONNECT</button>
       </div>
     </footer>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

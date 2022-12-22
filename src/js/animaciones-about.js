@@ -40,5 +40,20 @@ const objLoadVertical = (elem) => {
     });
 };
 
+const swiperAbout = new Swiper(".slider-about", {
+    slidesPerView: "auto",
+    grabCursor: false,
+    freeMode: false,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    // Navigation arrows
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
 objLoad(".about--image *");
 objLoadVertical(".about--info *");

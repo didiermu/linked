@@ -1,4 +1,16 @@
 .about {
+    .swiper {
+        &-navigation {
+            * {
+                color: var(--rosa-dark);
+            }
+        }
+
+        &-pagination {
+            display: none;
+        }
+    }
+
     &--image {
         padding: 0.2em;
         width: 46.666667%;
@@ -41,11 +53,72 @@
             }
         }
     }
+
+    &--footer {
+        position: fixed;
+        bottom: 10px;
+        width: 52%;
+        z-index: 1;
+
+        &--row {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &--info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &--legales {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-basis: 70%;
+            padding: 0 1em;
+
+            h6,
+            a {
+                color: #fff;
+                font-size: var(--l);
+                font-family: var(--secundaria-regular);
+            }
+        }
+
+        &--redes {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-basis: 20%;
+
+            img {
+                max-width: 22px;
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media (max-width: 768px) {
     .about {
-        margin-bottom: 7em;
+        margin-bottom: 3em;
+
+        .swiper {
+            &-navigation {
+                display: none;
+            }
+
+            &-pagination {
+                display: block;
+                position: relative;
+                margin-top: 2em;
+
+                &-bullet {
+                    background: var(--rosa-dark);
+                }
+            }
+        }
 
         &--image {
             width: 100%;
@@ -67,6 +140,40 @@
 
                 sup {
                     top: -1em;
+                }
+            }
+        }
+
+        &--footer {
+            position: relative;
+            width: 100%;
+            margin-top: 2em;
+
+            &--info {
+                width: 100%;
+                padding: 0.5em 2em 1em;
+                flex-direction: column;
+            }
+
+            &--legales {
+                padding: 0;
+                width: 100%;
+                margin-bottom: 1em;
+
+                h6,
+                a {
+                    color: var(--dark);
+                    text-align: center;
+                    font-size: var(--h5);
+                }
+            }
+
+            &--redes {
+                width: 100%;
+                justify-content: space-evenly;
+
+                img {
+                    filter: invert(1);
                 }
             }
         }
