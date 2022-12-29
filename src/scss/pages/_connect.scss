@@ -1,5 +1,10 @@
 .connect {
     background: var(--azul-marino);
+    
+    .screen-reader-response,
+    .wpcf7-response-output{
+        display: none;
+    }
 
     .header--logo {
         padding-left: var(--bs-gutter-x, 2rem);

@@ -351,4 +351,7 @@
 .input__group,
 .combo {
     @include input;
+    br{
+        display: none;
+    }
 }

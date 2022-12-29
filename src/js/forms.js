@@ -195,11 +195,14 @@ const validarForm = () => {
         let msjsError = document.querySelectorAll(".error-input.show");
 
         if (msjsError.length == 0) {
-            // form.submit();
             console.log("si");
             btnContacto.classList.add("active");
             btnContacto.innerText = "SENDED";
             form.reset();
+            //setTimeout(()=>{
+            //     form.submit();
+            //},1500);
+            
             return false;
         } else {
             console.log("no");

@@ -293,3 +293,15 @@ btnMobileHoverGridInt.onclick = () => {
     btnMobileHoverGrid.classList.toggle("active");
     btnMobileHoverGridInt.classList.toggle("active");
 };
+
+
+///// ORDER GRID
+
+const cardsHome = document.querySelectorAll(".projects-home .col-lg-4:not(.projects-home__acceso");
+const cardProject = document.querySelector(".projects-home__acceso--projects");
+const cardAbout = document.querySelector(".projects-home__acceso--about");
+
+for (let index = 0; index < cardsHome.length; index++) {
+    cardsHome[4].insertAdjacentElement("afterend", cardProject);
+    cardsHome[7].insertAdjacentElement("afterend", cardAbout);
+}
