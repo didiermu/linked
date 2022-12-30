@@ -4,7 +4,7 @@
     position: fixed;
     bottom: 0;
     right: 0;
-    width: 100%;
+    width: 33.33333%;
     z-index: 99;
 
     @media (hover: hover) {
@@ -17,6 +17,7 @@
 
     &--connect {
         background: var(--verde-limon);
+        width: 100%;
 
         button {
             appearance: none;
@@ -91,6 +92,8 @@
 
 @media (max-width: 768px) {
     .footer {
+        width: 100%;
+
         &--info {
             width: 100%;
             padding: 0.5em 2em 1em;

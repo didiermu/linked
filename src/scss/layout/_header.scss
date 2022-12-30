@@ -35,7 +35,8 @@
             gap: 40px;
         }
 
-        .btn-search {
+        .btn-search,
+        .is-search-submit {
             appearance: none;
             border: 0;
             width: 50px;
@@ -47,6 +48,10 @@
             &[aria-expanded="false"],
             &.collapsed {
                 background-image: url(../img/icon-search.svg);
+            }
+
+            span {
+                display: none;
             }
         }
 

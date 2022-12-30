@@ -269,6 +269,26 @@
             align-items: center;
             gap: 30px;
 
+            form {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                label {
+                    width: 90%;
+                    pointer-events: initial;
+                }
+
+                .active ~ .is-search-submit {
+                    background-image: url(../img/icon-search-pink.png);
+                }
+
+                .is-screen-reader-text {
+                    display: none;
+                }
+            }
+
             &.active {
                 // input:focus-visible {
                 //     outline-color: #fff;
@@ -298,8 +318,15 @@
             }
         }
 
+        .is-search-submit,
         .btn-search {
             background-image: url(../img/icon-search-white.png);
+            appearance: none;
+            border: 0;
+            width: 50px;
+            height: 40px;
+            z-index: 9;
+            transition: 0.3s ease-in-out all;
         }
     }
 
@@ -351,7 +378,7 @@
 .input__group,
 .combo {
     @include input;
-    br{
+    br {
         display: none;
     }
 }

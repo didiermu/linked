@@ -41,9 +41,16 @@ const objLoadVertical = (elem) => {
 };
 
 const limitChar = () => {
-    console.log("pa");
     const parrafos = document.querySelector(".writing-detail--paragraph .p");
+    const resume = document.querySelector(".writing-detail--resume");
+    resume.textContent = resume.textContent.slice(0, 100) + "...";
     parrafos.textContent = parrafos.textContent.slice(0, 1100) + "[...]";
+
+    const firstLetter = parrafos.textContent.charAt(0);
+    document.querySelector(".writing-detail--paragraph--let").innerHTML =
+        firstLetter;
+
+    parrafos.innerHTML = parrafos.textContent.slice(1);
 };
 
 limitChar();

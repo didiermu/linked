@@ -40,6 +40,7 @@
                 line-height: 1;
                 color: var(--gris);
                 font-family: var(--secundaria-regular);
+                padding: 0.1em 0;
                 transition: 0.3s ease-in-out all;
 
                 sup {
@@ -47,7 +48,7 @@
                     font-size: var(--l);
                 }
 
-                span {
+                span:not(.parrafo) {
                     font-size: var(--xl);
                     bottom: 20px;
                     position: relative;

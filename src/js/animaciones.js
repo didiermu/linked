@@ -275,29 +275,56 @@ btnMobileHoverHero.onclick = () => {
     btnMobileHoverHero.classList.toggle("active");
 };
 
-const btnMobileHoverGrid = document.querySelector(".btnHoverGrid");
-const btnMobileHoverGridInt = document.querySelector(".btnHoverGridInt");
+const btnMobileHoverGrid = document.querySelectorAll(".btnHoverGrid");
+const btnMobileHoverGridInt = document.querySelectorAll(".btnHoverGridInt");
 
-btnMobileHoverGrid.onclick = () => {
-    document
-        .querySelector(".projects-home__card__hover__projects")
-        .classList.toggle("active");
-    btnMobileHoverGrid.classList.toggle("active");
-    btnMobileHoverGridInt.classList.toggle("active");
-};
+for (const btnMobileHoverGridElem of btnMobileHoverGrid) {
+    btnMobileHoverGridElem.onclick = () => {
+        btnMobileHoverGridElem.parentNode.nextElementSibling.classList.toggle(
+            "active"
+        );
+    };
+}
 
-btnMobileHoverGridInt.onclick = () => {
-    document
-        .querySelector(".projects-home__card__hover__projects")
-        .classList.toggle("active");
-    btnMobileHoverGrid.classList.toggle("active");
-    btnMobileHoverGridInt.classList.toggle("active");
-};
+for (const btnMobileHoverGridIntElem of btnMobileHoverGridInt) {
+    btnMobileHoverGridIntElem.onclick = () => {
+        btnMobileHoverGridIntElem.parentNode.parentNode.classList.toggle(
+            "active"
+        );
+    };
+}
 
+// for (const btnMobileHoverGridElem of btnMobileHoverGrid) {
+//     btnMobileHoverGridElem.onclick = () => {
+//         let parentBtn = btnMobileHoverGridElem.closest(".col-lg-4");
+
+//         parentBtn
+//             .querySelector(".projects-home__card__hover__projects")
+//             .classList.toggle("active");
+
+//         btnMobileHoverGridElem.classList.toggle("active");
+//         parentBtn.querySelector(".btnHoverGridInt").classList.toggle("active");
+//     };
+// }
+
+// for (const btnMobileHoverGridIntElem of btnMobileHoverGridInt) {
+//     let parentBtn = btnMobileHoverGridIntElem.closest(".col-lg-4");
+
+//     btnMobileHoverGridIntElem.onclick = () => {
+//         parentBtn
+//             .querySelector(".projects-home__card__hover__projects")
+//             .classList.toggle("active");
+
+//         parentBtn.querySelector(".btnHoverGrid").classList.toggle("active");
+//         btnMobileHoverGridInt.classList.toggle("active");
+//     };
+// }
 
 ///// ORDER GRID
 
-const cardsHome = document.querySelectorAll(".projects-home .col-lg-4:not(.projects-home__acceso");
+const cardsHome = document.querySelectorAll(
+    ".projects-home .col-lg-4:not(.projects-home__acceso"
+);
 const cardProject = document.querySelector(".projects-home__acceso--projects");
 const cardAbout = document.querySelector(".projects-home__acceso--about");
 

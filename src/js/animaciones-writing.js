@@ -20,3 +20,15 @@ const objParallaxArray = (elem) => {
 };
 
 objParallaxArray(".papers__item");
+
+//////////////// LIMIT CHAR
+
+const limitChar = () => {
+    const parrafos = document.querySelectorAll(".papers__item .parrafo");
+
+    for (const parrafosElem of parrafos) {
+        parrafosElem.textContent = parrafosElem.textContent.slice(0, 120);
+    }
+};
+
+limitChar();

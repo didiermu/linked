@@ -27,6 +27,7 @@
             display: flex;
             flex-direction: column;
             row-gap: 80px;
+            margin-top: 10em;
 
             &.par {
                 flex-direction: column-reverse;
@@ -50,10 +51,11 @@
             padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
 
             .row {
-                padding-top: 4em;
-                padding-bottom: 4em;
+                // padding-top: 4em;
+                // padding-bottom: 4em;
                 // width: 50%;
                 display: inline-flex;
+                row-gap: 0;
 
                 picture {
                     height: calc(624px + 350 * ((100vw - 1920px) / 1280));
@@ -148,6 +150,7 @@
             &--wrap {
                 margin-bottom: 0em;
                 row-gap: 30px;
+                margin-top: 2em;
 
                 &.par {
                     flex-direction: column !important;

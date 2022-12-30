@@ -116,3 +116,32 @@ const modalGaleria = () => {
 };
 
 modalGaleria();
+
+//// REMOVE RELATED
+
+const cardsRelated = document.querySelectorAll(".related .col-lg-4");
+
+for (let index = 3; index < cardsRelated.length; index++) {
+    cardsRelated[index].remove();
+}
+
+//////////// EVENTS LISTENERS ////////////
+
+const btnMobileHoverGrid = document.querySelectorAll(".btnHoverGrid");
+const btnMobileHoverGridInt = document.querySelectorAll(".btnHoverGridInt");
+
+for (const btnMobileHoverGridElem of btnMobileHoverGrid) {
+    btnMobileHoverGridElem.onclick = () => {
+        btnMobileHoverGridElem.parentNode.nextElementSibling.classList.toggle(
+            "active"
+        );
+    };
+}
+
+for (const btnMobileHoverGridIntElem of btnMobileHoverGridInt) {
+    btnMobileHoverGridIntElem.onclick = () => {
+        btnMobileHoverGridIntElem.parentNode.parentNode.classList.toggle(
+            "active"
+        );
+    };
+}

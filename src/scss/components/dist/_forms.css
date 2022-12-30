@@ -1,0 +1,381 @@
+.botonera .boton {
+  margin: 0 15px;
+}
+
+@media (max-width: 992px) {
+  .botonera {
+    flex-direction: column;
+    width: 100%;
+  }
+  .botonera a {
+    width: 100%;
+  }
+  .botonera .boton {
+    margin: 0 0 20px 0;
+  }
+}
+
+.boton {
+  appearance: none;
+  outline: 0;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out all;
+}
+
+.boton.big {
+  height: calc(140px + 100 * ((100vw - 1920px) / 1280));
+  padding: 0 1em;
+  font-size: var(--ls);
+}
+
+.boton.big.prm {
+  background: var(--rosa-dark);
+  color: #fff;
+  border: 1px solid var(--gris-dark);
+  height: 40px;
+  font-size: var(--h6);
+}
+
+@media (hover: hover) {
+  .boton.big.prm:hover {
+    background: var(--azul);
+  }
+}
+
+.boton.big.sec {
+  background: var(--verde-limon);
+  color: var(--gris-dark);
+  border: 1px solid var(--gris-dark);
+}
+
+.boton.big.sec.active {
+  background: var(--rosa-dark) !important;
+  color: #fff;
+}
+
+@media (hover: hover) {
+  .boton.big.sec:hover {
+    color: #fff;
+    background: var(--verde);
+  }
+}
+
+@media (max-width: 768px) {
+  .boton.big {
+    font-size: var(--h3);
+    height: calc(80px + 10 * ((100vw - 360px) / 768));
+  }
+}
+
+.input__group,
+.combo {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 1.5em;
+}
+
+.input__group label,
+.combo label {
+  color: #fff;
+  font-size: var(--h5);
+  transition: 0.2s ease-in-out all;
+  pointer-events: none;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+
+.input__group .error-input,
+.combo .error-input {
+  color: red;
+  font-size: var(--h5);
+  order: 1;
+  margin-top: 0.4em;
+  display: none;
+  text-align: right;
+  right: 0;
+}
+
+.input__group .error-input.show,
+.combo .error-input.show {
+  display: block;
+}
+
+.input__group.active label,
+.combo.active label {
+  top: -1em;
+  left: 0;
+  color: var(--txt-sec);
+  font-size: var(--h6);
+}
+
+.input__group.valid label,
+.combo.valid label {
+  top: -1em;
+  left: 0;
+  color: var(--txt-prm);
+  font-size: var(--h6);
+}
+
+.input__group input[type="text"],
+.input__group input[type="email"],
+.input__group input[type="tel"],
+.input__group textarea,
+.combo input[type="text"],
+.combo input[type="email"],
+.combo input[type="tel"],
+.combo textarea {
+  appearance: none;
+  outline: none;
+  border: none;
+  height: 40px;
+  padding: 1em;
+  width: 100%;
+  order: 2;
+  color: #fff;
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 3px;
+}
+
+.input__group input[type="text"]::placeholder,
+.input__group input[type="email"]::placeholder,
+.input__group input[type="tel"]::placeholder,
+.input__group textarea::placeholder,
+.combo input[type="text"]::placeholder,
+.combo input[type="email"]::placeholder,
+.combo input[type="tel"]::placeholder,
+.combo textarea::placeholder {
+  color: #335c85;
+}
+
+.input__group input[type="text"]:focus,
+.input__group input[type="email"]:focus,
+.input__group input[type="tel"]:focus,
+.input__group textarea:focus,
+.combo input[type="text"]:focus,
+.combo input[type="email"]:focus,
+.combo input[type="tel"]:focus,
+.combo textarea:focus {
+  border: 1px solid var(--rosa-dark);
+  color: var(--rosa-dark);
+}
+
+.input__group textarea,
+.combo textarea {
+  resize: none;
+  height: calc(180px + 140 * ((100vw - 1920px) / 1280));
+}
+
+.input__group.combo br,
+.combo.combo br {
+  display: none;
+}
+
+.input__group.combo select,
+.combo.combo select {
+  outline: none;
+  border: none;
+  height: 40px;
+  width: 100%;
+  padding: 0 1em;
+  order: 2;
+  cursor: pointer;
+  background: none;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #335c85;
+}
+
+.input__group.combo select:focus,
+.combo.combo select:focus {
+  border: 1px solid var(--rosa-dark);
+}
+
+.input__group.combo select:valid,
+.combo.combo select:valid {
+  color: #fff;
+}
+
+.input__group.input-checkbox,
+.combo.input-checkbox {
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+.input__group.input-checkbox.valid label, .input__group.input-checkbox.active label,
+.combo.input-checkbox.valid label,
+.combo.input-checkbox.active label {
+  top: 0;
+  left: 1em;
+  color: var(--txt-prm);
+}
+
+.input__group.input-checkbox label,
+.combo.input-checkbox label {
+  position: relative;
+  top: 0 !important;
+  font-size: var(--h5);
+  pointer-events: initial;
+  cursor: pointer;
+  left: 1em;
+}
+
+.input__group.input-checkbox input,
+.combo.input-checkbox input {
+  appearance: none;
+  cursor: pointer;
+  border: 1px solid var(--bg-prm);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  padding: 0;
+  background: #fff;
+}
+
+.input__group.input-checkbox input:checked,
+.combo.input-checkbox input:checked {
+  background: var(--bg-prm);
+}
+
+.input__group.input-checkbox input:checked label,
+.combo.input-checkbox input:checked label {
+  font-size: var(--h5);
+}
+
+.input__group.input-checkbox input:focus,
+.combo.input-checkbox input:focus {
+  border-color: var(--bg-prm);
+}
+
+.input__group.input-search,
+.combo.input-search {
+  flex-direction: column;
+}
+
+.input__group.input-search label,
+.combo.input-search label {
+  font-size: var(--l);
+}
+
+.input__group.input-search .input-search--wrap,
+.combo.input-search .input-search--wrap {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.input__group.input-search .input-search--wrap form,
+.combo.input-search .input-search--wrap form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input__group.input-search .input-search--wrap form label,
+.combo.input-search .input-search--wrap form label {
+  width: 90%;
+  pointer-events: initial;
+}
+
+.input__group.input-search .input-search--wrap form .active ~ .is-search-submit,
+.combo.input-search .input-search--wrap form .active ~ .is-search-submit {
+  background-image: url(../img/icon-search-pink.png);
+}
+
+.input__group.input-search .input-search--wrap form .is-screen-reader-text,
+.combo.input-search .input-search--wrap form .is-screen-reader-text {
+  display: none;
+}
+
+.input__group.input-search .input-search--wrap.active .btn-search,
+.combo.input-search .input-search--wrap.active .btn-search {
+  background-image: url(../img/icon-search-pink.png);
+}
+
+.input__group.input-search input,
+.combo.input-search input {
+  appearance: none;
+  color: var(--gris-title-mid);
+  background: none;
+  outline: none;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  height: 70px;
+  font-size: var(--h4);
+  padding: 0 1em;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.input__group.input-search input::placeholder,
+.combo.input-search input::placeholder {
+  color: var(--gris-title-mid);
+}
+
+.input__group.input-search .is-search-submit,
+.input__group.input-search .btn-search,
+.combo.input-search .is-search-submit,
+.combo.input-search .btn-search {
+  background-image: url(../img/icon-search-white.png);
+  appearance: none;
+  border: 0;
+  width: 50px;
+  height: 40px;
+  z-index: 9;
+  transition: 0.3s ease-in-out all;
+}
+
+@media (max-width: 1024px) {
+  .input__group label,
+.combo label {
+    top: calc(32px - 12 * ((100vw - 768px) / 1024));
+  }
+  .input__group input,
+.combo input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .input__group label,
+.combo label {
+    top: calc(15px - 12 * ((100vw - 360px) / 768));
+  }
+  .input__group input[type="text"]:focus ~ label, .input__group input[type="text"]:valid ~ label,
+.combo input[type="text"]:focus ~ label,
+.combo input[type="text"]:valid ~ label {
+    top: -1.5em;
+  }
+  .input__group.input-search,
+.combo.input-search {
+    width: 100%;
+  }
+  .input__group.input-search .input-search--wrap,
+.combo.input-search .input-search--wrap {
+    column-gap: 20px;
+  }
+  .input__group.input-search input,
+.combo.input-search input {
+    height: 50px;
+  }
+  .input__group.input-search .btn-search,
+.combo.input-search .btn-search {
+    background-image: url(../../img/icon-search-white.png);
+  }
+  .input__group textarea,
+.combo textarea {
+    height: calc(80px + 10 * ((100vw - 360px) / 768));
+  }
+}
+
+.input__group br,
+.combo br {
+  display: none;
+}
+
+/*# sourceMappingURL=_forms.css.map */

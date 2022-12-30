@@ -12,6 +12,8 @@
 
     &--wrap-info {
         padding-top: 8em;
+        display: flex;
+        flex-direction: column;
     }
 
     &--title {
@@ -54,10 +56,13 @@
     &--wrap-text {
         display: flex;
         justify-content: space-between;
+        height: 100%;
 
         a {
             flex-basis: 15%;
             align-self: flex-end;
+            font-size: var(--h5);
+            margin-bottom: 30px;
         }
     }
 
