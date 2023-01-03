@@ -317,6 +317,6 @@ var cardAbout = document.querySelector(".projects-home__acceso--about");
 
 for (var index = 0; index < cardsHome.length; index++) {
   cardsHome[4].insertAdjacentElement("afterend", cardProject);
-  cardsHome[7].insertAdjacentElement("afterend", cardAbout);
+  cardsHome[8].insertAdjacentElement("afterend", cardAbout);
 }
 //# sourceMappingURL=animaciones.dev.js.map
