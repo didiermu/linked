@@ -82,7 +82,7 @@ block content
                     li PROJECTS
                 a(href='about.html')
                     li ABOUT
-                a#li-connect(data-bs-toggle="modal" data-bs-target="#exampleModal")
+                a#li-connect(data-bs-toggle="modal", data-bs-target="#exampleModal")
                     li CONNECT
 
         section.cita-home
@@ -133,8 +133,9 @@ block content
                         a(href='about.html')
                             h3 ABOUT
 
-                    .col-lg-4.col-12.projects-home__acceso.projects-home__acceso--connect(data-bs-toggle="modal" data-bs-target="#exampleModal")
+                    .col-lg-4.col-12.projects-home__acceso.projects-home__acceso--connect(data-bs-toggle="modal", data-bs-target="#exampleModal")
                         a
                             h3 CONNECT
 
+        include includes/footer.pug
     include includes/modal-connect.pug

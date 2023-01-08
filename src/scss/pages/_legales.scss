@@ -1,0 +1,25 @@
+.legales {
+    section {
+        padding: var(--paddingSection);
+
+        h1 {
+            margin-bottom: 1em;
+        }
+
+        p {
+            margin-bottom: 0.8em;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .legales {
+        section {
+            padding: 100px 0;
+
+            p {
+                font-size: var(--h5);
+            }
+        }
+    }
+}

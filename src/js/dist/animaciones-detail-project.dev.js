@@ -86,9 +86,9 @@ var modalGaleria = function modalGaleria() {
     resizeDuration: 300,
     disableScrolling: true,
     fitImagesInViewport: true,
-    wrapAround: true,
-    maxWidth: 700,
-    maxHeight: 700
+    wrapAround: true // maxWidth: 700,
+    // maxHeight: 700,
+
   });
 };
 

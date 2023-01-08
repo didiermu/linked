@@ -1,8 +1,25 @@
 .about {
     .swiper {
         &-navigation {
-            * {
+            .swiper-button-prev,
+            .swiper-button-next {
+                border: 1px solid var(--rosa-dark);
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
                 color: var(--rosa-dark);
+                background: url(../img/icon-arrow.svg) no-repeat center / 16px;
+
+                &.swiper-button-disabled {
+                    border-color: var(--gris) !important;
+                    color: var(--gris) !important;
+                    // opacity: 1;
+                }
+
+                &::after {
+                    transform: scaleY(0.9);
+                    font-size: x-large;
+                }
             }
         }
 
@@ -16,11 +33,12 @@
         width: 46.666667%;
 
         picture {
-            border-radius: 2px;
+            border-radius: 4px;
             display: block;
             height: 99vh;
             min-height: 230px;
             margin-left: 3em;
+            overflow: hidden;
 
             img {
                 width: 100%;

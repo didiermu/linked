@@ -294,32 +294,6 @@ for (const btnMobileHoverGridIntElem of btnMobileHoverGridInt) {
     };
 }
 
-// for (const btnMobileHoverGridElem of btnMobileHoverGrid) {
-//     btnMobileHoverGridElem.onclick = () => {
-//         let parentBtn = btnMobileHoverGridElem.closest(".col-lg-4");
-
-//         parentBtn
-//             .querySelector(".projects-home__card__hover__projects")
-//             .classList.toggle("active");
-
-//         btnMobileHoverGridElem.classList.toggle("active");
-//         parentBtn.querySelector(".btnHoverGridInt").classList.toggle("active");
-//     };
-// }
-
-// for (const btnMobileHoverGridIntElem of btnMobileHoverGridInt) {
-//     let parentBtn = btnMobileHoverGridIntElem.closest(".col-lg-4");
-
-//     btnMobileHoverGridIntElem.onclick = () => {
-//         parentBtn
-//             .querySelector(".projects-home__card__hover__projects")
-//             .classList.toggle("active");
-
-//         parentBtn.querySelector(".btnHoverGrid").classList.toggle("active");
-//         btnMobileHoverGridInt.classList.toggle("active");
-//     };
-// }
-
 ///// ORDER GRID
 
 const cardsHome = document.querySelectorAll(
@@ -332,3 +306,14 @@ for (let index = 0; index < cardsHome.length; index++) {
     cardsHome[4].insertAdjacentElement("afterend", cardProject);
     cardsHome[8].insertAdjacentElement("afterend", cardAbout);
 }
+
+///// SHOW FOOTER SCROLL
+
+const posCitaHome = document.querySelector(".cita-home");
+document.addEventListener("scroll", (event) => {
+    if (window.scrollY > posCitaHome.offsetTop - 200) {
+        document.querySelector(".footer").classList.add("show");
+    } else {
+        document.querySelector(".footer").classList.remove("show");
+    }
+});

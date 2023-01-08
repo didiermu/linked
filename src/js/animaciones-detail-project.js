@@ -110,8 +110,8 @@ const modalGaleria = () => {
         disableScrolling: true,
         fitImagesInViewport: true,
         wrapAround: true,
-        maxWidth: 700,
-        maxHeight: 700,
+        // maxWidth: 700,
+        // maxHeight: 700,
     });
 };
 
