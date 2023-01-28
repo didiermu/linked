@@ -281,7 +281,7 @@
                 }
 
                 .active ~ .is-search-submit {
-                    background-image: url(../img/icon-search-pink.png);
+                    background-image: url(../img/icon-search-pink.svg);
                 }
 
                 .is-screen-reader-text {
@@ -295,7 +295,7 @@
                 // }
 
                 .btn-search {
-                    background-image: url(../img/icon-search-pink.png);
+                    background-image: url(../img/icon-search-pink.svg);
                 }
             }
         }
@@ -320,7 +320,7 @@
 
         .is-search-submit,
         .btn-search {
-            background-image: url(../img/icon-search-white.png);
+            background-image: url(../img/icon-search-white.svg);
             appearance: none;
             border: 0;
             width: 50px;
@@ -358,6 +358,11 @@
 
             .input-search--wrap {
                 column-gap: 20px;
+
+                form label {
+                    width: 80%;
+                    margin: 0;
+                }
             }
 
             input {
@@ -365,7 +370,7 @@
             }
 
             .btn-search {
-                background-image: url(../../img/icon-search-white.png);
+                background-image: url(../img/icon-search-white.svg);
             }
         }
 

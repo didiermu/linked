@@ -18,6 +18,7 @@
     &--connect {
         background: var(--verde-limon);
         width: 100%;
+        border-radius: 6px;
 
         button {
             appearance: none;
@@ -30,6 +31,7 @@
             display: flex;
             justify-content: space-between;
             font-size: var(--h5);
+            color: var(--dark) !important;
 
             &::after {
                 content: "\2192";

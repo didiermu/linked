@@ -18,6 +18,13 @@
   }
 }
 
+.home .hero--wrap #link-home {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 .home .hero--wrap--hover {
   color: #fff;
   position: absolute;
@@ -114,13 +121,25 @@
   border-radius: 0 10px 10px 10px;
 }
 
+.home .hero--wrap picture:nth-child(1) img {
+  object-position: top;
+}
+
 .home .hero--wrap picture:nth-child(2) {
   border-radius: 10px;
   margin: 2px 0;
 }
 
+.home .hero--wrap picture:nth-child(2) img {
+  object-position: center;
+}
+
 .home .hero--wrap picture:nth-child(3) {
   border-radius: 10px 10px 10px 0;
+}
+
+.home .hero--wrap picture:nth-child(3) img {
+  object-position: bottom;
 }
 
 .home .hero--wrap picture img {
@@ -159,30 +178,30 @@
   }
 }
 
-.home .hero .sidenav a:nth-child(1) {
+.home .hero .sidenav a#li-projects {
   border-radius: 10px 0 10px 10px;
   background: var(--rosa);
 }
 
-.home .hero .sidenav a:nth-child(2) {
+.home .hero .sidenav a#li-about {
   background: var(--azul-rey);
   border-radius: 10px;
   margin: 2px 0;
 }
 
-.home .hero .sidenav a:nth-child(3) {
+.home .hero .sidenav a#li-writin {
   border-radius: 10px 10px 0 10px;
-  background: var(--verde-limon);
-  color: var(--txt-prm);
-  cursor: pointer;
-}
-
-.home .hero .sidenav a:nth-child(4) {
   background: var(--verde);
 }
 
-.home .hero .sidenav a:nth-child(5) {
+.home .hero .sidenav a#li-teach {
   background: var(--naranja);
+}
+
+.home .hero .sidenav a#li-connect {
+  background: var(--verde-limon);
+  color: var(--txt-prm);
+  cursor: pointer;
 }
 
 .home .cita-home {
@@ -195,6 +214,7 @@
 
 .home .projects-home__acceso {
   min-height: 600px;
+  border-radius: 6px;
 }
 
 .home .projects-home__acceso h3 {
@@ -255,7 +275,28 @@
   opacity: 1;
 }
 
+.coming {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.coming h1 {
+  font-family: var(--primaria-regular);
+  text-align: center;
+  font-size: var(--xl);
+}
+
+.coming img {
+  max-width: 350px;
+}
+
 @media (max-width: 768px) {
+  .coming img {
+    max-width: 280px;
+  }
   .home .hero {
     flex-direction: column;
   }
@@ -276,6 +317,7 @@
     place-items: center;
     color: #fff;
     font-size: xx-large;
+    z-index: 1;
   }
   .home .hero--wrap .btnHover::after {
     content: "+";
@@ -286,6 +328,7 @@
   }
   .home .hero--wrap .btnHover.active::after {
     content: "-";
+    align-self: flex-start;
   }
   .home .hero--wrap--hover {
     z-index: -1;

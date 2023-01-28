@@ -126,7 +126,7 @@
     margin-top: 2em;
   }
   .about .swiper-pagination-bullet {
-    background: var(--rosa-dark);
+    background: var(--gris);
   }
   .about--image {
     width: 100%;
@@ -137,6 +137,7 @@
     height: auto;
     width: 80%;
     margin: auto;
+    max-height: calc(360px + 500 * ((100vw - 360px) / 768));
   }
   .about--info {
     padding-top: 2em;

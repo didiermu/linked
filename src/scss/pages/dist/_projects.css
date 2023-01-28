@@ -1,0 +1,106 @@
+.projects-home h1 {
+  font-size: var(--h5);
+  color: var(--gris);
+  font-family: var(--primaria-regular);
+  margin-bottom: 5em;
+}
+
+.projects-grid h1 {
+  font-size: var(--h5);
+  color: var(--gris);
+  font-family: var(--primaria-regular);
+  margin-bottom: 5em;
+}
+
+.projects-grid .row {
+  row-gap: 60px;
+}
+
+.projects-grid .col-lg-4 {
+  transition: 0.4s ease-in-out all;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .projects-grid .col-lg-4:hover .projects-home__card__hover__projects {
+    opacity: 1;
+    transform: rotateZ(180deg) translateX(0);
+  }
+}
+
+.projects-grid--wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 600px;
+}
+
+.projects-grid .projects-home__card__title {
+  flex-basis: 10%;
+  transform: rotateZ(180deg);
+  writing-mode: vertical-lr;
+  font-family: var(--secundaria-regular);
+  color: var(--gris);
+  text-transform: capitalize;
+  margin: 0 0 0.5em 0;
+}
+
+.projects-grid .projects-home__card__images {
+  flex-basis: auto;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding-top: 2em;
+  }
+  .projects .grid .project__item {
+    width: 100% !important;
+    order: 2;
+    position: relative;
+  }
+  .projects .grid .project__item .row {
+    padding-bottom: 0;
+  }
+  .projects .grid .project__item picture {
+    height: calc( 300px + 620 * (100vw - 360px) / 768) !important;
+  }
+  .projects .grid .project__item__place {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: auto;
+  }
+  .projects .grid__description h3 {
+    font-size: var(--h1);
+  }
+  .projects .grid__description h3 sup {
+    top: -0.5em;
+  }
+  .projects .grid--wrap {
+    margin-bottom: 0em;
+  }
+  .projects .grid--wrap > a {
+    top: 2em !important;
+    margin-bottom: 5em;
+    display: block;
+  }
+  .projects .grid--wrap > a:last-child {
+    margin-bottom: 0;
+  }
+  .projects .grid--wrap > a:nth-child(odd) .project__item {
+    flex-direction: row-reverse;
+    margin-left: 0;
+  }
+  .projects .grid--wrap > a:nth-child(odd) .project__item .project__info {
+    padding-left: 15px;
+  }
+  .projects .grid--wrap > a:nth-child(odd) .project__item__place {
+    left: 66.66666667%;
+  }
+}
+
+/*# sourceMappingURL=_projects.css.map */

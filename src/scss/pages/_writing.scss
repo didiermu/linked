@@ -50,7 +50,7 @@
 
                 span:not(.parrafo) {
                     font-size: var(--xl);
-                    bottom: 20px;
+                    bottom: 15px;
                     position: relative;
                 }
             }
@@ -86,10 +86,10 @@
             padding: 2em 0;
 
             &__item {
-                padding-top: 2em;
+                padding-top: 1em;
 
                 p {
-                    margin-bottom: 1em;
+                    margin-bottom: 0.5em;
                     -webkit-box-orient: vertical;
                     -webkit-line-clamp: 3;
                     display: -webkit-box;
@@ -97,6 +97,11 @@
 
                     sup {
                         top: -1em;
+                        font-size: var(--h5);
+                    }
+                    span:not(.parrafo) {
+                        font-size: var(--l);
+                        bottom: 8px;
                     }
                 }
 

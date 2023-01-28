@@ -17,6 +17,7 @@
 .footer--connect {
   background: var(--verde-limon);
   width: 100%;
+  border-radius: 6px;
 }
 
 .footer--connect button {
@@ -30,6 +31,7 @@
   display: flex;
   justify-content: space-between;
   font-size: var(--h5);
+  color: var(--dark) !important;
 }
 
 .footer--connect button::after {

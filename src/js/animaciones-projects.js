@@ -140,9 +140,12 @@ const btnMobileHoverGridInt = document.querySelectorAll(".btnHoverGridInt");
 
 for (const btnMobileHoverGridElem of btnMobileHoverGrid) {
     btnMobileHoverGridElem.onclick = () => {
-        btnMobileHoverGridElem.parentNode.nextElementSibling.classList.toggle(
-            "active"
-        );
+        btnMobileHoverGridElem
+            .closest(".col-lg-4")
+            .querySelector(".projects-home__card__hover__projects")
+            .classList.toggle("active");
+
+        btnMobileHoverGridElem.closest(".col-lg-4").classList.add("active");
     };
 }
 
@@ -151,6 +154,10 @@ for (const btnMobileHoverGridIntElem of btnMobileHoverGridInt) {
         btnMobileHoverGridIntElem.parentNode.parentNode.classList.toggle(
             "active"
         );
+
+        btnMobileHoverGridIntElem
+            .closest(".col-lg-4")
+            .classList.remove("active");
     };
 }
 

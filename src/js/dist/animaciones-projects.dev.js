@@ -32,11 +32,16 @@ var objLoadVertical = function objLoadVertical(elem) {
   });
 };
 
-var animContenido = function animContenido(trigger, elem) {
+objLoad(".grid--head .project__info *");
+objLoad(".project__item__place *");
+objLoadVertical(".project__item picture");
+objLoadVertical(".grid__description");
+
+var animContenido = function animContenido(trigger, elem, triggerHook) {
   var controller = new ScrollMagic.Controller();
   var info = new ScrollMagic.Scene({
     triggerElement: trigger,
-    triggerHook: 0.7
+    triggerHook: triggerHook
   }).setTween(TweenMax.fromTo(elem, 1, {
     opacity: 0,
     yPercent: 10
@@ -46,6 +51,34 @@ var animContenido = function animContenido(trigger, elem) {
     delay: 0.5
   })).addTo(controller);
 };
+
+animContenido("#quotes-one", "#quotes-one .project-home__quotes", 0.9);
+animContenido("#quotes-two", "#quotes-two .project-home__quotes", 1);
+
+var objParallax = function objParallax(trigger, elem, posicion) {
+  gsap.from(elem, {
+    yPercent: 0
+  });
+  gsap.to(elem, {
+    yPercent: posicion,
+    ease: "none",
+    scrollTrigger: {
+      trigger: trigger,
+      start: "-=200 center",
+      end: "+=800",
+      scrub: 1,
+      toggleActions: "restart pause reverse pause" // markers: true,
+
+    }
+  });
+};
+
+objParallax("#grid--wrap-one", "#grid--wrap-one .project__info", -10);
+objParallax("#grid--wrap-one", "#grid--wrap-one .project__item picture", -5);
+objParallax("#grid--wrap-one", "#grid--wrap-one .project__item__place", -120);
+objParallax("#grid--wrap-two", "#grid--wrap-two .project__info", -10);
+objParallax("#grid--wrap-two", "#grid--wrap-two .project__item picture", -5);
+objParallax("#grid--wrap-two", "#grid--wrap-two .project__item__place", -120);
 
 var objParallaxArray = function objParallaxArray(trigger, elem) {
   var boletosArr = gsap.utils.toArray(elem);
@@ -73,31 +106,8 @@ var objParallaxArray = function objParallaxArray(trigger, elem) {
   });
 };
 
-objParallaxArray(".related", ".related .projects-home__card");
-objLoad(".project__item .project__item--info *");
-objLoadVertical(".project__item .project__item--image *");
-animContenido(".projects__quotes", ".projects__quotes");
-
-var modalGaleria = function modalGaleria() {
-  lightbox.option({
-    albumLabel: "",
-    fadeDuration: 300,
-    imageFadeDuration: 300,
-    resizeDuration: 300,
-    disableScrolling: true,
-    fitImagesInViewport: true,
-    wrapAround: true // maxWidth: 700,
-    // maxHeight: 700,
-
-  });
-};
-
-modalGaleria(); //// REMOVE RELATED
-// const cardsRelated = document.querySelectorAll(".related .col-lg-4");
-// for (let index = 3; index < cardsRelated.length; index++) {
-//     cardsRelated[index].remove();
-// }
-//////////// EVENTS LISTENERS ////////////
+objParallaxArray("#grid--wrap-one", "#grid--wrap-one .project__item");
+objParallaxArray("#grid--wrap-two", "#grid--wrap-two .project__item"); //////////// EVENTS LISTENERS ////////////
 
 var btnMobileHoverGrid = document.querySelectorAll(".btnHoverGrid");
 var btnMobileHoverGridInt = document.querySelectorAll(".btnHoverGridInt");
@@ -111,7 +121,7 @@ try {
 
     btnMobileHoverGridElem.onclick = function () {
       btnMobileHoverGridElem.closest(".col-lg-4").querySelector(".projects-home__card__hover__projects").classList.toggle("active");
-      btnMobileHoverGridElem.closest(".col-lg-4").classList.toggle("active");
+      btnMobileHoverGridElem.closest(".col-lg-4").classList.add("active");
     };
   };
 
@@ -149,7 +159,8 @@ try {
 
   for (var _iterator2 = btnMobileHoverGridInt[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
     _loop2();
-  }
+  } /// RANDOM COLUMNS
+
 } catch (err) {
   _didIteratorError2 = true;
   _iteratorError2 = err;
@@ -164,4 +175,13 @@ try {
     }
   }
 }
-//# sourceMappingURL=animaciones-detail-project.dev.js.map
+
+var numero = Math.floor(Math.random() * 100);
+var row1 = document.querySelector(".grid--head .row");
+var row2 = document.querySelector(".grid--wrap");
+
+if (numero % 2 == 0) {
+  row1.classList.add("par");
+  row2.classList.add("par");
+}
+//# sourceMappingURL=animaciones-projects.dev.js.map

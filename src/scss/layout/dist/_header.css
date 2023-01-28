@@ -1,0 +1,223 @@
+.header {
+  height: 72px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  z-index: 9;
+  transition: 0.3s ease-in-out all;
+}
+
+.header .logo-header {
+  width: 125px;
+}
+
+.header.search-on .btn-ham {
+  z-index: 0;
+}
+
+.header.nav-on .btn-search {
+  z-index: 0;
+}
+
+.header--navegacion {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header--navegacion nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header--navegacion .btn-search,
+.header--navegacion .is-search-submit {
+  appearance: none;
+  border: 0;
+  width: 50px;
+  height: 40px;
+  background: url(../img/icon-close-gray.svg) no-repeat center/contain;
+  z-index: 9;
+  transition: 0.3s ease-in-out all;
+}
+
+.header--navegacion .btn-search[aria-expanded="false"], .header--navegacion .btn-search.collapsed,
+.header--navegacion .is-search-submit[aria-expanded="false"],
+.header--navegacion .is-search-submit.collapsed {
+  background-image: url(../img/icon-search.svg);
+}
+
+.header--navegacion .btn-search span,
+.header--navegacion .is-search-submit span {
+  display: none;
+}
+
+.header--navegacion .btn-ham {
+  width: 65px;
+  height: 10px;
+  z-index: 9;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  transition: 0.3s ease-in-out all;
+}
+
+.header--navegacion .btn-ham[aria-expanded="false"] span.ham-top, .header--navegacion .btn-ham.collapsed span.ham-top {
+  top: 0;
+}
+
+.header--navegacion .btn-ham[aria-expanded="false"] span.ham-btm, .header--navegacion .btn-ham.collapsed span.ham-btm {
+  bottom: 0;
+}
+
+.header--navegacion .btn-ham[aria-expanded="true"] span.ham-top {
+  transform: rotateZ(45deg);
+  top: 2px;
+}
+
+.header--navegacion .btn-ham[aria-expanded="true"] span.ham-btm {
+  transform: rotateZ(-45deg);
+  bottom: 5px;
+}
+
+.header--navegacion .btn-ham span {
+  width: 100%;
+  height: 2px;
+  background: var(--gris);
+  transition: 0.3s ease-in-out all;
+  position: absolute;
+}
+
+.header--navegacion .navbar-collapse {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  top: 0;
+  z-index: 0;
+  align-items: flex-start;
+  background: var(--gris-medio);
+}
+
+.header--navegacion .navbar-collapse#navbarNav {
+  width: 33.33333%;
+}
+
+.header--navegacion .navbar-collapse .container--search {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 100px;
+}
+
+.header--navegacion .navbar-collapse .container--search h1 {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: var(--xl);
+  font-family: var(--primaria-regular);
+}
+
+.header--navegacion ul {
+  margin: 3em 0 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header--navegacion ul li {
+  font-size: var(--h2);
+  transition: 0.3s ease-in-out all;
+  color: var(--azul-marino);
+  margin-bottom: 1em;
+  opacity: 0;
+}
+
+.header--navegacion ul li sup {
+  font-size: var(--h5);
+  top: -1em;
+  left: 0.5em;
+}
+
+.header--navegacion ul li.active {
+  border-bottom: 1px solid;
+  color: var(--txt-prm);
+}
+
+@media (hover: hover) {
+  .header--navegacion ul li:hover {
+    color: var(--rosa-dark);
+  }
+}
+
+.header--navegacion ul li a {
+  color: inherit;
+}
+
+.header--navegacion .boton {
+  margin-left: 2em;
+}
+
+@media (max-width: 768px) {
+  .header {
+    z-index: 999;
+  }
+  .header.search-on #btn-search-header {
+    right: 20px;
+    position: absolute;
+  }
+  .header .logo-header {
+    width: calc(90px + 10 * ((100vw - 360px) / 768));
+  }
+  .header #navbarNav {
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    top: 0;
+    width: 100vw;
+    transition: 0.3s ease-in-out all;
+  }
+  .header--navegacion .navbar-collapse .container--search {
+    row-gap: 30px;
+  }
+  .header--navegacion .navbar-collapse#navbarNav {
+    width: 100%;
+  }
+  .header--navegacion nav {
+    column-gap: 20px;
+  }
+  .header--navegacion .btn-search {
+    width: 30px;
+    height: 30px;
+  }
+  .header--navegacion .btn-ham {
+    width: 40px;
+  }
+  .header--navegacion ul {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0;
+  }
+  .header--navegacion ul li {
+    margin: 0 0 2em;
+    font-size: var(--txt-big);
+    opacity: 1;
+    line-height: normal;
+    margin-bottom: 0.5em;
+  }
+  .header--navegacion ul li.active {
+    border-bottom: 1px solid;
+    color: #fff;
+  }
+  .header--navegacion .boton {
+    margin-left: 0;
+    padding: 0 1em;
+  }
+}
+
+/*# sourceMappingURL=_header.css.map */

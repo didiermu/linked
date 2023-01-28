@@ -41,7 +41,8 @@
             border: 0;
             width: 50px;
             height: 40px;
-            background: url(../img/icon-close.png) no-repeat center / contain;
+            background: url(../img/icon-close-gray.svg) no-repeat center /
+                contain;
             z-index: 9;
             transition: 0.3s ease-in-out all;
 
@@ -144,7 +145,7 @@
             li {
                 font-size: var(--h2);
                 transition: 0.3s ease-in-out all;
-                color: var(--txt-sec);
+                color: var(--azul-marino);
                 margin-bottom: 1em;
                 opacity: 0;
 
@@ -224,8 +225,8 @@
             }
 
             .btn-search {
-                width: 25px;
-                height: 25px;
+                width: 30px;
+                height: 30px;
             }
 
             .btn-ham {

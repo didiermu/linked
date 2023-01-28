@@ -133,7 +133,7 @@
                 margin-top: 2em;
 
                 &-bullet {
-                    background: var(--rosa-dark);
+                    background: var(--gris);
                 }
             }
         }
@@ -147,6 +147,7 @@
                 height: auto;
                 width: 80%;
                 margin: auto;
+                max-height: calc(360px + 500 * ((100vw - 360px) / 768));
             }
         }
 

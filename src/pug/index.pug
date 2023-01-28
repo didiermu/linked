@@ -5,14 +5,18 @@ block head-page
 
 block content
     -ruta = ""
-    header.header
+    main.coming 
+        img.img-fluid.logo-header(src='img/logo-linked-blanco.svg' alt)
+        h1 COMING SOON
+
+    header.header(style="display:none")
         .container-fluid
             .row
                 .col-6.col-lg-2.header--logo
                     a(href='../')
                         img.img-fluid.logo-header(src='img/logo-linked-blanco.svg' alt)
 
-    main.home
+    main.home(style="display:none")
         section.hero
             .hero--wrap
                 picture
@@ -92,7 +96,7 @@ block content
             .container-fluid
                 .row
                     - var n = 0;
-                    while n < 19
+                    while n < 9
                         - ++n
                         .col-lg-4.col-12
                             .projects-grid--wrap
@@ -109,17 +113,20 @@ block content
                                 | Typology 
                                 .btnHoverGrid
 
+                            a.linkCard(href="project-home.html")
+
                             .projects-home__card__hover__projects
                                 h5.title-categoria PROJECTS
 
                                 .projects-home__card__hover__projects__links
-                                    a(href="project-home.html")
+
+                                    a(href="project-detail.html")
                                         h5.projects-home__card__hover__title Worl Trade Center
 
-                                    a(href="project-home.html")
+                                    a(href="project-detail.html")
                                         h5.projects-home__card__hover__title Transparencias
 
-                                    a(href="project-home.html") 
+                                    a(href="project-detail.html") 
                                         h5.projects-home__card__hover__title Agricultura
 
                                 h4 Typology 
@@ -133,9 +140,6 @@ block content
                         a(href='about.html')
                             h3 ABOUT
 
-                    .col-lg-4.col-12.projects-home__acceso.projects-home__acceso--connect(data-bs-toggle="modal", data-bs-target="#exampleModal")
-                        a
-                            h3 CONNECT
 
         include includes/footer.pug
     include includes/modal-connect.pug

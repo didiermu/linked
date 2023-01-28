@@ -237,7 +237,8 @@ try {
     var btnMobileHoverGridElem = _step.value;
 
     btnMobileHoverGridElem.onclick = function () {
-      btnMobileHoverGridElem.parentNode.nextElementSibling.classList.toggle("active");
+      btnMobileHoverGridElem.closest(".col-lg-4").querySelector(".projects-home__card__hover__projects").classList.toggle("active");
+      btnMobileHoverGridElem.closest(".col-lg-4").classList.toggle("active");
     };
   };
 
@@ -269,6 +270,7 @@ try {
 
     btnMobileHoverGridIntElem.onclick = function () {
       btnMobileHoverGridIntElem.parentNode.parentNode.classList.toggle("active");
+      btnMobileHoverGridIntElem.closest(".col-lg-4").classList.remove("active");
     };
   };
 
@@ -296,8 +298,10 @@ var cardProject = document.querySelector(".projects-home__acceso--projects");
 var cardAbout = document.querySelector(".projects-home__acceso--about");
 
 for (var index = 0; index < cardsHome.length; index++) {
-  cardsHome[4].insertAdjacentElement("afterend", cardProject);
-  cardsHome[8].insertAdjacentElement("afterend", cardAbout);
+  if (cardsHome.length > 8) {
+    cardsHome[4].insertAdjacentElement("afterend", cardProject);
+    cardsHome[8].insertAdjacentElement("afterend", cardAbout);
+  }
 } ///// SHOW FOOTER SCROLL
 
 

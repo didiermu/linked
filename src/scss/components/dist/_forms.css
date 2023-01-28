@@ -284,7 +284,7 @@
 
 .input__group.input-search .input-search--wrap form .active ~ .is-search-submit,
 .combo.input-search .input-search--wrap form .active ~ .is-search-submit {
-  background-image: url(../img/icon-search-pink.png);
+  background-image: url(../img/icon-search-pink.svg);
 }
 
 .input__group.input-search .input-search--wrap form .is-screen-reader-text,
@@ -294,7 +294,7 @@
 
 .input__group.input-search .input-search--wrap.active .btn-search,
 .combo.input-search .input-search--wrap.active .btn-search {
-  background-image: url(../img/icon-search-pink.png);
+  background-image: url(../img/icon-search-pink.svg);
 }
 
 .input__group.input-search input,
@@ -321,7 +321,7 @@
 .input__group.input-search .btn-search,
 .combo.input-search .is-search-submit,
 .combo.input-search .btn-search {
-  background-image: url(../img/icon-search-white.png);
+  background-image: url(../img/icon-search-white.svg);
   appearance: none;
   border: 0;
   width: 50px;
@@ -359,13 +359,18 @@
 .combo.input-search .input-search--wrap {
     column-gap: 20px;
   }
+  .input__group.input-search .input-search--wrap form label,
+.combo.input-search .input-search--wrap form label {
+    width: 80%;
+    margin: 0;
+  }
   .input__group.input-search input,
 .combo.input-search input {
     height: 50px;
   }
   .input__group.input-search .btn-search,
 .combo.input-search .btn-search {
-    background-image: url(../../img/icon-search-white.png);
+    background-image: url(../img/icon-search-white.svg);
   }
   .input__group textarea,
 .combo textarea {

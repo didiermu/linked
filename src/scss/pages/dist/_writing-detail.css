@@ -117,6 +117,7 @@
   .writing-detail--wrap-info {
     order: 2;
     padding-top: 2em;
+    padding-bottom: 2em;
   }
   .writing-detail--paragraph {
     padding-left: 30px;

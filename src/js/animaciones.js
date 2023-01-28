@@ -280,9 +280,12 @@ const btnMobileHoverGridInt = document.querySelectorAll(".btnHoverGridInt");
 
 for (const btnMobileHoverGridElem of btnMobileHoverGrid) {
     btnMobileHoverGridElem.onclick = () => {
-        btnMobileHoverGridElem.parentNode.nextElementSibling.classList.toggle(
-            "active"
-        );
+        btnMobileHoverGridElem
+            .closest(".col-lg-4")
+            .querySelector(".projects-home__card__hover__projects")
+            .classList.toggle("active");
+
+        btnMobileHoverGridElem.closest(".col-lg-4").classList.toggle("active");
     };
 }
 
@@ -291,6 +294,10 @@ for (const btnMobileHoverGridIntElem of btnMobileHoverGridInt) {
         btnMobileHoverGridIntElem.parentNode.parentNode.classList.toggle(
             "active"
         );
+
+        btnMobileHoverGridIntElem
+            .closest(".col-lg-4")
+            .classList.remove("active");
     };
 }
 
@@ -303,8 +310,10 @@ const cardProject = document.querySelector(".projects-home__acceso--projects");
 const cardAbout = document.querySelector(".projects-home__acceso--about");
 
 for (let index = 0; index < cardsHome.length; index++) {
-    cardsHome[4].insertAdjacentElement("afterend", cardProject);
-    cardsHome[8].insertAdjacentElement("afterend", cardAbout);
+    if (cardsHome.length > 8) {
+        cardsHome[4].insertAdjacentElement("afterend", cardProject);
+        cardsHome[8].insertAdjacentElement("afterend", cardAbout);
+    }
 }
 
 ///// SHOW FOOTER SCROLL
