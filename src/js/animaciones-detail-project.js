@@ -101,6 +101,12 @@ objLoad(".project__item .project__item--info *");
 objLoadVertical(".project__item .project__item--image *");
 animContenido(".projects__quotes", ".projects__quotes");
 
+///// SLIDER GALERIA
+// const slidesGaleria = document.querySelectorAll(".gallery img");
+// for (const slidesGaleriaElem of slidesGaleria) {
+//     console.log(slidesGaleriaElem);
+// }
+
 const modalGaleria = () => {
     lightbox.option({
         albumLabel: "",
@@ -116,14 +122,6 @@ const modalGaleria = () => {
 };
 
 modalGaleria();
-
-//// REMOVE RELATED
-
-// const cardsRelated = document.querySelectorAll(".related .col-lg-4");
-
-// for (let index = 3; index < cardsRelated.length; index++) {
-//     cardsRelated[index].remove();
-// }
 
 //////////// EVENTS LISTENERS ////////////
 
@@ -152,3 +150,16 @@ for (const btnMobileHoverGridIntElem of btnMobileHoverGridInt) {
             .classList.remove("active");
     };
 }
+
+// var elem = document.querySelector(".swiper-wrapper");
+// var iso = new Isotope(elem, {
+//     // options
+//     itemSelector: ".swiper-slide",
+//     layoutMode: "fitRows",
+// });
+
+// // element argument can be a selector string
+// //   for an individual element
+// var iso = new Isotope(".grid", {
+//     // options
+// });

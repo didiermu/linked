@@ -1,6 +1,8 @@
 extends includes/head.pug
 block head-page
     title Linked | Project Detail
+    //- script(src='https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js')
+
     <!- SLIDER -->
     //- JQUERY
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js")
@@ -35,7 +37,9 @@ block content
                                 li Builded
                                 li Enviromental
 
-                            h6.project__date 2015
+                            h6.project__date 
+                                p 2015
+                                p Romania
                             h6.project__country Romania
                             h6.project__location.
 
@@ -85,22 +89,27 @@ block content
                                         picture
                                             img.img-fluid(src='img/layout5.jpg' alt)
 
+                                .swiper-slide
                                     a#image2(href="img/layout2.jpg", data-lightbox="galeria-desktop")
                                         picture
                                             img.img-fluid(src='img/layout2.jpg' alt)
 
+                                .swiper-slide
                                     a#image5(href="img/layout3.jpg", data-lightbox="galeria-desktop")
                                         picture
                                             img.img-fluid(src='img/layout3.jpg' alt)
 
+                                .swiper-slide
                                     a#image1(href="img/layout.jpg", data-lightbox="galeria-desktop")
                                         picture
                                             img.img-fluid(src='img/layout.jpg' alt)
 
+                                .swiper-slide
                                     a#image3(href="img/layout4.jpg", data-lightbox="galeria-desktop")
                                         picture
                                             img.img-fluid(src='img/layout4.jpg' alt)
 
+                                .swiper-slide
                                     a#image6(href="img/layout6.jpg", data-lightbox="galeria-desktop")
                                         picture
                                             img.img-fluid(src='img/layout6.jpg' alt)
@@ -110,26 +119,30 @@ block content
                                         picture
                                             img.img-fluid(src='img/layout5.jpg' alt)
 
+                                .swiper-slide
                                     a#image8(href="img/layout2.jpg", data-lightbox="galeria-desktop")
                                         picture
                                             img.img-fluid(src='img/layout2.jpg' alt)
 
+                                .swiper-slide
                                     a#image11(href="img/layout3.jpg", data-lightbox="galeria-desktop")
                                         picture
                                             img.img-fluid(src='img/layout3.jpg' alt)
 
-                                    a#image9(href="img/layout.jpg", data-lightbox="galeria-desktop")
-                                        picture
-                                            img.img-fluid(src='img/layout.jpg' alt)
+                                //- .swiper-slide
+                                //-     a#image9(href="img/layout.jpg", data-lightbox="galeria-desktop")
+                                //-         picture
+                                //-             img.img-fluid(src='img/layout.jpg' alt)
 
-                                    a#image7(href="img/layout4.jpg", data-lightbox="galeria-desktop")
-                                        picture
-                                            img.img-fluid(src='img/layout4.jpg' alt)
+                                //- .swiper-slide
+                                //-     a#image7(href="img/layout4.jpg", data-lightbox="galeria-desktop")
+                                //-         picture
+                                //-             img.img-fluid(src='img/layout4.jpg' alt)
 
-                                    a#image12(href="img/layout6.jpg", data-lightbox="galeria-desktop")
-                                        picture
-                                            img.img-fluid(src='img/layout6.jpg' alt)
-
+                                //- .swiper-slide
+                                //-     a#image12(href="img/layout6.jpg", data-lightbox="galeria-desktop")
+                                //-         picture
+                                //-             img.img-fluid(src='img/layout6.jpg' alt)
 
 
                             .swiper-pagination

@@ -83,6 +83,10 @@
   font-family: var(--primaria-regular);
 }
 
+.writing-detail--paragraph .p > * {
+  font-size: var(--h5);
+}
+
 .writing-detail--images {
   position: sticky;
   top: 0;
@@ -129,6 +133,9 @@
   }
   .writing-detail--wrap-text a {
     margin-top: 1em;
+  }
+  .writing-detail--resume {
+    width: 100%;
   }
 }
 

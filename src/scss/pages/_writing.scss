@@ -35,7 +35,7 @@
                 display: block;
             }
 
-            p {
+            .resumen {
                 font-size: var(--h1);
                 line-height: 1;
                 color: var(--gris);
@@ -88,7 +88,7 @@
             &__item {
                 padding-top: 1em;
 
-                p {
+                .resumen {
                     margin-bottom: 0.5em;
                     -webkit-box-orient: vertical;
                     -webkit-line-clamp: 3;

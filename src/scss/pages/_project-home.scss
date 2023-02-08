@@ -9,6 +9,7 @@
         }
 
         &--head {
+            margin-bottom: 1em;
             & > .row {
                 gap: 0;
                 justify-content: initial;
@@ -26,6 +27,13 @@
 
             .project__info {
                 padding-right: 0;
+
+                .project__date {
+                    & > * {
+                        font-size: var(--h5);
+                        font-family: var(--primaria-regular);
+                    }
+                }
             }
         }
 
@@ -56,6 +64,7 @@
             width: 58.33333333% !important;
             padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
             padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
+            justify-content: center;
 
             .row {
                 // padding-top: 4em;
@@ -82,20 +91,31 @@
                 color: var(--gris);
                 font-size: var(--xl);
                 font-family: var(--secundaria-regular);
+                // display: flex;
+                // align-items: baseline;
 
                 sup {
                     font-size: var(--l);
                     font-family: var(--primaria-regular);
                     color: var(--naranja);
                     text-transform: uppercase;
-                    top: -1.5em;
+                    top: 0.5em;
                     margin-right: 1.5em;
+                    float: left;
 
                     &::before {
                         content: "\2192";
                         font-family: x-large;
                         margin-right: 0.5em;
                     }
+                }
+
+                & > *:not(sup) {
+                    color: var(--gris);
+                    font-size: var(--xl);
+                    font-family: var(--secundaria-regular);
+                    // display: flex;
+                    // align-items: flex-start;
                 }
             }
         }
@@ -106,6 +126,15 @@
         color: var(--gris);
         font-family: var(--secundaria-regular);
         margin: 1em 0;
+    }
+
+    #quotes-one,
+    #quotes-two {
+        & > * {
+            font-size: var(--h1);
+            color: var(--gris);
+            font-family: var(--secundaria-regular);
+        }
     }
 }
 
@@ -163,10 +192,11 @@
 
             &__description {
                 h3 {
-                    font-size: var(--h1);
+                    & > *:not(sup) {
+                        font-size: var(--h1);
+                    }
 
                     sup {
-                        top: -0.5em;
                         font-size: var(--h5);
                     }
                 }

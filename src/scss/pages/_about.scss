@@ -56,18 +56,25 @@
             padding-left: 0.5em;
             font-size: var(--xxl);
 
-            sup {
-                font-size: var(--h5);
-                font-family: var(--primaria-regular);
-                margin-right: 0.5em;
-                text-transform: uppercase;
-                top: -2em;
-                color: var(--gris-dark);
+            span {
+                float: left;
+                sup {
+                    font-size: var(--h5);
+                    font-family: var(--primaria-regular);
+                    margin-right: 0.5em;
+                    text-transform: uppercase;
+                    top: -1.5em;
+                    color: var(--gris-dark);
 
-                &::before {
-                    content: "\2192";
-                    margin-right: 0.3em;
+                    &::before {
+                        content: "\2192";
+                        margin-right: 0.3em;
+                    }
                 }
+            }
+
+            p {
+                font-size: var(--xxl);
             }
         }
     }
@@ -155,10 +162,14 @@
             padding-top: 2em;
 
             h1 {
-                font-size: var(--h1);
+                p {
+                    font-size: var(--h1);
+                }
 
-                sup {
-                    top: -1em;
+                span {
+                    sup {
+                        top: 0em;
+                    }
                 }
             }
         }

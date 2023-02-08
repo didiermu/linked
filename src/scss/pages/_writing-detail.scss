@@ -83,6 +83,12 @@
             float: left;
             font-family: var(--primaria-regular);
         }
+
+        .p {
+            & > * {
+                font-size: var(--h5);
+            }
+        }
     }
 
     &--images {
@@ -138,6 +144,10 @@
             a {
                 margin-top: 1em;
             }
+        }
+
+        &--resume {
+            width: 100%;
         }
     }
 }

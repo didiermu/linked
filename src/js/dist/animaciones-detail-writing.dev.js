@@ -33,7 +33,7 @@ var objLoadVertical = function objLoadVertical(elem) {
 };
 
 var limitChar = function limitChar() {
-  var parrafos = document.querySelector(".writing-detail--paragraph .p");
+  var parrafos = document.querySelector(".writing-detail--paragraph .p p");
   var resume = document.querySelector(".writing-detail--resume");
   resume.textContent = resume.textContent.slice(0, 100) + "...";
   parrafos.textContent = parrafos.textContent.slice(0, 1100) + "[...]";

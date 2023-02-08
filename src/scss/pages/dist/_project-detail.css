@@ -50,18 +50,53 @@
   overflow: initial;
   overflow-y: clip;
   height: calc(840px + 400 * ((100vw - 1920px) / 1280));
+  width: 100%;
 }
 
 .project-detail .gallery .swiper-wrapper {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .project-detail .gallery .swiper-slide {
-  position: relative;
+  width: max-content;
+  height: max-content;
 }
 
-.project-detail .gallery .swiper-slide a {
-  position: absolute;
+.project-detail .gallery .swiper-slide:nth-child(1), .project-detail .gallery .swiper-slide:nth-child(7) {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.project-detail .gallery .swiper-slide:nth-child(2), .project-detail .gallery .swiper-slide:nth-child(8) {
+  left: 25%;
+  z-index: 1;
+}
+
+.project-detail .gallery .swiper-slide:nth-child(3), .project-detail .gallery .swiper-slide:nth-child(9) {
+  right: -60%;
+  bottom: 0%;
+}
+
+.project-detail .gallery .swiper-slide:nth-child(4), .project-detail .gallery .swiper-slide:nth-child(10) {
+  left: 5%;
+  bottom: 5%;
+  z-index: 2;
+}
+
+.project-detail .gallery .swiper-slide:nth-child(5), .project-detail .gallery .swiper-slide:nth-child(11) {
+  z-index: 1;
+  bottom: 60%;
+  left: 60%;
+}
+
+.project-detail .gallery .swiper-slide:nth-child(6), .project-detail .gallery .swiper-slide:nth-child(12) {
+  bottom: 40%;
+  left: 55%;
 }
 
 .project-detail .gallery .swiper-slide a img {
@@ -72,35 +107,35 @@
   max-height: calc( 350px + 600 * ((100vw - 1280px) / 1920));
 }
 
-.project-detail .gallery .swiper-slide a#image1, .project-detail .gallery .swiper-slide a#image7 {
+.project-detail .gallery .swiper-slide a#image0, .project-detail .gallery .swiper-slide a#image6 {
   left: 0;
   top: 12em;
 }
 
-.project-detail .gallery .swiper-slide a#image2, .project-detail .gallery .swiper-slide a#image8 {
+.project-detail .gallery .swiper-slide a#image1, .project-detail .gallery .swiper-slide a#image7 {
   left: 15%;
   top: 5em;
   z-index: 1;
 }
 
-.project-detail .gallery .swiper-slide a#image3, .project-detail .gallery .swiper-slide a#image9 {
+.project-detail .gallery .swiper-slide a#image2, .project-detail .gallery .swiper-slide a#image8 {
   left: 20%;
   top: 0;
 }
 
-.project-detail .gallery .swiper-slide a#image4, .project-detail .gallery .swiper-slide a#image10 {
+.project-detail .gallery .swiper-slide a#image3, .project-detail .gallery .swiper-slide a#image9 {
   left: 40%;
   top: 12em;
   z-index: 2;
 }
 
-.project-detail .gallery .swiper-slide a#image5, .project-detail .gallery .swiper-slide a#image11 {
+.project-detail .gallery .swiper-slide a#image4, .project-detail .gallery .swiper-slide a#image10 {
   right: 5%;
   top: 3em;
   z-index: 1;
 }
 
-.project-detail .gallery .swiper-slide a#image6, .project-detail .gallery .swiper-slide a#image12 {
+.project-detail .gallery .swiper-slide a#image5, .project-detail .gallery .swiper-slide a#image11 {
   right: 0;
   top: 15em;
 }

@@ -54,18 +54,26 @@
   font-size: var(--xxl);
 }
 
-.about--info h1 sup {
+.about--info h1 span {
+  float: left;
+}
+
+.about--info h1 span sup {
   font-size: var(--h5);
   font-family: var(--primaria-regular);
   margin-right: 0.5em;
   text-transform: uppercase;
-  top: -2em;
+  top: -1.5em;
   color: var(--gris-dark);
 }
 
-.about--info h1 sup::before {
+.about--info h1 span sup::before {
   content: "\2192";
   margin-right: 0.3em;
+}
+
+.about--info h1 p {
+  font-size: var(--xxl);
 }
 
 .about--footer {
@@ -142,11 +150,11 @@
   .about--info {
     padding-top: 2em;
   }
-  .about--info h1 {
+  .about--info h1 p {
     font-size: var(--h1);
   }
-  .about--info h1 sup {
-    top: -1em;
+  .about--info h1 span sup {
+    top: 0em;
   }
   .about--footer {
     position: relative;

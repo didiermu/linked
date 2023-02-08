@@ -76,7 +76,11 @@ var objParallaxArray = function objParallaxArray(trigger, elem) {
 objParallaxArray(".related", ".related .projects-home__card");
 objLoad(".project__item .project__item--info *");
 objLoadVertical(".project__item .project__item--image *");
-animContenido(".projects__quotes", ".projects__quotes");
+animContenido(".projects__quotes", ".projects__quotes"); ///// SLIDER GALERIA
+// const slidesGaleria = document.querySelectorAll(".gallery img");
+// for (const slidesGaleriaElem of slidesGaleria) {
+//     console.log(slidesGaleriaElem);
+// }
 
 var modalGaleria = function modalGaleria() {
   lightbox.option({
@@ -92,12 +96,7 @@ var modalGaleria = function modalGaleria() {
   });
 };
 
-modalGaleria(); //// REMOVE RELATED
-// const cardsRelated = document.querySelectorAll(".related .col-lg-4");
-// for (let index = 3; index < cardsRelated.length; index++) {
-//     cardsRelated[index].remove();
-// }
-//////////// EVENTS LISTENERS ////////////
+modalGaleria(); //////////// EVENTS LISTENERS ////////////
 
 var btnMobileHoverGrid = document.querySelectorAll(".btnHoverGrid");
 var btnMobileHoverGridInt = document.querySelectorAll(".btnHoverGridInt");
@@ -149,7 +148,18 @@ try {
 
   for (var _iterator2 = btnMobileHoverGridInt[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
     _loop2();
-  }
+  } // var elem = document.querySelector(".swiper-wrapper");
+  // var iso = new Isotope(elem, {
+  //     // options
+  //     itemSelector: ".swiper-slide",
+  //     layoutMode: "fitRows",
+  // });
+  // // element argument can be a selector string
+  // //   for an individual element
+  // var iso = new Isotope(".grid", {
+  //     // options
+  // });
+
 } catch (err) {
   _didIteratorError2 = true;
   _iteratorError2 = err;

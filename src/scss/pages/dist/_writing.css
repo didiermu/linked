@@ -35,7 +35,7 @@
   display: block;
 }
 
-.writing .papers__item p {
+.writing .papers__item .resumen {
   font-size: var(--h1);
   line-height: 1;
   color: var(--gris);
@@ -44,12 +44,12 @@
   transition: 0.3s ease-in-out all;
 }
 
-.writing .papers__item p sup {
+.writing .papers__item .resumen sup {
   top: -2em;
   font-size: var(--l);
 }
 
-.writing .papers__item p span:not(.parrafo) {
+.writing .papers__item .resumen span:not(.parrafo) {
   font-size: var(--xl);
   bottom: 15px;
   position: relative;
@@ -84,18 +84,18 @@
   .writing .papers__item {
     padding-top: 1em;
   }
-  .writing .papers__item p {
+  .writing .papers__item .resumen {
     margin-bottom: 0.5em;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     display: -webkit-box;
     overflow: hidden;
   }
-  .writing .papers__item p sup {
+  .writing .papers__item .resumen sup {
     top: -1em;
     font-size: var(--h5);
   }
-  .writing .papers__item p span:not(.parrafo) {
+  .writing .papers__item .resumen span:not(.parrafo) {
     font-size: var(--l);
     bottom: 8px;
   }

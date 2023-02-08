@@ -2,10 +2,12 @@ const swiperPromos = new Swiper(".slider-detail", {
     direction: "vertical",
     // loop: false,
     autoplay: false,
-    slidesPerView: "auto",
+    slidesPerView: 6,
+    slidesPerGroup: 6,
+    // slidesPerGroupSkip: 1,
     grabCursor: false,
     freeMode: false,
-    // If we need pagination
+    centeredSlides: true,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,

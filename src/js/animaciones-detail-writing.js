@@ -41,7 +41,7 @@ const objLoadVertical = (elem) => {
 };
 
 const limitChar = () => {
-    const parrafos = document.querySelector(".writing-detail--paragraph .p");
+    const parrafos = document.querySelector(".writing-detail--paragraph .p p");
     const resume = document.querySelector(".writing-detail--resume");
     resume.textContent = resume.textContent.slice(0, 100) + "...";
     parrafos.textContent = parrafos.textContent.slice(0, 1100) + "[...]";

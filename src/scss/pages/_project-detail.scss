@@ -54,18 +54,75 @@
             overflow: initial;
             overflow-y: clip;
             height: calc(840px + 400 * ((100vw - 1920px) / 1280));
+            width: 100%;
 
             &-wrapper {
                 position: relative;
+                display: flex;
+                // align-items: center;
+                justify-content: center;
             }
 
             &-slide {
                 // display: grid;
                 // place-content: center;
-                position: relative;
+                // position: absolute;
+                width: max-content;
+                height: max-content;
+                // margin: auto;
+
+                &:nth-child(1),
+                &:nth-child(7) {
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    // top: 12em;
+                }
+
+                &:nth-child(2),
+                &:nth-child(8) {
+                    left: 25%;
+                    // top: 5em;
+                    z-index: 1;
+                }
+
+                &:nth-child(3),
+                &:nth-child(9) {
+                    right: -60%;
+                    bottom: 0%;
+                    // left: 20%;
+                    // top: 0;
+                }
+
+                &:nth-child(4),
+                &:nth-child(10) {
+                    left: 5%;
+                    // top: 12em;
+                    bottom: 5%;
+                    z-index: 2;
+                }
+
+                &:nth-child(5),
+                &:nth-child(11) {
+                    // top: 3em;
+                    // right: 5%;
+                    z-index: 1;
+                    bottom: 60%;
+                    left: 60%;
+                }
+
+                &:nth-child(6),
+                &:nth-child(12) {
+                    bottom: 40%;
+                    left: 55%;
+                    // right: 0;
+                    // top: 15em;
+                }
 
                 a {
-                    position: absolute;
+                    // position: absolute;
 
                     img {
                         transform: scale(0);
@@ -79,41 +136,41 @@
                         );
                     }
 
-                    &#image1,
-                    &#image7 {
+                    &#image0,
+                    &#image6 {
                         left: 0;
                         top: 12em;
                     }
 
-                    &#image2,
-                    &#image8 {
+                    &#image1,
+                    &#image7 {
                         left: 15%;
                         top: 5em;
                         z-index: 1;
                     }
 
-                    &#image3,
-                    &#image9 {
+                    &#image2,
+                    &#image8 {
                         left: 20%;
                         top: 0;
                     }
 
-                    &#image4,
-                    &#image10 {
+                    &#image3,
+                    &#image9 {
                         left: 40%;
                         top: 12em;
                         z-index: 2;
                     }
 
-                    &#image5,
-                    &#image11 {
+                    &#image4,
+                    &#image10 {
                         right: 5%;
                         top: 3em;
                         z-index: 1;
                     }
 
-                    &#image6,
-                    &#image12 {
+                    &#image5,
+                    &#image11 {
                         right: 0;
                         top: 15em;
                     }
