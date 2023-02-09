@@ -61,7 +61,7 @@
 
 .project-detail .gallery .swiper-slide {
   width: max-content;
-  height: max-content;
+  position: absolute;
 }
 
 .project-detail .gallery .swiper-slide:nth-child(1), .project-detail .gallery .swiper-slide:nth-child(7) {
@@ -99,45 +99,45 @@
   left: 55%;
 }
 
-.project-detail .gallery .swiper-slide a img {
-  transform: scale(0);
-  opacity: 0;
-  border-radius: 6px;
-  max-width: calc( 400px + 600 * ((100vw - 1280px) / 1920));
-  max-height: calc( 350px + 600 * ((100vw - 1280px) / 1920));
-}
-
-.project-detail .gallery .swiper-slide a#image0, .project-detail .gallery .swiper-slide a#image6 {
+.project-detail .gallery .swiper-slide a:nth-child(1), .project-detail .gallery .swiper-slide a:nth-child(7) {
   left: 0;
-  top: 12em;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 }
 
-.project-detail .gallery .swiper-slide a#image1, .project-detail .gallery .swiper-slide a#image7 {
-  left: 15%;
-  top: 5em;
+.project-detail .gallery .swiper-slide a:nth-child(2), .project-detail .gallery .swiper-slide a:nth-child(8) {
+  left: 25%;
   z-index: 1;
 }
 
-.project-detail .gallery .swiper-slide a#image2, .project-detail .gallery .swiper-slide a#image8 {
-  left: 20%;
-  top: 0;
+.project-detail .gallery .swiper-slide a:nth-child(3), .project-detail .gallery .swiper-slide a:nth-child(9) {
+  right: -60%;
+  bottom: 0%;
 }
 
-.project-detail .gallery .swiper-slide a#image3, .project-detail .gallery .swiper-slide a#image9 {
-  left: 40%;
-  top: 12em;
+.project-detail .gallery .swiper-slide a:nth-child(4), .project-detail .gallery .swiper-slide a:nth-child(10) {
+  left: 5%;
+  bottom: 5%;
   z-index: 2;
 }
 
-.project-detail .gallery .swiper-slide a#image4, .project-detail .gallery .swiper-slide a#image10 {
-  right: 5%;
-  top: 3em;
+.project-detail .gallery .swiper-slide a:nth-child(5), .project-detail .gallery .swiper-slide a:nth-child(11) {
   z-index: 1;
+  bottom: 60%;
+  left: 60%;
 }
 
-.project-detail .gallery .swiper-slide a#image5, .project-detail .gallery .swiper-slide a#image11 {
-  right: 0;
-  top: 15em;
+.project-detail .gallery .swiper-slide a:nth-child(6), .project-detail .gallery .swiper-slide a:nth-child(12) {
+  bottom: 40%;
+  left: 55%;
+}
+
+.project-detail .gallery .swiper-slide a img {
+  border-radius: 6px;
+  max-width: calc( 400px + 600 * ((100vw - 1280px) / 1920));
+  max-height: calc( 350px + 600 * ((100vw - 1280px) / 1920));
 }
 
 .project-detail .gallery .swiper-pagination {

@@ -155,10 +155,10 @@
                     left: 0.5em;
                 }
 
-                &.active {
-                    border-bottom: 1px solid;
-                    color: var(--txt-prm);
-                }
+                // &.active {
+                //     border-bottom: 1px solid;
+                //     color: var(--txt-prm);
+                // }
 
                 @media (hover: hover) {
                     &:hover {

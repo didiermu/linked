@@ -188,8 +188,8 @@ const validarForm = () => {
     btnContacto.onclick = () => {
         valText(inputNombre);
         valMail(inputEmail);
-        valNum(inputPhone);
-        valText(inputCountry);
+        // valNum(inputPhone);
+        // valText(inputCountry);
         valTextNum(inputMsj);
 
         let msjsError = document.querySelectorAll(".error-input.show");
@@ -202,7 +202,7 @@ const validarForm = () => {
             //setTimeout(()=>{
             //     form.submit();
             //},1500);
-            
+
             return false;
         } else {
             console.log("no");

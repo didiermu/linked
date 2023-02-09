@@ -143,11 +143,6 @@
   left: 0.5em;
 }
 
-.header--navegacion ul li.active {
-  border-bottom: 1px solid;
-  color: var(--txt-prm);
-}
-
 @media (hover: hover) {
   .header--navegacion ul li:hover {
     color: var(--rosa-dark);

@@ -1,6 +1,6 @@
 "use strict";
 
-var swiperPromos = new Swiper(".slider-detail", {
+var swiperPromos = {
   direction: "vertical",
   // loop: false,
   autoplay: false,
@@ -9,7 +9,7 @@ var swiperPromos = new Swiper(".slider-detail", {
   // slidesPerGroupSkip: 1,
   grabCursor: false,
   freeMode: false,
-  centeredSlides: true,
+  // centeredSlides: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true
@@ -18,13 +18,15 @@ var swiperPromos = new Swiper(".slider-detail", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev"
+  },
+  mousewheel: {
+    releaseOnEdges: true,
+    sensitivity: 5
   }
-});
-
-window.onresize = function () {}; // swiperPromos.on("slideChange", function () {
+};
+var mySwiper = new Swiper(".slider-detail", swiperPromos); // swiperPromos.on("slideChange", function () {
 //     animContenidoScale(".swiper-slide", ".swiper-slide img");
 // });
-
 
 var animContenidoScale = function animContenidoScale(trigger, elem) {
   var controller = new ScrollMagic.Controller();
@@ -39,7 +41,5 @@ var animContenidoScale = function animContenidoScale(trigger, elem) {
     scale: 1,
     delay: 0.1
   })).addTo(controller);
-};
-
-animContenidoScale(".swiper-slide", ".swiper-slide img");
+}; // animContenidoScale(".swiper-slide", ".swiper-slide img");
 //# sourceMappingURL=sliders.dev.js.map

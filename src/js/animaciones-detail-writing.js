@@ -57,3 +57,31 @@ limitChar();
 
 objLoad(".writing-detail--wrap-info *");
 objLoadVertical(".writing-detail--images *");
+
+/////////// EVENTS LISTENERS ////////////
+
+const btnMobileHoverGrid = document.querySelectorAll(".btnHoverGrid");
+const btnMobileHoverGridInt = document.querySelectorAll(".btnHoverGridInt");
+
+for (const btnMobileHoverGridElem of btnMobileHoverGrid) {
+    btnMobileHoverGridElem.onclick = () => {
+        btnMobileHoverGridElem
+            .closest(".col-lg-4")
+            .querySelector(".projects-home__card__hover__projects")
+            .classList.toggle("active");
+
+        btnMobileHoverGridElem.closest(".col-lg-4").classList.toggle("active");
+    };
+}
+
+for (const btnMobileHoverGridIntElem of btnMobileHoverGridInt) {
+    btnMobileHoverGridIntElem.onclick = () => {
+        btnMobileHoverGridIntElem.parentNode.parentNode.classList.toggle(
+            "active"
+        );
+
+        btnMobileHoverGridIntElem
+            .closest(".col-lg-4")
+            .classList.remove("active");
+    };
+}

@@ -1,4 +1,4 @@
-const swiperPromos = new Swiper(".slider-detail", {
+const swiperPromos = {
     direction: "vertical",
     // loop: false,
     autoplay: false,
@@ -7,20 +7,23 @@ const swiperPromos = new Swiper(".slider-detail", {
     // slidesPerGroupSkip: 1,
     grabCursor: false,
     freeMode: false,
-    centeredSlides: true,
+    // centeredSlides: true,
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
     },
-
     // Navigation arrows
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-});
+    mousewheel: {
+        releaseOnEdges: true,
+        sensitivity: 5,
+    },
+};
 
-window.onresize = () => {};
+var mySwiper = new Swiper(".slider-detail", swiperPromos);
 
 // swiperPromos.on("slideChange", function () {
 //     animContenidoScale(".swiper-slide", ".swiper-slide img");
@@ -50,4 +53,4 @@ const animContenidoScale = (trigger, elem) => {
         .addTo(controller);
 };
 
-animContenidoScale(".swiper-slide", ".swiper-slide img");
+// animContenidoScale(".swiper-slide", ".swiper-slide img");
