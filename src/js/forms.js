@@ -114,7 +114,7 @@ const valTextNum = (nameInput) => {
             nameInput
                 .closest(".input__group")
                 .querySelector(".error-input").innerText =
-                "No se permiten caracteres especiales";
+                "Special characters are not allowed";
         } else {
             nameInput
                 .closest(".input__group")
@@ -175,9 +175,9 @@ const valCombos = (nameInput) => {
     // });
 };
 
+console.log("s8");
 const validarForm = () => {
-    console.log("so");
-    const form = document.querySelector("#form-contacto"),
+    const form = document.querySelector("#exampleModal form"),
         btnContacto = document.querySelector("#btn-connect"),
         inputNombre = document.querySelector("#input-name"),
         inputEmail = document.querySelector("#input-email"),
@@ -195,14 +195,14 @@ const validarForm = () => {
         let msjsError = document.querySelectorAll(".error-input.show");
 
         if (msjsError.length == 0) {
-            console.log("si");
+            // console.log("si");
             btnContacto.classList.add("active");
-            btnContacto.innerText = "SENDED";
-            form.reset();
-            //setTimeout(()=>{
-            //     form.submit();
-            //},1500);
-
+            btnContacto.value = "MESSAGE SENT";
+            setTimeout(() => {
+                form.submit();
+                form.reset();
+                console.log("loading");
+            }, 1500);
             return false;
         } else {
             console.log("no");

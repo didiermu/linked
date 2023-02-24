@@ -64,7 +64,7 @@ var valTextNum = function valTextNum(nameInput) {
 
     if (!validText) {
       nameInput.closest(".input__group").querySelector(".error-input").classList.add("show");
-      nameInput.closest(".input__group").querySelector(".error-input").innerText = "No se permiten caracteres especiales";
+      nameInput.closest(".input__group").querySelector(".error-input").innerText = "Special characters are not allowed";
     } else {
       nameInput.closest(".input__group").querySelector(".error-input").classList.remove("show");
     }
@@ -105,9 +105,10 @@ var valCombos = function valCombos(nameInput) {
 
 };
 
+console.log("s8");
+
 var validarForm = function validarForm() {
-  console.log("so");
-  var form = document.querySelector("#form-contacto"),
+  var form = document.querySelector("#exampleModal form"),
       btnContacto = document.querySelector("#btn-connect"),
       inputNombre = document.querySelector("#input-name"),
       inputEmail = document.querySelector("#input-email"),
@@ -124,13 +125,14 @@ var validarForm = function validarForm() {
     var msjsError = document.querySelectorAll(".error-input.show");
 
     if (msjsError.length == 0) {
-      console.log("si");
+      // console.log("si");
       btnContacto.classList.add("active");
-      btnContacto.innerText = "SENDED";
-      form.reset(); //setTimeout(()=>{
-      //     form.submit();
-      //},1500);
-
+      btnContacto.value = "MESSAGE SENT";
+      setTimeout(function () {
+        form.submit();
+        form.reset();
+        console.log("loading");
+      }, 1500);
       return false;
     } else {
       console.log("no");

@@ -387,8 +387,8 @@
     height: auto;
   }
   .projects-home .col-lg-4.project-simple .projects-grid--wrap {
-    max-height: 300px;
-    height: 200px;
+    max-height: 320px;
+    height: 320px;
   }
 }
 
@@ -408,7 +408,7 @@
     display: block;
   }
   .projects-home .projects-grid--wrap {
-    max-height: 220px;
+    max-height: 320px;
     gap: 3px !important;
   }
   .projects-home .linkCard {
