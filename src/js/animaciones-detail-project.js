@@ -96,20 +96,21 @@ const objParallaxArray = (trigger, elem) => {
 };
 
 objParallaxArray(".related", ".related .projects-home__card");
-
 objLoad(".project__item .project__item--info *");
 objLoadVertical(".project__item .project__item--image *");
 animContenido(".projects__quotes", ".projects__quotes");
 
+// ESTE NO SE DESCOMENTA
 ///// SLIDER GALERIA
 // const slidesGaleria = document.querySelectorAll(".gallery img");
 // for (const slidesGaleriaElem of slidesGaleria) {
 //     console.log(slidesGaleriaElem);
 // }
+// ESTE NO SE DESCOMENTA
 
 const modalGaleria = () => {
     lightbox.option({
-        albumLabel: "",
+        albumLabel: "Image %1 of %2",
         fadeDuration: 300,
         imageFadeDuration: 300,
         resizeDuration: 300,
@@ -125,7 +126,8 @@ modalGaleria();
 
 //////////// EVENTS LISTENERS ////////////
 
-const btnMobileHoverGrid = document.querySelectorAll(".btnHoverGrid");
+
+const btnMobileHoverGrid = document.querySelectorAll(".projects-grid--wrap");
 const btnMobileHoverGridInt = document.querySelectorAll(".btnHoverGridInt");
 
 for (const btnMobileHoverGridElem of btnMobileHoverGrid) {
@@ -141,7 +143,7 @@ for (const btnMobileHoverGridElem of btnMobileHoverGrid) {
 
 for (const btnMobileHoverGridIntElem of btnMobileHoverGridInt) {
     btnMobileHoverGridIntElem.onclick = () => {
-        btnMobileHoverGridIntElem.parentNode.parentNode.classList.toggle(
+        btnMobileHoverGridIntElem.parentNode.classList.toggle(
             "active"
         );
 
@@ -150,16 +152,3 @@ for (const btnMobileHoverGridIntElem of btnMobileHoverGridInt) {
             .classList.remove("active");
     };
 }
-
-// var elem = document.querySelector(".swiper-wrapper");
-// var iso = new Isotope(elem, {
-//     // options
-//     itemSelector: ".swiper-slide",
-//     layoutMode: "fitRows",
-// });
-
-// // element argument can be a selector string
-// //   for an individual element
-// var iso = new Isotope(".grid", {
-//     // options
-// });

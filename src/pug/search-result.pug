@@ -1,41 +1,84 @@
 extends includes/head.pug
 block head-page
     title Linked | Search Result
-    script(src="js/animaciones-projects.min.js" defer)
+    //- script(src="js/animaciones-projects.min.js" defer)
     script(src="js/nav.min.js" defer)
+    script(src="js/busqueda.min.js" defer)
 
 block content
     -ruta = ""
     include includes/header.pug
 
-    main.home
+    main.home.search
         section.projects-home.projects-grid
             h1.text-center RESULT: 
-                span CONTRAST
+                span#key sustentable
+            
             .container-fluid
-                .row
-                    - var n = 0;
-                    while n < 3
-                        - ++n
-                        .col-lg-4.col-12.project-simple
-                            .projects-grid--wrap
-                                .projects-home__card__images__img(titulo='Worl Trade Center')
-                                    img.img-fluid(src='img/images1.jpg' alt)
+                .row.search--grid
+                    .col-lg-4.col-12.project-simple
+                        .projects-grid--wrap
+                            .projects-home__card__images__img(titulo='Worl Trade Center')
+                                img.img-fluid(src='img/images1.jpg' alt)
+
+                        h3.projects-home__card__title 
+                            | Typology 
+                            .btnHoverGrid
+
+                        a(href="project-detail.html")
+                            .projects-home__card__hover__projects
+                                h5.title-categoria PROJECTS
+
+                                .projects-home__card__hover__projects__links
+                                    h2.projects-home__card__hover__title Adida
+
+                                h4.tituloCategoria Typology 
+                                    .btnHoverGridInt
+
+                        h6.tags casa alone sustentable
 
 
-                            h3.projects-home__card__title 
-                                | Typology 
-                                .btnHoverGrid
+                    .col-lg-4.col-12.project-simple
+                        .projects-grid--wrap
+                            .projects-home__card__images__img(titulo='Worl Trade Center')
+                                img.img-fluid(src='img/images1.jpg' alt)
 
-                            a(href="project-detail.html")
-                                .projects-home__card__hover__projects
-                                    h5.title-categoria PROJECTS
 
-                                    .projects-home__card__hover__projects__links
-                                        h5.projects-home__card__hover__title Worl Trade Center
+                        h3.projects-home__card__title 
+                            | Typology 
+                            .btnHoverGrid
 
-                                    h4 Typology 
-                                        .btnHoverGridInt
+                        a(href="project-detail.html")
+                            .projects-home__card__hover__projects
+                                h5.title-categoria PROJECTS
 
+                                .projects-home__card__hover__projects__links
+                                    h2.projects-home__card__hover__title Worl Trade Center
+
+                                h4.tituloCategoria Typology 
+                                    .btnHoverGridInt
+
+                        h6.tags casa sola
+
+                    .col-lg-4.col-12.project-simple
+                        .projects-grid--wrap
+                            .projects-home__card__images__img(titulo='Worl Trade Center')
+                                img.img-fluid(src='img/images1.jpg' alt)
+
+                        h3.projects-home__card__title 
+                            | Typology 
+                            .btnHoverGrid
+
+                        a(href="project-detail.html")
+                            .projects-home__card__hover__projects
+                                h5.title-categoria PROJECTS
+
+                                .projects-home__card__hover__projects__links
+                                    h2.projects-home__card__hover__title Kia
+
+                                h4.tituloCategoria Garden 
+                                    .btnHoverGridInt
+
+                        h6.tags hogar desierto
 
     include includes/footer.pug

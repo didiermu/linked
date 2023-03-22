@@ -10,7 +10,7 @@ block head-page
     link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css' defer)
     script(src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer)
     script(type="text/javascript", src="js/lightbox.min.min.js" defer)
-    script(src="js/sliders.min.js" defer)
+    //- script(src="js/sliders.min.js" defer)
     script(src="js/animaciones-detail-project.min.js" defer)
     script(src="js/nav.min.js" defer)
 
@@ -25,10 +25,10 @@ block content
                 h1.text-center PROJECTS
                 .row.project__item--row
                     .col-lg-2.project__item--info
-                        h5.project__item--info--cat PITESTI
+                        h5.project__item--info--cat EXPERIMENTALISMI
                         .project__item
                             h6 PROJECT
-                            h4.project__name Pitesti
+                            h4.project__name EXPERIMENTALISMI
                             ul
                                 li Sustainable
                                 li Builded
@@ -85,7 +85,7 @@ block content
                         .swiper.slider-detail
                             .swiper-wrapper
                                 .swiper-slide
-                                    a#image4(href="img/layout.jpg", data-lightbox="galeria-desktop")
+                                    a#image1(href="img/layout.jpg", data-lightbox="galeria-desktop")
                                         picture
                                             img.img-fluid(src='img/layout.jpg' alt)
 
@@ -129,20 +129,20 @@ block content
                                         picture
                                             img.img-fluid(src='img/layout3.jpg' alt)
 
-                                //- .swiper-slide
-                                //-     a#image9(href="img/layout.jpg", data-lightbox="galeria-desktop")
-                                //-         picture
-                                //-             img.img-fluid(src='img/layout.jpg' alt)
+                                .swiper-slide
+                                    a#image9(href="img/layout.jpg", data-lightbox="galeria-desktop")
+                                        picture
+                                            img.img-fluid(src='img/layout.jpg' alt)
 
-                                //- .swiper-slide
-                                //-     a#image7(href="img/layout4.jpg", data-lightbox="galeria-desktop")
-                                //-         picture
-                                //-             img.img-fluid(src='img/layout4.jpg' alt)
+                                .swiper-slide
+                                    a#image7(href="img/layout4.jpg", data-lightbox="galeria-desktop")
+                                        picture
+                                            img.img-fluid(src='img/layout4.jpg' alt)
 
-                                //- .swiper-slide
-                                //-     a#image12(href="img/layout6.jpg", data-lightbox="galeria-desktop")
-                                //-         picture
-                                //-             img.img-fluid(src='img/layout6.jpg' alt)
+                                .swiper-slide
+                                    a#image12(href="img/layout6.jpg", data-lightbox="galeria-desktop")
+                                        picture
+                                            img.img-fluid(src='img/layout6.jpg' alt)
 
 
                             .swiper-pagination
@@ -170,6 +170,7 @@ block content
                                 .btnHoverGrid
 
                             .projects-home__card__hover__projects
+                                .btnHoverGridInt
                                 h5.title-categoria PROJECTS
 
                                 .projects-home__card__hover__projects__links
@@ -177,7 +178,7 @@ block content
                                         h5.projects-home__card__hover__title Worl Trade Center
 
                                 h4 Typology 
-                                    .btnHoverGridInt
+                                    
 
 
     include includes/footer.pug

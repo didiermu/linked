@@ -30,7 +30,8 @@
 
     &--image {
         padding: 0.2em;
-        width: 46.666667%;
+        // width: 46.666667%;
+        width: auto;
 
         picture {
             border-radius: 4px;
@@ -128,6 +129,7 @@
 @media (max-width: 768px) {
     .about {
         margin-bottom: 3em;
+        padding-top: 6em;
 
         .swiper {
             &-navigation {
@@ -154,7 +156,8 @@
                 height: auto;
                 width: 80%;
                 margin: auto;
-                max-height: calc(360px + 500 * ((100vw - 360px) / 768));
+                // max-height: calc(360px + 500 * ((100vw - 360px) / 768));
+                // max-height: none;
             }
         }
 

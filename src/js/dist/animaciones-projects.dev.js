@@ -109,7 +109,7 @@ var objParallaxArray = function objParallaxArray(trigger, elem) {
 objParallaxArray("#grid--wrap-one", "#grid--wrap-one .project__item");
 objParallaxArray("#grid--wrap-two", "#grid--wrap-two .project__item"); //////////// EVENTS LISTENERS ////////////
 
-var btnMobileHoverGrid = document.querySelectorAll(".btnHoverGrid");
+var btnMobileHoverGrid = document.querySelectorAll(".projects-grid--wrap");
 var btnMobileHoverGridInt = document.querySelectorAll(".btnHoverGridInt");
 var _iteratorNormalCompletion = true;
 var _didIteratorError = false;
@@ -121,7 +121,7 @@ try {
 
     btnMobileHoverGridElem.onclick = function () {
       btnMobileHoverGridElem.closest(".col-lg-4").querySelector(".projects-home__card__hover__projects").classList.toggle("active");
-      btnMobileHoverGridElem.closest(".col-lg-4").classList.add("active");
+      btnMobileHoverGridElem.closest(".col-lg-4").classList.toggle("active");
     };
   };
 
@@ -152,7 +152,7 @@ try {
     var btnMobileHoverGridIntElem = _step2.value;
 
     btnMobileHoverGridIntElem.onclick = function () {
-      btnMobileHoverGridIntElem.parentNode.parentNode.classList.toggle("active");
+      btnMobileHoverGridIntElem.parentNode.classList.toggle("active");
       btnMobileHoverGridIntElem.closest(".col-lg-4").classList.remove("active");
     };
   };
@@ -160,6 +160,14 @@ try {
   for (var _iterator2 = btnMobileHoverGridInt[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
     _loop2();
   } /// RANDOM COLUMNS
+  // let numero = Math.floor(Math.random() * 100);
+  // const row1 = document.querySelector(".grid--head .row");
+  // const row2 = document.querySelector(".grid--wrap");
+  // if (numero % 2 == 0) {
+  //     row1.classList.add("par");
+  //     row2.classList.add("par");
+  // }
+  ///// ORDER GRID
 
 } catch (err) {
   _didIteratorError2 = true;
@@ -176,12 +184,39 @@ try {
   }
 }
 
-var numero = Math.floor(Math.random() * 100);
-var row1 = document.querySelector(".grid--head .row");
-var row2 = document.querySelector(".grid--wrap");
+var cardsHome = document.querySelectorAll(".projects-home .col-lg-4");
+var break1 = document.querySelector("#break1");
+var break2 = document.querySelector("#break2");
+var break3 = document.querySelector("#break3");
+var break4 = document.querySelector("#break4");
+var break5 = document.querySelector("#break5"); ///// BREAKS
 
-if (numero % 2 == 0) {
-  row1.classList.add("par");
-  row2.classList.add("par");
+for (var index = 0; index < cardsHome.length; index++) {
+  console.log("k");
+
+  if (cardsHome.length > 6) {
+    cardsHome[5].insertAdjacentElement("afterend", break1);
+    break1.classList.add("active");
+  }
+
+  if (cardsHome.length > 12) {
+    cardsHome[11].insertAdjacentElement("afterend", break2);
+    break2.classList.add("active");
+  }
+
+  if (cardsHome.length > 18) {
+    cardsHome[17].insertAdjacentElement("afterend", break3);
+    break3.classList.add("active");
+  }
+
+  if (cardsHome.length > 21) {
+    cardsHome[20].insertAdjacentElement("afterend", break4);
+    break4.classList.add("active");
+  }
+
+  if (cardsHome.length > 27) {
+    cardsHome[26].insertAdjacentElement("afterend", break5);
+    break5.classList.add("active");
+  }
 }
 //# sourceMappingURL=animaciones-projects.dev.js.map

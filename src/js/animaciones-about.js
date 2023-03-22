@@ -57,3 +57,9 @@ const swiperAbout = new Swiper(".slider-about", {
 
 objLoad(".about--image *");
 objLoadVertical(".about--info *");
+
+
+/// año
+
+const anio = new Date();
+document.querySelector("#anio").innerText = anio.getFullYear();

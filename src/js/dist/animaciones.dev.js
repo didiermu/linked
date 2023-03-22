@@ -61,8 +61,7 @@ var objParallaxMultipleDos = function objParallaxMultipleDos() {
   });
 };
 
-objParallaxMultiple(); // objParallaxMultipleDos();
-// objParallax(".about", "#rosas-about img");
+objParallaxMultiple();
 
 var objElements = function objElements(trigger, elem) {
   gsap.from(elem, {
@@ -149,17 +148,7 @@ var animElem = function animElem(trigger, elem) {
     yPercent: 0,
     delay: 0.3
   })).addTo(controller);
-}; // const contentSections = gsap.utils.toArray("li");
-// contentSections.forEach((target) => {
-//     ScrollTrigger.create({
-//         trigger: target,
-//         start: "top 80%",
-//         end: "bottom 50%",
-//         markers: true,
-//         toggleClass: "active",
-//     });
-// });
-
+};
 
 var objParallaxArray = function objParallaxArray(trigger, elem) {
   var boletosArr = gsap.utils.toArray(elem);
@@ -188,14 +177,18 @@ var objParallaxArray = function objParallaxArray(trigger, elem) {
   });
 };
 
-gsap.fromTo(".header--logo", {
-  yPercent: -100
-}, {
-  yPercent: 0,
-  stagger: 0.1,
-  delay: 0.5,
-  ease: "power2.out"
-});
+var headerLogo = function headerLogo() {
+  gsap.fromTo(".header--logo", {
+    yPercent: -100
+  }, {
+    yPercent: 0,
+    stagger: 0.1,
+    delay: 0.5,
+    ease: "power2.out"
+  });
+};
+
+headerLogo();
 
 var objParallaxArrayOk = function objParallaxArrayOk(elem) {
   gsap.utils.toArray(elem).forEach(function (e) {
@@ -215,36 +208,31 @@ var objParallaxArrayOk = function objParallaxArrayOk(elem) {
       }
     });
   });
-};
+}; //////////// EVENTS LISTENERS ////////////
+// HOME
 
-objParallaxArrayOk(".projects-home .col-lg-4"); //////////// EVENTS LISTENERS ////////////
 
-var btnMobileHoverHero = document.querySelector(".btnHover");
-
-btnMobileHoverHero.onclick = function () {
-  document.querySelector(".hero--wrap--hover").classList.toggle("active");
-  btnMobileHoverHero.classList.toggle("active");
-};
-
-var btnMobileHoverGrid = document.querySelectorAll(".btnHoverGrid");
-var btnMobileHoverGridInt = document.querySelectorAll(".btnHoverGridInt");
+var btnHeroHover = document.querySelector(".hero--wrap");
+var imagesHero = document.querySelectorAll(".hero--wrap img");
+var btncloseHero = document.querySelector(".btnHover");
+var heroHover = document.querySelector(".hero--wrap .hero--wrap--hover");
 var _iteratorNormalCompletion = true;
 var _didIteratorError = false;
 var _iteratorError = undefined;
 
 try {
-  var _loop = function _loop() {
-    var btnMobileHoverGridElem = _step.value;
+  for (var _iterator = imagesHero[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+    var imagesHeroEl = _step.value;
 
-    btnMobileHoverGridElem.onclick = function () {
-      btnMobileHoverGridElem.closest(".col-lg-4").querySelector(".projects-home__card__hover__projects").classList.toggle("active");
-      btnMobileHoverGridElem.closest(".col-lg-4").classList.toggle("active");
+    imagesHeroEl.onclick = function () {
+      btnHeroHover.classList.add("active");
+      heroHover.classList.add("active");
     };
-  };
+  } //  btnHeroHover.onclick = () => {
+  //     btnHeroHover.classList.add("active");
+  //     heroHover.classList.add("active");
+  // };
 
-  for (var _iterator = btnMobileHoverGrid[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-    _loop();
-  }
 } catch (err) {
   _didIteratorError = true;
   _iteratorError = err;
@@ -260,24 +248,32 @@ try {
   }
 }
 
+btncloseHero.onclick = function () {
+  btnHeroHover.classList.remove("active");
+  heroHover.classList.remove("active");
+  console.log("clo");
+}; // PROJECTS
+
+
+var btnMobileHoverGrid = document.querySelectorAll(".projects-grid--wrap");
+var btnMobileHoverGridInt = document.querySelectorAll(".btnHoverGridInt");
 var _iteratorNormalCompletion2 = true;
 var _didIteratorError2 = false;
 var _iteratorError2 = undefined;
 
 try {
-  var _loop2 = function _loop2() {
-    var btnMobileHoverGridIntElem = _step2.value;
+  var _loop = function _loop() {
+    var btnMobileHoverGridElem = _step2.value;
 
-    btnMobileHoverGridIntElem.onclick = function () {
-      btnMobileHoverGridIntElem.parentNode.parentNode.classList.toggle("active");
-      btnMobileHoverGridIntElem.closest(".col-lg-4").classList.remove("active");
+    btnMobileHoverGridElem.onclick = function () {
+      btnMobileHoverGridElem.closest(".col-lg-4").querySelector(".projects-home__card__hover__projects").classList.toggle("active");
+      btnMobileHoverGridElem.closest(".col-lg-4").classList.toggle("active");
     };
   };
 
-  for (var _iterator2 = btnMobileHoverGridInt[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-    _loop2();
-  } ///// ORDER GRID
-
+  for (var _iterator2 = btnMobileHoverGrid[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+    _loop();
+  }
 } catch (err) {
   _didIteratorError2 = true;
   _iteratorError2 = err;
@@ -293,17 +289,87 @@ try {
   }
 }
 
-var cardsHome = document.querySelectorAll(".projects-home .col-lg-4:not(.projects-home__acceso");
-var cardProject = document.querySelector(".projects-home__acceso--projects");
-var cardAbout = document.querySelector(".projects-home__acceso--about");
+var _iteratorNormalCompletion3 = true;
+var _didIteratorError3 = false;
+var _iteratorError3 = undefined;
 
-for (var index = 0; index < cardsHome.length; index++) {
-  if (cardsHome.length > 8) {
-    cardsHome[4].insertAdjacentElement("afterend", cardProject);
-    cardsHome[8].insertAdjacentElement("afterend", cardAbout);
+try {
+  var _loop2 = function _loop2() {
+    var btnMobileHoverGridIntElem = _step3.value;
+
+    btnMobileHoverGridIntElem.onclick = function () {
+      btnMobileHoverGridIntElem.parentNode.classList.toggle("active");
+      btnMobileHoverGridIntElem.closest(".col-lg-4").classList.remove("active");
+    };
+  };
+
+  for (var _iterator3 = btnMobileHoverGridInt[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+    _loop2();
+  } ///// ORDER GRID
+
+} catch (err) {
+  _didIteratorError3 = true;
+  _iteratorError3 = err;
+} finally {
+  try {
+    if (!_iteratorNormalCompletion3 && _iterator3["return"] != null) {
+      _iterator3["return"]();
+    }
+  } finally {
+    if (_didIteratorError3) {
+      throw _iteratorError3;
+    }
   }
-} ///// SHOW FOOTER SCROLL
+}
 
+var descansos = function descansos() {
+  var cardsHome = document.querySelectorAll(".projects-home .col-lg-4:not(.projects-home__acceso");
+  var cardProject = document.querySelector(".projects-home__acceso--projects");
+  var cardAbout = document.querySelector(".projects-home__acceso--about");
+  var break1 = document.querySelector("#break1");
+  var break2 = document.querySelector("#break2");
+  var break3 = document.querySelector("#break3");
+  var break4 = document.querySelector("#break4");
+  var break5 = document.querySelector("#break5");
+
+  for (var index = 0; index < cardsHome.length; index++) {
+    if (cardsHome.length > 8) {
+      cardsHome[4].insertAdjacentElement("afterend", cardProject);
+      cardsHome[8].insertAdjacentElement("afterend", cardAbout);
+    } ///// BREAKS
+
+
+    if (cardsHome.length >= 8) {
+      cardProject.insertAdjacentElement("afterend", break1); // cardsHome[5].insertAdjacentElement("afterend", break1);
+
+      break1.classList.add("active");
+    }
+
+    if (cardsHome.length > 10) {
+      cardsHome[9].insertAdjacentElement("afterend", break2);
+      break2.classList.add("active");
+    }
+
+    if (cardsHome.length > 16) {
+      cardsHome[15].insertAdjacentElement("afterend", break3);
+      break3.classList.add("active");
+    }
+
+    if (cardsHome.length > 22) {
+      cardsHome[21].insertAdjacentElement("afterend", break4);
+      break4.classList.add("active");
+    }
+
+    if (cardsHome.length > 28) {
+      cardsHome[27].insertAdjacentElement("afterend", break5);
+      break5.classList.add("active");
+    }
+
+    console.log("12");
+  }
+};
+
+descansos(); ///// SHOW FOOTER SCROLL
 
 var posCitaHome = document.querySelector(".cita-home");
 document.addEventListener("scroll", function (event) {

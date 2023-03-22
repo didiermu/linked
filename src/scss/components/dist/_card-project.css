@@ -71,12 +71,15 @@
 .project__name {
   margin-bottom: 0.3em;
   font-size: var(--ls);
-  overflow-wrap: break-word;
 }
 
 .projects-home .row {
   row-gap: 60px;
   column-gap: 1.23rem;
+}
+
+.projects-home .container-fluid > .break {
+  margin-bottom: 60px;
 }
 
 .projects-home__card {
@@ -186,7 +189,7 @@
   margin-top: 1em;
 }
 
-.projects-home .col-lg-4[categoria="Sin Categoria"] {
+.projects-home .col-lg-4[categoria="NOT TO CHOSE"] {
   display: none !important;
 }
 
@@ -196,7 +199,7 @@
   overflow: hidden;
   display: flex;
   cursor: pointer;
-  min-height: 600px;
+  min-height: 550px;
   padding: 0;
   width: 32%;
 }
@@ -286,6 +289,22 @@
   z-index: 1;
 }
 
+.projects-home.related .linkCard {
+  width: 100%;
+}
+
+.break {
+  width: 32%;
+  text-align: center;
+  font-size: var(--xl);
+  align-items: center;
+  font-family: var(--secundaria-regular);
+}
+
+.break.active {
+  display: grid;
+}
+
 @media (max-width: 768px) {
   .projects-home .row {
     row-gap: 20px !important;
@@ -343,39 +362,39 @@
     flex-basis: 10%;
     margin: 0 !important;
   }
-  .projects-home .btnHoverGrid,
-.projects-home .btnHoverGridInt {
+  .projects-home .btnHoverGridInt {
     width: 25px;
     height: 25px;
     border-radius: 50%;
     bottom: 20px;
     background: var(--gris-dark);
-    right: 20px;
+    right: auto;
+    left: 8px;
+    bottom: 10px;
     margin-top: 10px;
     display: grid;
     place-items: center;
     color: #fff;
     font-size: x-large;
     will-change: auto;
+    position: absolute;
   }
-  .projects-home .btnHoverGrid.active,
-.projects-home .btnHoverGridInt.active {
+  .projects-home .btnHoverGridInt.active {
     background: var(--gris);
     z-index: 1;
   }
-  .projects-home .btnHoverGrid.active::after,
-.projects-home .btnHoverGridInt.active::after {
-    content: "-";
-  }
-  .projects-home .btnHoverGrid::after {
+  .projects-home .btnHoverGridInt.active::after {
     content: "+";
   }
   .projects-home .btnHoverGridInt {
-    border: 1px solid #fff;
     font-size: revert;
+    font-family: var(--secundaria-regular);
   }
   .projects-home .btnHoverGridInt::after {
-    content: "-";
+    content: "";
+    background: url(../img/icon-close.svg) no-repeat center/contain;
+    width: 20px;
+    height: 20px;
   }
   .projects-home .col-lg-4 {
     flex-direction: row !important;
@@ -414,6 +433,10 @@
   .projects-home .linkCard {
     width: 65%;
     display: none;
+  }
+  .break {
+    width: 100%;
+    font-size: var(--h2);
   }
 }
 

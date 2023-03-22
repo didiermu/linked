@@ -71,6 +71,20 @@
     }
 }
 
+main.search{
+    .project-simple{
+        display: none;
+
+        &.match{
+            display: flex;
+        }
+
+        .tags{
+            display: none;
+        }
+    }
+}
+
 @media (max-width: 768px) {
     .projects {
         padding-top: 2em;

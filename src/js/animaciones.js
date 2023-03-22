@@ -70,9 +70,6 @@ const objParallaxMultipleDos = () => {
 };
 
 objParallaxMultiple();
-// objParallaxMultipleDos();
-
-// objParallax(".about", "#rosas-about img");
 
 const objElements = (trigger, elem) => {
     gsap.from(elem, {
@@ -188,17 +185,6 @@ const animElem = (trigger, elem) => {
         .addTo(controller);
 };
 
-// const contentSections = gsap.utils.toArray("li");
-// contentSections.forEach((target) => {
-//     ScrollTrigger.create({
-//         trigger: target,
-//         start: "top 80%",
-//         end: "bottom 50%",
-//         markers: true,
-//         toggleClass: "active",
-//     });
-// });
-
 const objParallaxArray = (trigger, elem) => {
     let boletosArr = gsap.utils.toArray(elem);
 
@@ -231,18 +217,22 @@ const objParallaxArray = (trigger, elem) => {
     });
 };
 
-gsap.fromTo(
-    ".header--logo",
-    {
-        yPercent: -100,
-    },
-    {
-        yPercent: 0,
-        stagger: 0.1,
-        delay: 0.5,
-        ease: "power2.out",
-    }
-);
+const headerLogo = () => {
+    gsap.fromTo(
+        ".header--logo",
+        {
+            yPercent: -100,
+        },
+        {
+            yPercent: 0,
+            stagger: 0.1,
+            delay: 0.5,
+            ease: "power2.out",
+        }
+    );
+};
+
+headerLogo();
 
 const objParallaxArrayOk = (elem) => {
     gsap.utils.toArray(elem).forEach(function (e) {
@@ -264,18 +254,35 @@ const objParallaxArrayOk = (elem) => {
     });
 };
 
-objParallaxArrayOk(".projects-home .col-lg-4");
-
 //////////// EVENTS LISTENERS ////////////
 
-const btnMobileHoverHero = document.querySelector(".btnHover");
+// HOME
+const btnHeroHover = document.querySelector(".hero--wrap");
+const imagesHero = document.querySelectorAll(".hero--wrap img");
+const btncloseHero = document.querySelector(".btnHover");
+const heroHover = document.querySelector(".hero--wrap .hero--wrap--hover");
 
-btnMobileHoverHero.onclick = () => {
-    document.querySelector(".hero--wrap--hover").classList.toggle("active");
-    btnMobileHoverHero.classList.toggle("active");
+for (const imagesHeroEl of imagesHero) {
+    imagesHeroEl.onclick = () => {
+        btnHeroHover.classList.add("active");
+        heroHover.classList.add("active");
+    };
+}
+
+//  btnHeroHover.onclick = () => {
+//     btnHeroHover.classList.add("active");
+//     heroHover.classList.add("active");
+// };
+
+btncloseHero.onclick = () => {
+    btnHeroHover.classList.remove("active");
+    heroHover.classList.remove("active");
+    console.log("clo");
 };
 
-const btnMobileHoverGrid = document.querySelectorAll(".btnHoverGrid");
+// PROJECTS
+
+const btnMobileHoverGrid = document.querySelectorAll(".projects-grid--wrap");
 const btnMobileHoverGridInt = document.querySelectorAll(".btnHoverGridInt");
 
 for (const btnMobileHoverGridElem of btnMobileHoverGrid) {
@@ -291,9 +298,7 @@ for (const btnMobileHoverGridElem of btnMobileHoverGrid) {
 
 for (const btnMobileHoverGridIntElem of btnMobileHoverGridInt) {
     btnMobileHoverGridIntElem.onclick = () => {
-        btnMobileHoverGridIntElem.parentNode.parentNode.classList.toggle(
-            "active"
-        );
+        btnMobileHoverGridIntElem.parentNode.classList.toggle("active");
 
         btnMobileHoverGridIntElem
             .closest(".col-lg-4")
@@ -302,19 +307,59 @@ for (const btnMobileHoverGridIntElem of btnMobileHoverGridInt) {
 }
 
 ///// ORDER GRID
+const descansos = () => {
+    const cardsHome = document.querySelectorAll(
+        ".projects-home .col-lg-4:not(.projects-home__acceso"
+    );
+    const cardProject = document.querySelector(
+        ".projects-home__acceso--projects"
+    );
+    const cardAbout = document.querySelector(".projects-home__acceso--about");
 
-const cardsHome = document.querySelectorAll(
-    ".projects-home .col-lg-4:not(.projects-home__acceso"
-);
-const cardProject = document.querySelector(".projects-home__acceso--projects");
-const cardAbout = document.querySelector(".projects-home__acceso--about");
+    const break1 = document.querySelector("#break1");
+    const break2 = document.querySelector("#break2");
+    const break3 = document.querySelector("#break3");
+    const break4 = document.querySelector("#break4");
+    const break5 = document.querySelector("#break5");
 
-for (let index = 0; index < cardsHome.length; index++) {
-    if (cardsHome.length > 8) {
-        cardsHome[4].insertAdjacentElement("afterend", cardProject);
-        cardsHome[8].insertAdjacentElement("afterend", cardAbout);
+    for (let index = 0; index < cardsHome.length; index++) {
+        if (cardsHome.length > 8) {
+            cardsHome[4].insertAdjacentElement("afterend", cardProject);
+            cardsHome[8].insertAdjacentElement("afterend", cardAbout);
+        }
+
+        ///// BREAKS
+        if (cardsHome.length >= 8) {
+            cardProject.insertAdjacentElement("afterend", break1);
+            // cardsHome[5].insertAdjacentElement("afterend", break1);
+            break1.classList.add("active");
+        }
+
+        if (cardsHome.length > 10) {
+            cardsHome[9].insertAdjacentElement("afterend", break2);
+            break2.classList.add("active");
+        }
+
+        if (cardsHome.length > 16) {
+            cardsHome[15].insertAdjacentElement("afterend", break3);
+            break3.classList.add("active");
+        }
+
+        if (cardsHome.length > 22) {
+            cardsHome[21].insertAdjacentElement("afterend", break4);
+            break4.classList.add("active");
+        }
+
+        if (cardsHome.length > 28) {
+            cardsHome[27].insertAdjacentElement("afterend", break5);
+            break5.classList.add("active");
+        }
+
+        console.log("12");
     }
-}
+};
+
+descansos();
 
 ///// SHOW FOOTER SCROLL
 

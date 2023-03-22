@@ -1,4 +1,4 @@
-const swiperPromos = {
+const swiperGaleria = {
     direction: "vertical",
     // loop: false,
     autoplay: false,
@@ -23,9 +23,9 @@ const swiperPromos = {
     },
 };
 
-var mySwiper = new Swiper(".slider-detail", swiperPromos);
+var mySwiper = new Swiper(".slider-detail", swiperGaleria);
 
-// swiperPromos.on("slideChange", function () {
+// swiperGaleria.on("slideChange", function () {
 //     animContenidoScale(".swiper-slide", ".swiper-slide img");
 // });
 

@@ -107,16 +107,16 @@
                 height: 360px;
                 position: relative;
 
-                &::after {
-                    content: "";
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    top: 0;
-                    z-index: 1;
-                    display: block;
-                    background: rgba($color: #000000, $alpha: 0.4);
-                }
+                // &::after {
+                //     content: "";
+                //     width: 100%;
+                //     height: 100%;
+                //     position: absolute;
+                //     top: 0;
+                //     z-index: 1;
+                //     display: block;
+                //     background: rgba($color: #000000, $alpha: 0.4);
+                // }
 
                 &:nth-child(1) {
                     border-radius: 0 10px 10px 10px;
@@ -320,23 +320,31 @@
                 flex: auto;
                 height: 50vh;
 
+                &.active{
+                    .btnHover{
+                        z-index: 999;
+                    }
+                }
+
                 .btnHover {
                     width: 50px;
                     height: 50px;
                     border-radius: 50%;
                     position: absolute;
-                    bottom: 20px;
-                    background: var(--gris-dark);
+                    top: 20px;
                     right: 20px;
                     margin: auto;
                     display: grid;
                     place-items: center;
                     color: #fff;
                     font-size: xx-large;
-                    z-index: 1;
+                    z-index: -1;
 
                     &::after {
-                        content: "+";
+                        content: "";
+                        background: url(../img/icon-close.svg) center/contain no-repeat;
+                        width: 20px;
+                        height: 20px;
                     }
 
                     &.active {

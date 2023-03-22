@@ -5,25 +5,25 @@ block head-page
 
 block content
     -ruta = ""
-    main.coming 
-        img.img-fluid.logo-header(src='img/logo-linked-blanco.svg' alt)
-        h1 COMING SOON
 
-    header.header(style="display:none")
+    header.header
         .container-fluid
             .row
                 .col-6.col-lg-2.header--logo
                     a(href='../')
                         img.img-fluid.logo-header(src='img/logo-linked-blanco.svg' alt)
 
-    main.home(style="display:none")
+    main.home
         section.hero
             .hero--wrap
                 picture
+                    source(srcset='img/images1.jpg' )
                     img.img-fluid(src='img/images1.jpg' alt)
                 picture
+                    source(srcset='img/images1.jpg' )
                     img.img-fluid(src='img/layout5.jpg' alt)
                 picture
+                    source(srcset='img/images1.jpg' )
                     img.img-fluid(src='img/layout6.jpg' alt)
 
                 .hero--wrap--hover
@@ -90,32 +90,39 @@ block content
                     li CONNECT
 
         section.cita-home
+
             h1 Sometimes I do write for the sake of argument, because I think it is an interesting topic and I want to see how the discussion can go, a sort of devil’s advocateand the text goes further here.
 
         section.projects-home
             .container-fluid
                 .row
                     - var n = 0;
-                    while n < 9
+                    while n < 29
                         - ++n
                         .col-lg-4.col-12
                             .projects-grid--wrap
                                 .projects-home__card__images__img(titulo='Worl Trade Center')
-                                    img.img-fluid(src='img/images1.jpg' alt)
+                                    picture
+                                        source(srcset='img/images1.jpg' alt)
+                                        img.img-fluid(src='img/images1.jpg' alt)
 
                                 .projects-home__card__images__img
-                                    img.img-fluid(src='img/images1.jpg' alt)
+                                    picture
+                                        source(srcset='img/images1.jpg' alt)
+                                        img.img-fluid(src='img/images1.jpg' alt)
 
                                 .projects-home__card__images__img
-                                    img.img-fluid(src='img/images1.jpg' alt)
+                                    picture
+                                        source(srcset='img/images1.jpg' alt)
+                                        img.img-fluid(src='img/images1.jpg' alt)
 
                             h3.projects-home__card__title 
                                 | Typology 
-                                .btnHoverGrid
 
                             a.linkCard(href="project-home.html")
 
                             .projects-home__card__hover__projects
+                                .btnHoverGridInt
                                 h5.title-categoria PROJECTS
 
                                 .projects-home__card__hover__projects__links
@@ -130,7 +137,6 @@ block content
                                         h5.projects-home__card__hover__title Agricultura
 
                                 h4 Typology 
-                                    .btnHoverGridInt
 
                     .col-lg-4.col-12.projects-home__acceso.projects-home__acceso--projects
                         a(href='projects.html')
@@ -140,6 +146,11 @@ block content
                         a(href='about.html')
                             h3 ABOUT
 
+                h2.break#break1 Sometimes I do write for the sake of argument, because I think it is an interesting topic and I want to see how the discussion can go, a sort of devil’s advocateand the text goes further here.
+                h2.break#break2 Sometimes I do write for the sake of argument, because I think it is an interesting topic and I want to see how the discussion can go, a sort of devil’s advocateand the text goes further here.
+                h2.break#break3 Sometimes I do write for the sake of argument, because I think it is an interesting topic and I want to see how the discussion can go, a sort of devil’s advocateand the text goes further here.
+                h2.break#break4 Sometimes I do write for the sake of argument, because I think it is an interesting topic and I want to see how the discussion can go, a sort of devil’s advocateand the text goes further here.
+                h2.break#break5 Sometimes I do write for the sake of argument, because I think it is an interesting topic and I want to see how the discussion can go, a sort of devil’s advocateand the text goes further here.
 
         include includes/footer.pug
     include includes/modal-connect.pug

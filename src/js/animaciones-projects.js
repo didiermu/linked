@@ -135,7 +135,7 @@ objParallaxArray("#grid--wrap-two", "#grid--wrap-two .project__item");
 
 //////////// EVENTS LISTENERS ////////////
 
-const btnMobileHoverGrid = document.querySelectorAll(".btnHoverGrid");
+const btnMobileHoverGrid = document.querySelectorAll(".projects-grid--wrap");
 const btnMobileHoverGridInt = document.querySelectorAll(".btnHoverGridInt");
 
 for (const btnMobileHoverGridElem of btnMobileHoverGrid) {
@@ -145,15 +145,13 @@ for (const btnMobileHoverGridElem of btnMobileHoverGrid) {
             .querySelector(".projects-home__card__hover__projects")
             .classList.toggle("active");
 
-        btnMobileHoverGridElem.closest(".col-lg-4").classList.add("active");
+        btnMobileHoverGridElem.closest(".col-lg-4").classList.toggle("active");
     };
 }
 
 for (const btnMobileHoverGridIntElem of btnMobileHoverGridInt) {
     btnMobileHoverGridIntElem.onclick = () => {
-        btnMobileHoverGridIntElem.parentNode.parentNode.classList.toggle(
-            "active"
-        );
+        btnMobileHoverGridIntElem.parentNode.classList.toggle("active");
 
         btnMobileHoverGridIntElem
             .closest(".col-lg-4")
@@ -163,11 +161,51 @@ for (const btnMobileHoverGridIntElem of btnMobileHoverGridInt) {
 
 /// RANDOM COLUMNS
 
-let numero = Math.floor(Math.random() * 100);
-const row1 = document.querySelector(".grid--head .row");
-const row2 = document.querySelector(".grid--wrap");
+// let numero = Math.floor(Math.random() * 100);
+// const row1 = document.querySelector(".grid--head .row");
+// const row2 = document.querySelector(".grid--wrap");
 
-if (numero % 2 == 0) {
-    row1.classList.add("par");
-    row2.classList.add("par");
+// if (numero % 2 == 0) {
+//     row1.classList.add("par");
+//     row2.classList.add("par");
+// }
+
+///// ORDER GRID
+
+const cardsHome = document.querySelectorAll(".projects-home .col-lg-4");
+
+const break1 = document.querySelector("#break1");
+const break2 = document.querySelector("#break2");
+const break3 = document.querySelector("#break3");
+const break4 = document.querySelector("#break4");
+const break5 = document.querySelector("#break5");
+
+///// BREAKS
+
+for (let index = 0; index < cardsHome.length; index++) {
+    console.log("k");
+    if (cardsHome.length > 6) {
+        cardsHome[5].insertAdjacentElement("afterend", break1);
+        break1.classList.add("active");
+    }
+
+    if (cardsHome.length > 12) {
+        cardsHome[11].insertAdjacentElement("afterend", break2);
+        break2.classList.add("active");
+    }
+
+    if (cardsHome.length > 18) {
+        cardsHome[17].insertAdjacentElement("afterend", break3);
+        break3.classList.add("active");
+    }
+
+    if (cardsHome.length > 21) {
+        cardsHome[20].insertAdjacentElement("afterend", break4);
+        break4.classList.add("active");
+    }
+
+    if (cardsHome.length > 27) {
+        cardsHome[26].insertAdjacentElement("afterend", break5);
+        break5.classList.add("active");
+    }
 }
