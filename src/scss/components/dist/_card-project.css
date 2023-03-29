@@ -199,7 +199,7 @@
   overflow: hidden;
   display: flex;
   cursor: pointer;
-  min-height: 550px;
+  max-height: calc(600px + 250 * ((100vw - 1920px) / 1280));
   padding: 0;
   width: 32%;
 }

@@ -298,7 +298,8 @@ try {
     var btnMobileHoverGridIntElem = _step3.value;
 
     btnMobileHoverGridIntElem.onclick = function () {
-      btnMobileHoverGridIntElem.parentNode.classList.toggle("active");
+      btnMobileHoverGridIntElem.closest(".projects-home__card__hover__projects").classList.toggle("active"); // btnMobileHoverGridIntElem.parentNode.classList.toggle("active");
+
       btnMobileHoverGridIntElem.closest(".col-lg-4").classList.remove("active");
     };
   };
@@ -323,7 +324,7 @@ try {
 }
 
 var descansos = function descansos() {
-  var cardsHome = document.querySelectorAll(".projects-home .col-lg-4:not(.projects-home__acceso");
+  var cardsHome = document.querySelectorAll(".projects-home .col-lg-4:not(.projects-home__acceso)");
   var cardProject = document.querySelector(".projects-home__acceso--projects");
   var cardAbout = document.querySelector(".projects-home__acceso--about");
   var break1 = document.querySelector("#break1");
@@ -378,5 +379,41 @@ document.addEventListener("scroll", function (event) {
   } else {
     document.querySelector(".footer").classList.remove("show");
   }
-});
+}); ////////// PRIMERA CATEGORIA
+
+var primeraCate = function primeraCate() {
+  var cadaveres = document.querySelectorAll(".projects-home .col-lg-4:not(.projects-home__acceso)");
+  var _iteratorNormalCompletion4 = true;
+  var _didIteratorError4 = false;
+  var _iteratorError4 = undefined;
+
+  try {
+    for (var _iterator4 = cadaveres[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+      var cadaveresEl = _step4.value;
+      var hijos = cadaveresEl.querySelectorAll(".projects-home__card__images__img");
+
+      for (var index = 0; index < hijos.length; index++) {
+        var element = hijos[0].getAttribute("categoria");
+        var padreCadaver = hijos[0].closest(".col-lg-4");
+        padreCadaver.querySelector(".projects-home__card__title").innerText = element;
+        padreCadaver.querySelector(".projects-home__card__hover__projects h4 span").innerText = element;
+      }
+    }
+  } catch (err) {
+    _didIteratorError4 = true;
+    _iteratorError4 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion4 && _iterator4["return"] != null) {
+        _iterator4["return"]();
+      }
+    } finally {
+      if (_didIteratorError4) {
+        throw _iteratorError4;
+      }
+    }
+  }
+};
+
+primeraCate();
 //# sourceMappingURL=animaciones.dev.js.map

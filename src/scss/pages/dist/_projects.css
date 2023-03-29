@@ -36,7 +36,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  max-height: 600px;
+  max-height: calc(600px + 250 * ((100vw - 1920px) / 1280));
 }
 
 .projects-grid .projects-home__card__title {
@@ -51,6 +51,18 @@
 
 .projects-grid .projects-home__card__images {
   flex-basis: auto;
+}
+
+main.search .project-simple {
+  display: none;
+}
+
+main.search .project-simple.match {
+  display: flex;
+}
+
+main.search .project-simple .tags {
+  display: none;
 }
 
 @media (max-width: 768px) {

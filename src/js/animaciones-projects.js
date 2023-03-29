@@ -151,7 +151,10 @@ for (const btnMobileHoverGridElem of btnMobileHoverGrid) {
 
 for (const btnMobileHoverGridIntElem of btnMobileHoverGridInt) {
     btnMobileHoverGridIntElem.onclick = () => {
-        btnMobileHoverGridIntElem.parentNode.classList.toggle("active");
+        // btnMobileHoverGridIntElem.parentNode.classList.toggle("active");
+        btnMobileHoverGridIntElem
+            .closest(".projects-home__card__hover__projects")
+            .classList.toggle("active");
 
         btnMobileHoverGridIntElem
             .closest(".col-lg-4")
@@ -209,3 +212,29 @@ for (let index = 0; index < cardsHome.length; index++) {
         break5.classList.add("active");
     }
 }
+
+////////// PRIMERA CATEGORIA
+
+const primeraCate = () => {
+    const cadaveres = document.querySelectorAll(".projects-home .col-lg-4");
+
+    for (const cadaveresEl of cadaveres) {
+        let hijos = cadaveresEl.querySelectorAll(
+            ".projects-home__card__images__img"
+        );
+
+        for (let index = 0; index < hijos.length; index++) {
+            const element = hijos[0].getAttribute("categoria");
+            const padreCadaver = hijos[0].closest(".col-lg-4");
+            padreCadaver.querySelector(
+                ".projects-home__card__title"
+            ).innerText = element;
+
+            padreCadaver.querySelector(
+                ".projects-home__card__hover__projects h4 span"
+            ).innerText = element;
+        }
+    }
+};
+
+primeraCate();

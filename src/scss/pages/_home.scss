@@ -221,7 +221,7 @@
     .projects-home {
         &__acceso {
             // margin-bottom: 3em;
-            min-height: 600px;
+            min-height: calc(600px + 250 * ((100vw - 1920px) / 1280));
             border-radius: 6px;
 
             h3 {
@@ -320,8 +320,8 @@
                 flex: auto;
                 height: 50vh;
 
-                &.active{
-                    .btnHover{
+                &.active {
+                    .btnHover {
                         z-index: 999;
                     }
                 }
@@ -342,7 +342,8 @@
 
                     &::after {
                         content: "";
-                        background: url(../img/icon-close.svg) center/contain no-repeat;
+                        background: url(../img/icon-close.svg) center/contain
+                            no-repeat;
                         width: 20px;
                         height: 20px;
                     }

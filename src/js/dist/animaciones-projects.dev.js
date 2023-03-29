@@ -152,7 +152,8 @@ try {
     var btnMobileHoverGridIntElem = _step2.value;
 
     btnMobileHoverGridIntElem.onclick = function () {
-      btnMobileHoverGridIntElem.parentNode.classList.toggle("active");
+      // btnMobileHoverGridIntElem.parentNode.classList.toggle("active");
+      btnMobileHoverGridIntElem.closest(".projects-home__card__hover__projects").classList.toggle("active");
       btnMobileHoverGridIntElem.closest(".col-lg-4").classList.remove("active");
     };
   };
@@ -218,5 +219,42 @@ for (var index = 0; index < cardsHome.length; index++) {
     cardsHome[26].insertAdjacentElement("afterend", break5);
     break5.classList.add("active");
   }
-}
+} ////////// PRIMERA CATEGORIA
+
+
+var primeraCate = function primeraCate() {
+  var cadaveres = document.querySelectorAll(".projects-home .col-lg-4");
+  var _iteratorNormalCompletion3 = true;
+  var _didIteratorError3 = false;
+  var _iteratorError3 = undefined;
+
+  try {
+    for (var _iterator3 = cadaveres[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+      var cadaveresEl = _step3.value;
+      var hijos = cadaveresEl.querySelectorAll(".projects-home__card__images__img");
+
+      for (var _index = 0; _index < hijos.length; _index++) {
+        var element = hijos[0].getAttribute("categoria");
+        var padreCadaver = hijos[0].closest(".col-lg-4");
+        padreCadaver.querySelector(".projects-home__card__title").innerText = element;
+        padreCadaver.querySelector(".projects-home__card__hover__projects h4 span").innerText = element;
+      }
+    }
+  } catch (err) {
+    _didIteratorError3 = true;
+    _iteratorError3 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion3 && _iterator3["return"] != null) {
+        _iterator3["return"]();
+      }
+    } finally {
+      if (_didIteratorError3) {
+        throw _iteratorError3;
+      }
+    }
+  }
+};
+
+primeraCate();
 //# sourceMappingURL=animaciones-projects.dev.js.map
