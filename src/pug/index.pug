@@ -16,20 +16,91 @@ block content
     main.home
         section.hero
             .hero--wrap
-                picture
+                picture(class="sustainability")
                     source(srcset='img/images1.jpg' )
                     img.img-fluid(src='img/images1.jpg' alt)
-                picture
+                picture(class="sustainability")
                     source(srcset='img/images1.jpg' )
                     img.img-fluid(src='img/layout5.jpg' alt)
-                picture
+                picture(class="sustainability")
+                    source(srcset='img/images1.jpg' )
+                    img.img-fluid(src='img/images1.jpg' alt)
+                picture(class="sustainability")
+                    source(srcset='img/images1.jpg' )
+                    img.img-fluid(src='img/layout5.jpg' alt)
+                picture(class="sustainability")
+                    source(srcset='img/images1.jpg' )
+                    img.img-fluid(src='img/images1.jpg' alt)
+                picture(class="sustainability")
+                    source(srcset='img/images1.jpg' )
+                    img.img-fluid(src='img/layout5.jpg' alt)
+                picture(class="sustainability")
+                    source(srcset='img/images1.jpg' )
+                    img.img-fluid(src='img/images1.jpg' alt)
+                picture(class="sustainability")
+                    source(srcset='img/images1.jpg' )
+                    img.img-fluid(src='img/layout5.jpg' alt)
+                picture(class="otra")
                     source(srcset='img/images1.jpg' )
                     img.img-fluid(src='img/layout6.jpg' alt)
 
                 .hero--wrap--hover
-                    h3 SUSTAINABILITY
+                    h3#sustainability sustainability
+                    a#link-home
 
-                    a(href="project-home.html") 
+                    a.sustainability(href="project-home.html") 
+                        .hero--wrap--hover--project#100
+                            h6 PROJECT
+                            h4.hero--wrap--hover--project--title.
+
+                                Richar Prince
+
+                            .hero--wrap--hover--project--data
+                                h5.hero--wrap--hover--project--status.
+                                    Unbuilded
+
+                                h5.hero--wrap--hover--project--subcat.
+                                    Experimental
+                    a.sustainability(href="project-home.html") 
+                        .hero--wrap--hover--project#198
+                            h6 PROJECT
+                            h4.hero--wrap--hover--project--title.
+
+                                Richar Prince
+
+                            .hero--wrap--hover--project--data
+                                h5.hero--wrap--hover--project--status.
+                                    Unbuilded
+
+                                h5.hero--wrap--hover--project--subcat.
+                                    Experimental
+                    a.sustainability(href="project-home.html") 
+                        .hero--wrap--hover--project#201
+                            h6 PROJECT
+                            h4.hero--wrap--hover--project--title.
+
+                                Richar Prince
+
+                            .hero--wrap--hover--project--data
+                                h5.hero--wrap--hover--project--status.
+                                    Unbuilded
+
+                                h5.hero--wrap--hover--project--subcat.
+                                    Experimental
+                    a.sustainability(href="project-home.html") 
+                        .hero--wrap--hover--project
+                            h6 PROJECT
+                            h4.hero--wrap--hover--project--title.
+
+                                Richar Prince
+
+                            .hero--wrap--hover--project--data
+                                h5.hero--wrap--hover--project--status.
+                                    Unbuilded
+
+                                h5.hero--wrap--hover--project--subcat.
+                                    Experimental
+                    a.sustainability(href="project-home.html") 
                         .hero--wrap--hover--project
                             h6 PROJECT
                             h4.hero--wrap--hover--project--title.
@@ -44,40 +115,6 @@ block content
                                     Experimental
 
 
-                        .hero--wrap--hover--project
-                            h6 PROJECT
-                            h4.hero--wrap--hover--project--title.
-
-                                Pitesti
-
-                            .hero--wrap--hover--project--data
-                                h5.hero--wrap--hover--project--status.
-
-                                    Sustainable
-
-                                h5.hero--wrap--hover--project--subcat.
-
-                                    Builded
-
-                                h5.hero--wrap--hover--project--type.
-
-                                    Enviromental
-
-
-                        .hero--wrap--hover--project
-                            h6 PROJECT
-                            h4.hero--wrap--hover--project--title.
-
-                                Big Daddy
-
-                            .hero--wrap--hover--project--data
-                                h5.hero--wrap--hover--project--subcat.
-
-                                    Builded
-
-                                h5.hero--wrap--hover--project--type.
-
-                                    Personal
 
                 .btnHover
 
@@ -99,7 +136,7 @@ block content
                     - var n = 0;
                     while n < 29
                         - ++n
-                        .col-lg-4.col-12
+                        .col-lg-4.col-12(categoria="imagination")
                             .projects-grid--wrap
                                 .projects-home__card__images__img(categoria='1 Worl Trade Center')
                                     picture

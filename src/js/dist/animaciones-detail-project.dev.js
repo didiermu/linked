@@ -76,15 +76,17 @@ var objParallaxArray = function objParallaxArray(trigger, elem) {
 objParallaxArray(".related", ".related .projects-home__card");
 objLoad(".project__item .project__item--info *");
 objLoadVertical(".project__item .project__item--image *");
-animContenido(".projects__quotes", ".projects__quotes"); ///// SLIDER GALERIA
+animContenido(".projects__quotes", ".projects__quotes"); // ESTE NO SE DESCOMENTA
+///// SLIDER GALERIA
 // const slidesGaleria = document.querySelectorAll(".gallery img");
 // for (const slidesGaleriaElem of slidesGaleria) {
 //     console.log(slidesGaleriaElem);
 // }
+// ESTE NO SE DESCOMENTA
 
 var modalGaleria = function modalGaleria() {
   lightbox.option({
-    albumLabel: "",
+    albumLabel: "Image %1 of %2",
     fadeDuration: 300,
     imageFadeDuration: 300,
     resizeDuration: 300,
@@ -98,7 +100,7 @@ var modalGaleria = function modalGaleria() {
 
 modalGaleria(); //////////// EVENTS LISTENERS ////////////
 
-var btnMobileHoverGrid = document.querySelectorAll(".btnHoverGrid");
+var btnMobileHoverGrid = document.querySelectorAll(".projects-grid--wrap");
 var btnMobileHoverGridInt = document.querySelectorAll(".btnHoverGridInt");
 var _iteratorNormalCompletion = true;
 var _didIteratorError = false;
@@ -141,24 +143,14 @@ try {
     var btnMobileHoverGridIntElem = _step2.value;
 
     btnMobileHoverGridIntElem.onclick = function () {
-      btnMobileHoverGridIntElem.parentNode.parentNode.classList.toggle("active");
+      btnMobileHoverGridIntElem.parentNode.classList.toggle("active");
       btnMobileHoverGridIntElem.closest(".col-lg-4").classList.remove("active");
     };
   };
 
   for (var _iterator2 = btnMobileHoverGridInt[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
     _loop2();
-  } // var elem = document.querySelector(".swiper-wrapper");
-  // var iso = new Isotope(elem, {
-  //     // options
-  //     itemSelector: ".swiper-slide",
-  //     layoutMode: "fitRows",
-  // });
-  // // element argument can be a selector string
-  // //   for an individual element
-  // var iso = new Isotope(".grid", {
-  //     // options
-  // });
+  } ////////// PRIMERA CATEGORIA
 
 } catch (err) {
   _didIteratorError2 = true;
@@ -174,4 +166,40 @@ try {
     }
   }
 }
+
+var primeraCate = function primeraCate() {
+  var cadaveres = document.querySelectorAll(".related .col-lg-4");
+  var _iteratorNormalCompletion3 = true;
+  var _didIteratorError3 = false;
+  var _iteratorError3 = undefined;
+
+  try {
+    for (var _iterator3 = cadaveres[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+      var cadaveresEl = _step3.value;
+      var hijos = cadaveresEl.querySelectorAll(".projects-home__card__images__img");
+
+      for (var index = 0; index < hijos.length; index++) {
+        var element = hijos[0].getAttribute("categoria");
+        var padreCadaver = hijos[0].closest(".col-lg-4");
+        padreCadaver.querySelector(".projects-home__card__title").innerText = element;
+        padreCadaver.querySelector(".projects-home__card__hover__projects h4 span").innerText = element;
+      }
+    }
+  } catch (err) {
+    _didIteratorError3 = true;
+    _iteratorError3 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion3 && _iterator3["return"] != null) {
+        _iterator3["return"]();
+      }
+    } finally {
+      if (_didIteratorError3) {
+        throw _iteratorError3;
+      }
+    }
+  }
+};
+
+primeraCate();
 //# sourceMappingURL=animaciones-detail-project.dev.js.map

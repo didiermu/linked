@@ -379,10 +379,12 @@ document.addEventListener("scroll", function (event) {
   } else {
     document.querySelector(".footer").classList.remove("show");
   }
-}); ////////// PRIMERA CATEGORIA
+}); ////////// PRIMERA CATEGORIA HERO
 
-var primeraCate = function primeraCate() {
-  var cadaveres = document.querySelectorAll(".projects-home .col-lg-4:not(.projects-home__acceso)");
+var heroCate = function heroCate() {
+  var titleHero = document.querySelector(".hero--wrap--hover h3").id; // imagen
+
+  var cadaveres = document.querySelectorAll(".hero--wrap picture:not(." + titleHero + ")");
   var _iteratorNormalCompletion4 = true;
   var _didIteratorError4 = false;
   var _iteratorError4 = undefined;
@@ -390,14 +392,8 @@ var primeraCate = function primeraCate() {
   try {
     for (var _iterator4 = cadaveres[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
       var cadaveresEl = _step4.value;
-      var hijos = cadaveresEl.querySelectorAll(".projects-home__card__images__img");
-
-      for (var index = 0; index < hijos.length; index++) {
-        var element = hijos[0].getAttribute("categoria");
-        var padreCadaver = hijos[0].closest(".col-lg-4");
-        padreCadaver.querySelector(".projects-home__card__title").innerText = element;
-        padreCadaver.querySelector(".projects-home__card__hover__projects h4 span").innerText = element;
-      }
+      // cadaveresEl.classList.add("valid");
+      cadaveresEl.remove();
     }
   } catch (err) {
     _didIteratorError4 = true;
@@ -410,6 +406,105 @@ var primeraCate = function primeraCate() {
     } finally {
       if (_didIteratorError4) {
         throw _iteratorError4;
+      }
+    }
+  }
+
+  var newImg = document.querySelectorAll(".hero--wrap picture." + titleHero);
+
+  for (var index = 3; index < newImg.length; index++) {
+    var element = newImg[index]; // element.classList.add("remove");
+
+    element.remove();
+  } // link
+
+
+  var linkHover = document.querySelectorAll(".hero--wrap--hover a:not(#link-home, ." + titleHero + ")");
+  var _iteratorNormalCompletion5 = true;
+  var _didIteratorError5 = false;
+  var _iteratorError5 = undefined;
+
+  try {
+    for (var _iterator5 = linkHover[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+      var linkHoverEl = _step5.value;
+      // cadaveresEl.classList.add("valid");
+      linkHoverEl.remove();
+    }
+  } catch (err) {
+    _didIteratorError5 = true;
+    _iteratorError5 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion5 && _iterator5["return"] != null) {
+        _iterator5["return"]();
+      }
+    } finally {
+      if (_didIteratorError5) {
+        throw _iteratorError5;
+      }
+    }
+  }
+
+  var newLink = document.querySelectorAll(".hero--wrap--hover a." + titleHero);
+
+  for (var _index = 3; _index < newLink.length; _index++) {
+    var _element = newLink[_index]; // element.classList.add("remove");
+
+    _element.remove();
+  }
+};
+
+heroCate(); // cambio de link
+
+var cambioLink = function cambioLink() {
+  var idLinks = document.querySelectorAll(".hero--wrap--hover--project");
+  var linkHero = document.querySelector("#link-home");
+  var element1 = "";
+  var element2 = "";
+  var element3 = "";
+
+  for (var index = 0; index < idLinks.length; index++) {
+    element1 = idLinks[0].id;
+    element2 = idLinks[1].id;
+    element3 = idLinks[2].id;
+  } // return console.log(element1, element2, element3);
+  // return element1, element2, element3;
+
+
+  linkHero.setAttribute("href", "https://linked-space.com/project-home?ids=" + element1 + "?" + element2 + "?" + element3);
+};
+
+cambioLink(); ////////// PRIMERA CATEGORIA
+
+var primeraCate = function primeraCate() {
+  var cadaveres = document.querySelectorAll(".projects-home .col-lg-4:not(.projects-home__acceso)");
+  var _iteratorNormalCompletion6 = true;
+  var _didIteratorError6 = false;
+  var _iteratorError6 = undefined;
+
+  try {
+    for (var _iterator6 = cadaveres[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
+      var cadaveresEl = _step6.value;
+      var hijos = cadaveresEl.querySelectorAll(".projects-home__card__images__img");
+
+      for (var index = 0; index < hijos.length; index++) {
+        var element = hijos[0].getAttribute("categoria");
+        var padreCadaver = hijos[0].closest(".col-lg-4");
+        padreCadaver.querySelector(".projects-home__card__title").innerText = element;
+        padreCadaver.querySelector(".projects-home__card__hover__projects h4 span").innerText = element;
+      }
+    }
+  } catch (err) {
+    _didIteratorError6 = true;
+    _iteratorError6 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion6 && _iterator6["return"] != null) {
+        _iterator6["return"]();
+      }
+    } finally {
+      if (_didIteratorError6) {
+        throw _iteratorError6;
       }
     }
   }

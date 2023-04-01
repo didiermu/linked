@@ -41,6 +41,16 @@
                     z-index: 1;
                 }
 
+                // a:not(#link-home) {
+                //     display: none;
+
+                //     &:nth-child(1n),
+                //     &:nth-child(2n),
+                //     &:nth-child(3n) {
+                //         display: block;
+                //     }
+                // }
+
                 h3 {
                     margin-bottom: 0.5em;
                     font-size: var(--h1-1);
@@ -98,14 +108,27 @@
                         }
                     }
                 }
+
+                // .linkP {
+                //     display: none;
+
+                //     &:nth-child(1n),
+                //     &:nth-child(2n) {
+                //         display: block;
+                //     }
+                // }
             }
 
             picture {
-                display: block;
+                display: none;
                 // flex: 0.4;
                 overflow: hidden;
                 height: 360px;
                 position: relative;
+
+                &:nth-child(-n + 3) {
+                    display: block;
+                }
 
                 // &::after {
                 //     content: "";

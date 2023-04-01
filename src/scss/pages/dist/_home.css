@@ -100,10 +100,14 @@
 }
 
 .home .hero--wrap picture {
-  display: block;
+  display: none;
   overflow: hidden;
   height: 360px;
   position: relative;
+}
+
+.home .hero--wrap picture:nth-child(-n + 3) {
+  display: block;
 }
 
 .home .hero--wrap picture:nth-child(1) {

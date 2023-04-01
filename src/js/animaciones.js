@@ -375,6 +375,87 @@ document.addEventListener("scroll", (event) => {
     }
 });
 
+////////// PRIMERA CATEGORIA HERO
+
+const heroCate = () => {
+    const titleHero = document.querySelector(".hero--wrap--hover h3").id;
+
+    // imagen
+
+    const cadaveres = document.querySelectorAll(
+        ".hero--wrap picture:not(." + titleHero + ")"
+    );
+
+    for (const cadaveresEl of cadaveres) {
+        // cadaveresEl.classList.add("valid");
+        cadaveresEl.remove();
+    }
+
+    const newImg = document.querySelectorAll(
+        ".hero--wrap picture." + titleHero
+    );
+
+    for (let index = 3; index < newImg.length; index++) {
+        const element = newImg[index];
+        // element.classList.add("remove");
+        element.remove();
+    }
+
+    // link
+
+    const linkHover = document.querySelectorAll(
+        ".hero--wrap--hover a:not(#link-home, ." + titleHero + ")"
+    );
+
+    for (const linkHoverEl of linkHover) {
+        // cadaveresEl.classList.add("valid");
+        linkHoverEl.remove();
+    }
+
+    const newLink = document.querySelectorAll(
+        ".hero--wrap--hover a." + titleHero
+    );
+
+    for (let index = 3; index < newLink.length; index++) {
+        const element = newLink[index];
+        // element.classList.add("remove");
+        element.remove();
+    }
+};
+
+heroCate();
+
+// cambio de link
+
+const cambioLink = () => {
+    const idLinks = document.querySelectorAll(".hero--wrap--hover--project");
+    const linkHero = document.querySelector("#link-home");
+
+    let element1 = "";
+    let element2 = "";
+    let element3 = "";
+
+    for (let index = 0; index < idLinks.length; index++) {
+        element1 = idLinks[0].id;
+        element2 = idLinks[1].id;
+        element3 = idLinks[2].id;
+    }
+    // return console.log(element1, element2, element3);
+    // return element1, element2, element3;
+
+    linkHero.setAttribute(
+        "href",
+        "https://linked-space.com/project-home?ids=" +
+            element1 +
+            "?" +
+            element2 +
+            "?" +
+            element3
+    );
+};
+
+cambioLink();
+
 ////////// PRIMERA CATEGORIA
 
 const primeraCate = () => {
