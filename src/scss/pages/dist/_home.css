@@ -103,11 +103,15 @@
 .home .hero--wrap picture {
   display: none;
   overflow: hidden;
-  height: 360px;
+  height: calc(100vh / 3);
   position: relative;
 }
 
 .home .hero--wrap picture:nth-child(-n + 3) {
+  display: block;
+}
+
+.home .hero--wrap picture.show {
   display: block;
 }
 
@@ -199,7 +203,7 @@
 }
 
 .home .cita-home {
-  padding: 5em;
+  padding: 3em 3em 1em;
 }
 
 .home .cita-home h1 {
@@ -207,7 +211,6 @@
 }
 
 .home .projects-home__acceso {
-  min-height: calc(600px + 250 * ((100vw - 1920px) / 1280));
   border-radius: 6px;
 }
 
@@ -254,6 +257,10 @@
 
 .home .projects-home__acceso--connect a h3 {
   color: var(--gris-dark);
+}
+
+.home .projects-home .col-lg-4 {
+  min-height: calc(600px + 250 * ((100vw - 1920px) / 1280));
 }
 
 .home .projects-home--wrap {

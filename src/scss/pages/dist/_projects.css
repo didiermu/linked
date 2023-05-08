@@ -12,10 +12,6 @@
   margin-bottom: 5em;
 }
 
-.projects-grid .row {
-  row-gap: 60px;
-}
-
 .projects-grid .col-lg-4 {
   transition: 0.4s ease-in-out all;
   position: relative;

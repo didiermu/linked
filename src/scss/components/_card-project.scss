@@ -85,7 +85,7 @@
 
 .projects-home {
     .row {
-        row-gap: 60px;
+        // row-gap: 60px;
         column-gap: 1.23rem;
         // column-gap: 12px;
         // justify-content: center;
@@ -242,9 +242,14 @@
         max-height: calc(600px + 250 * ((100vw - 1920px) / 1280));
         padding: 0;
         width: 32%;
+        margin-bottom: 60px;
 
         .projects-grid--wrap {
             gap: 0.3em 0;
+        }
+
+        &.remove {
+            display: none;
         }
 
         // &.project-simple {
@@ -301,7 +306,7 @@
             flex-direction: row-reverse;
 
             .projects-home__card__title {
-                margin: 0.5em 0.5em 0 0;
+                margin: 0.5em 0.5em 0.5em 0;
             }
 
             .projects-home__card__hover__projects {
@@ -355,13 +360,14 @@
     font-family: var(--secundaria-regular);
     &.active {
         display: grid;
+        margin: 20px 0 40px;
     }
 }
 
 @media (max-width: 768px) {
     .projects-home {
         .row {
-            row-gap: 20px !important;
+            // row-gap: 20px !important;
             padding: 0 calc(var(--bs-gutter-x) * 0.5);
         }
 
@@ -478,6 +484,7 @@
             align-items: flex-end !important;
             min-height: auto;
             width: 100%;
+            margin-bottom: 20px;
             // padding: 0 calc(var(--bs-gutter-x) * 0.5);
 
             &.project-simple {

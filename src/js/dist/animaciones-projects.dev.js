@@ -108,132 +108,81 @@ var objParallaxArray = function objParallaxArray(trigger, elem) {
 
 objParallaxArray("#grid--wrap-one", "#grid--wrap-one .project__item");
 objParallaxArray("#grid--wrap-two", "#grid--wrap-two .project__item"); //////////// EVENTS LISTENERS ////////////
-
-var btnMobileHoverGrid = document.querySelectorAll(".projects-grid--wrap");
-var btnMobileHoverGridInt = document.querySelectorAll(".btnHoverGridInt");
-var _iteratorNormalCompletion = true;
-var _didIteratorError = false;
-var _iteratorError = undefined;
-
-try {
-  var _loop = function _loop() {
-    var btnMobileHoverGridElem = _step.value;
-
-    btnMobileHoverGridElem.onclick = function () {
-      btnMobileHoverGridElem.closest(".col-lg-4").querySelector(".projects-home__card__hover__projects").classList.toggle("active");
-      btnMobileHoverGridElem.closest(".col-lg-4").classList.toggle("active");
-    };
-  };
-
-  for (var _iterator = btnMobileHoverGrid[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-    _loop();
-  }
-} catch (err) {
-  _didIteratorError = true;
-  _iteratorError = err;
-} finally {
-  try {
-    if (!_iteratorNormalCompletion && _iterator["return"] != null) {
-      _iterator["return"]();
-    }
-  } finally {
-    if (_didIteratorError) {
-      throw _iteratorError;
-    }
-  }
-}
-
-var _iteratorNormalCompletion2 = true;
-var _didIteratorError2 = false;
-var _iteratorError2 = undefined;
-
-try {
-  var _loop2 = function _loop2() {
-    var btnMobileHoverGridIntElem = _step2.value;
-
-    btnMobileHoverGridIntElem.onclick = function () {
-      // btnMobileHoverGridIntElem.parentNode.classList.toggle("active");
-      btnMobileHoverGridIntElem.closest(".projects-home__card__hover__projects").classList.toggle("active");
-      btnMobileHoverGridIntElem.closest(".col-lg-4").classList.remove("active");
-    };
-  };
-
-  for (var _iterator2 = btnMobileHoverGridInt[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-    _loop2();
-  } /// RANDOM COLUMNS
-  // let numero = Math.floor(Math.random() * 100);
-  // const row1 = document.querySelector(".grid--head .row");
-  // const row2 = document.querySelector(".grid--wrap");
-  // if (numero % 2 == 0) {
-  //     row1.classList.add("par");
-  //     row2.classList.add("par");
-  // }
-  ///// ORDER GRID
-
-} catch (err) {
-  _didIteratorError2 = true;
-  _iteratorError2 = err;
-} finally {
-  try {
-    if (!_iteratorNormalCompletion2 && _iterator2["return"] != null) {
-      _iterator2["return"]();
-    }
-  } finally {
-    if (_didIteratorError2) {
-      throw _iteratorError2;
-    }
-  }
-}
-
-var cardsHome = document.querySelectorAll(".projects-home .col-lg-4");
-var break1 = document.querySelector("#break1");
-var break2 = document.querySelector("#break2");
-var break3 = document.querySelector("#break3");
-var break4 = document.querySelector("#break4");
-var break5 = document.querySelector("#break5"); ///// BREAKS
-
-for (var index = 0; index < cardsHome.length; index++) {
-  console.log("k");
-
-  if (cardsHome.length > 6) {
-    cardsHome[5].insertAdjacentElement("afterend", break1);
-    break1.classList.add("active");
-  }
-
-  if (cardsHome.length > 12) {
-    cardsHome[11].insertAdjacentElement("afterend", break2);
-    break2.classList.add("active");
-  }
-
-  if (cardsHome.length > 18) {
-    cardsHome[17].insertAdjacentElement("afterend", break3);
-    break3.classList.add("active");
-  }
-
-  if (cardsHome.length > 21) {
-    cardsHome[20].insertAdjacentElement("afterend", break4);
-    break4.classList.add("active");
-  }
-
-  if (cardsHome.length > 27) {
-    cardsHome[26].insertAdjacentElement("afterend", break5);
-    break5.classList.add("active");
-  }
-} ////////// PRIMERA CATEGORIA
-
+// const btnMobileHoverGrid = document.querySelectorAll(".projects-grid--wrap");
+// const btnMobileHoverGridInt = document.querySelectorAll(".btnHoverGridInt");
+// for (const btnMobileHoverGridElem of btnMobileHoverGrid) {
+//     btnMobileHoverGridElem.onclick = () => {
+//         btnMobileHoverGridElem
+//             .closest(".col-lg-4")
+//             .querySelector(".projects-home__card__hover__projects")
+//             .classList.toggle("active");
+//         btnMobileHoverGridElem.closest(".col-lg-4").classList.toggle("active");
+//     };
+// }
+// for (const btnMobileHoverGridIntElem of btnMobileHoverGridInt) {
+//     btnMobileHoverGridIntElem.onclick = () => {
+//         // btnMobileHoverGridIntElem.parentNode.classList.toggle("active");
+//         btnMobileHoverGridIntElem
+//             .closest(".projects-home__card__hover__projects")
+//             .classList.toggle("active");
+//         btnMobileHoverGridIntElem
+//             .closest(".col-lg-4")
+//             .classList.remove("active");
+//     };
+// }
+/// RANDOM COLUMNS
+// let numero = Math.floor(Math.random() * 100);
+// const row1 = document.querySelector(".grid--head .row");
+// const row2 = document.querySelector(".grid--wrap");
+// if (numero % 2 == 0) {
+//     row1.classList.add("par");
+//     row2.classList.add("par");
+// }
+///// ORDER GRID
+// const cardsHome = document.querySelectorAll(".projects-home .col-lg-4");
+// const break1 = document.querySelector("#break1");
+// const break2 = document.querySelector("#break2");
+// const break3 = document.querySelector("#break3");
+// const break4 = document.querySelector("#break4");
+// const break5 = document.querySelector("#break5");
+// ///// BREAKS
+// for (let index = 0; index < cardsHome.length; index++) {
+//     console.log("k");
+//     if (cardsHome.length > 6) {
+//         cardsHome[5].insertAdjacentElement("afterend", break1);
+//         break1.classList.add("active");
+//     }
+//     if (cardsHome.length > 12) {
+//         cardsHome[11].insertAdjacentElement("afterend", break2);
+//         break2.classList.add("active");
+//     }
+//     if (cardsHome.length > 18) {
+//         cardsHome[17].insertAdjacentElement("afterend", break3);
+//         break3.classList.add("active");
+//     }
+//     if (cardsHome.length > 21) {
+//         cardsHome[20].insertAdjacentElement("afterend", break4);
+//         break4.classList.add("active");
+//     }
+//     if (cardsHome.length > 27) {
+//         cardsHome[26].insertAdjacentElement("afterend", break5);
+//         break5.classList.add("active");
+//     }
+// }
+////////// PRIMERA CATEGORIA
 
 var primeraCate = function primeraCate() {
   var cadaveres = document.querySelectorAll(".projects-home .col-lg-4");
-  var _iteratorNormalCompletion3 = true;
-  var _didIteratorError3 = false;
-  var _iteratorError3 = undefined;
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
 
   try {
-    for (var _iterator3 = cadaveres[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-      var cadaveresEl = _step3.value;
+    for (var _iterator = cadaveres[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+      var cadaveresEl = _step.value;
       var hijos = cadaveresEl.querySelectorAll(".projects-home__card__images__img");
 
-      for (var _index = 0; _index < hijos.length; _index++) {
+      for (var index = 0; index < hijos.length; index++) {
         var element = hijos[0].getAttribute("categoria");
         var padreCadaver = hijos[0].closest(".col-lg-4");
         padreCadaver.querySelector(".projects-home__card__title").innerText = element;
@@ -241,20 +190,18 @@ var primeraCate = function primeraCate() {
       }
     }
   } catch (err) {
-    _didIteratorError3 = true;
-    _iteratorError3 = err;
+    _didIteratorError = true;
+    _iteratorError = err;
   } finally {
     try {
-      if (!_iteratorNormalCompletion3 && _iterator3["return"] != null) {
-        _iterator3["return"]();
+      if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+        _iterator["return"]();
       }
     } finally {
-      if (_didIteratorError3) {
-        throw _iteratorError3;
+      if (_didIteratorError) {
+        throw _iteratorError;
       }
     }
   }
-};
-
-primeraCate();
+}; // primeraCate();
 //# sourceMappingURL=animaciones-projects.dev.js.map

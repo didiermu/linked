@@ -59,9 +59,8 @@ var objParallaxMultipleDos = function objParallaxMultipleDos() {
       ease: "power2.out"
     });
   });
-};
+}; // objParallaxMultiple();
 
-objParallaxMultiple();
 
 var objElements = function objElements(trigger, elem) {
   gsap.from(elem, {
@@ -253,124 +252,30 @@ btncloseHero.onclick = function () {
   heroHover.classList.remove("active");
   console.log("clo");
 }; // PROJECTS
+// const btnMobileHoverGrid = document.querySelectorAll(".projects-grid--wrap");
+// const btnMobileHoverGridInt = document.querySelectorAll(".btnHoverGridInt");
+// for (const btnMobileHoverGridElem of btnMobileHoverGrid) {
+//     btnMobileHoverGridElem.onclick = () => {
+//         btnMobileHoverGridElem
+//             .closest(".col-lg-4")
+//             .querySelector(".projects-home__card__hover__projects")
+//             .classList.toggle("active");
+//         btnMobileHoverGridElem.closest(".col-lg-4").classList.toggle("active");
+//     };
+// }
+// for (const btnMobileHoverGridIntElem of btnMobileHoverGridInt) {
+//     btnMobileHoverGridIntElem.onclick = () => {
+//         btnMobileHoverGridIntElem
+//             .closest(".projects-home__card__hover__projects")
+//             .classList.toggle("active");
+//         // btnMobileHoverGridIntElem.parentNode.classList.toggle("active");
+//         btnMobileHoverGridIntElem
+//             .closest(".col-lg-4")
+//             .classList.remove("active");
+//     };
+// }
+///// SHOW FOOTER SCROLL
 
-
-var btnMobileHoverGrid = document.querySelectorAll(".projects-grid--wrap");
-var btnMobileHoverGridInt = document.querySelectorAll(".btnHoverGridInt");
-var _iteratorNormalCompletion2 = true;
-var _didIteratorError2 = false;
-var _iteratorError2 = undefined;
-
-try {
-  var _loop = function _loop() {
-    var btnMobileHoverGridElem = _step2.value;
-
-    btnMobileHoverGridElem.onclick = function () {
-      btnMobileHoverGridElem.closest(".col-lg-4").querySelector(".projects-home__card__hover__projects").classList.toggle("active");
-      btnMobileHoverGridElem.closest(".col-lg-4").classList.toggle("active");
-    };
-  };
-
-  for (var _iterator2 = btnMobileHoverGrid[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-    _loop();
-  }
-} catch (err) {
-  _didIteratorError2 = true;
-  _iteratorError2 = err;
-} finally {
-  try {
-    if (!_iteratorNormalCompletion2 && _iterator2["return"] != null) {
-      _iterator2["return"]();
-    }
-  } finally {
-    if (_didIteratorError2) {
-      throw _iteratorError2;
-    }
-  }
-}
-
-var _iteratorNormalCompletion3 = true;
-var _didIteratorError3 = false;
-var _iteratorError3 = undefined;
-
-try {
-  var _loop2 = function _loop2() {
-    var btnMobileHoverGridIntElem = _step3.value;
-
-    btnMobileHoverGridIntElem.onclick = function () {
-      btnMobileHoverGridIntElem.closest(".projects-home__card__hover__projects").classList.toggle("active"); // btnMobileHoverGridIntElem.parentNode.classList.toggle("active");
-
-      btnMobileHoverGridIntElem.closest(".col-lg-4").classList.remove("active");
-    };
-  };
-
-  for (var _iterator3 = btnMobileHoverGridInt[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-    _loop2();
-  } ///// ORDER GRID
-
-} catch (err) {
-  _didIteratorError3 = true;
-  _iteratorError3 = err;
-} finally {
-  try {
-    if (!_iteratorNormalCompletion3 && _iterator3["return"] != null) {
-      _iterator3["return"]();
-    }
-  } finally {
-    if (_didIteratorError3) {
-      throw _iteratorError3;
-    }
-  }
-}
-
-var descansos = function descansos() {
-  var cardsHome = document.querySelectorAll(".projects-home .col-lg-4:not(.projects-home__acceso)");
-  var cardProject = document.querySelector(".projects-home__acceso--projects");
-  var cardAbout = document.querySelector(".projects-home__acceso--about");
-  var break1 = document.querySelector("#break1");
-  var break2 = document.querySelector("#break2");
-  var break3 = document.querySelector("#break3");
-  var break4 = document.querySelector("#break4");
-  var break5 = document.querySelector("#break5");
-
-  for (var index = 0; index < cardsHome.length; index++) {
-    if (cardsHome.length > 8) {
-      cardsHome[4].insertAdjacentElement("afterend", cardProject);
-      cardsHome[8].insertAdjacentElement("afterend", cardAbout);
-    } ///// BREAKS
-
-
-    if (cardsHome.length >= 8) {
-      cardProject.insertAdjacentElement("afterend", break1); // cardsHome[5].insertAdjacentElement("afterend", break1);
-
-      break1.classList.add("active");
-    }
-
-    if (cardsHome.length > 10) {
-      cardsHome[9].insertAdjacentElement("afterend", break2);
-      break2.classList.add("active");
-    }
-
-    if (cardsHome.length > 16) {
-      cardsHome[15].insertAdjacentElement("afterend", break3);
-      break3.classList.add("active");
-    }
-
-    if (cardsHome.length > 22) {
-      cardsHome[21].insertAdjacentElement("afterend", break4);
-      break4.classList.add("active");
-    }
-
-    if (cardsHome.length > 28) {
-      cardsHome[27].insertAdjacentElement("afterend", break5);
-      break5.classList.add("active");
-    }
-
-    console.log("12");
-  }
-};
-
-descansos(); ///// SHOW FOOTER SCROLL
 
 var posCitaHome = document.querySelector(".cita-home");
 document.addEventListener("scroll", function (event) {
@@ -385,15 +290,73 @@ var heroCate = function heroCate() {
   var titleHero = document.querySelector(".hero--wrap--hover h3").id; // imagen
 
   var cadaveres = document.querySelectorAll(".hero--wrap picture:not(." + titleHero + ")");
+  var _iteratorNormalCompletion2 = true;
+  var _didIteratorError2 = false;
+  var _iteratorError2 = undefined;
+
+  try {
+    for (var _iterator2 = cadaveres[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+      var cadaveresEl = _step2.value;
+      cadaveresEl.remove();
+    }
+  } catch (err) {
+    _didIteratorError2 = true;
+    _iteratorError2 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion2 && _iterator2["return"] != null) {
+        _iterator2["return"]();
+      }
+    } finally {
+      if (_didIteratorError2) {
+        throw _iteratorError2;
+      }
+    }
+  }
+
+  var newImg = document.querySelectorAll(".hero--wrap picture." + titleHero);
+
+  for (var index = 3; index < newImg.length; index++) {
+    var element = newImg[index]; // element.classList.add("remove");
+
+    element.remove();
+  }
+
+  var _iteratorNormalCompletion3 = true;
+  var _didIteratorError3 = false;
+  var _iteratorError3 = undefined;
+
+  try {
+    for (var _iterator3 = newImg[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+      var newImgElm = _step3.value;
+      newImgElm.classList.add("show");
+    } // link
+
+  } catch (err) {
+    _didIteratorError3 = true;
+    _iteratorError3 = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion3 && _iterator3["return"] != null) {
+        _iterator3["return"]();
+      }
+    } finally {
+      if (_didIteratorError3) {
+        throw _iteratorError3;
+      }
+    }
+  }
+
+  var linkHover = document.querySelectorAll(".hero--wrap--hover a:not(#link-home, ." + titleHero + ")");
   var _iteratorNormalCompletion4 = true;
   var _didIteratorError4 = false;
   var _iteratorError4 = undefined;
 
   try {
-    for (var _iterator4 = cadaveres[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-      var cadaveresEl = _step4.value;
+    for (var _iterator4 = linkHover[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+      var linkHoverEl = _step4.value;
       // cadaveresEl.classList.add("valid");
-      cadaveresEl.remove();
+      linkHoverEl.remove();
     }
   } catch (err) {
     _didIteratorError4 = true;
@@ -406,41 +369,6 @@ var heroCate = function heroCate() {
     } finally {
       if (_didIteratorError4) {
         throw _iteratorError4;
-      }
-    }
-  }
-
-  var newImg = document.querySelectorAll(".hero--wrap picture." + titleHero);
-
-  for (var index = 3; index < newImg.length; index++) {
-    var element = newImg[index]; // element.classList.add("remove");
-
-    element.remove();
-  } // link
-
-
-  var linkHover = document.querySelectorAll(".hero--wrap--hover a:not(#link-home, ." + titleHero + ")");
-  var _iteratorNormalCompletion5 = true;
-  var _didIteratorError5 = false;
-  var _iteratorError5 = undefined;
-
-  try {
-    for (var _iterator5 = linkHover[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
-      var linkHoverEl = _step5.value;
-      // cadaveresEl.classList.add("valid");
-      linkHoverEl.remove();
-    }
-  } catch (err) {
-    _didIteratorError5 = true;
-    _iteratorError5 = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion5 && _iterator5["return"] != null) {
-        _iterator5["return"]();
-      }
-    } finally {
-      if (_didIteratorError5) {
-        throw _iteratorError5;
       }
     }
   }
@@ -474,41 +402,5 @@ var cambioLink = function cambioLink() {
   linkHero.setAttribute("href", "https://linked-space.com/project-home?ids=" + element1 + "?" + element2 + "?" + element3);
 };
 
-cambioLink(); ////////// PRIMERA CATEGORIA
-
-var primeraCate = function primeraCate() {
-  var cadaveres = document.querySelectorAll(".projects-home .col-lg-4:not(.projects-home__acceso)");
-  var _iteratorNormalCompletion6 = true;
-  var _didIteratorError6 = false;
-  var _iteratorError6 = undefined;
-
-  try {
-    for (var _iterator6 = cadaveres[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
-      var cadaveresEl = _step6.value;
-      var hijos = cadaveresEl.querySelectorAll(".projects-home__card__images__img");
-
-      for (var index = 0; index < hijos.length; index++) {
-        var element = hijos[0].getAttribute("categoria");
-        var padreCadaver = hijos[0].closest(".col-lg-4");
-        padreCadaver.querySelector(".projects-home__card__title").innerText = element;
-        padreCadaver.querySelector(".projects-home__card__hover__projects h4 span").innerText = element;
-      }
-    }
-  } catch (err) {
-    _didIteratorError6 = true;
-    _iteratorError6 = err;
-  } finally {
-    try {
-      if (!_iteratorNormalCompletion6 && _iterator6["return"] != null) {
-        _iterator6["return"]();
-      }
-    } finally {
-      if (_didIteratorError6) {
-        throw _iteratorError6;
-      }
-    }
-  }
-};
-
-primeraCate();
+cambioLink();
 //# sourceMappingURL=animaciones.dev.js.map

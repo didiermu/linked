@@ -40,6 +40,7 @@
 
                 a {
                     z-index: 1;
+                    // display: none;
                 }
 
                 // a:not(#link-home) {
@@ -124,23 +125,17 @@
                 display: none;
                 // flex: 0.4;
                 overflow: hidden;
-                height: 360px;
+                // height: 360px;
+                height: calc(100vh / 3);
                 position: relative;
 
                 &:nth-child(-n + 3) {
                     display: block;
                 }
 
-                // &::after {
-                //     content: "";
-                //     width: 100%;
-                //     height: 100%;
-                //     position: absolute;
-                //     top: 0;
-                //     z-index: 1;
-                //     display: block;
-                //     background: rgba($color: #000000, $alpha: 0.4);
-                // }
+                &.show {
+                    display: block;
+                }
 
                 &:nth-child(1) {
                     border-radius: 0 10px 10px 10px;
@@ -235,7 +230,7 @@
     }
 
     .cita-home {
-        padding: 5em;
+        padding: 3em 3em 1em;
 
         h1 {
             color: var(--rosa-dark);
@@ -245,7 +240,7 @@
     .projects-home {
         &__acceso {
             // margin-bottom: 3em;
-            min-height: calc(600px + 250 * ((100vw - 1920px) / 1280));
+            // min-height: calc(600px + 250 * ((100vw - 1920px) / 1280));
             border-radius: 6px;
 
             h3 {
@@ -296,9 +291,23 @@
             }
         }
 
+        .col-lg-4 {
+            min-height: calc(600px + 250 * ((100vw - 1920px) / 1280));
+        }
+
         &--wrap {
             width: 100%;
         }
+
+        // .projects-grid--wrap {
+        //     color: red;
+        //     .proyecto {
+        //         display: none;
+        //         &:first-child {
+        //             display: block;
+        //         }
+        //     }
+        // }
     }
 
     .footer {

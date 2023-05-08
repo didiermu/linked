@@ -69,7 +69,7 @@ const objParallaxMultipleDos = () => {
     });
 };
 
-objParallaxMultiple();
+// objParallaxMultiple();
 
 const objElements = (trigger, elem) => {
     gsap.from(elem, {
@@ -282,87 +282,32 @@ btncloseHero.onclick = () => {
 
 // PROJECTS
 
-const btnMobileHoverGrid = document.querySelectorAll(".projects-grid--wrap");
-const btnMobileHoverGridInt = document.querySelectorAll(".btnHoverGridInt");
+// const btnMobileHoverGrid = document.querySelectorAll(".projects-grid--wrap");
+// const btnMobileHoverGridInt = document.querySelectorAll(".btnHoverGridInt");
 
-for (const btnMobileHoverGridElem of btnMobileHoverGrid) {
-    btnMobileHoverGridElem.onclick = () => {
-        btnMobileHoverGridElem
-            .closest(".col-lg-4")
-            .querySelector(".projects-home__card__hover__projects")
-            .classList.toggle("active");
+// for (const btnMobileHoverGridElem of btnMobileHoverGrid) {
+//     btnMobileHoverGridElem.onclick = () => {
+//         btnMobileHoverGridElem
+//             .closest(".col-lg-4")
+//             .querySelector(".projects-home__card__hover__projects")
+//             .classList.toggle("active");
 
-        btnMobileHoverGridElem.closest(".col-lg-4").classList.toggle("active");
-    };
-}
+//         btnMobileHoverGridElem.closest(".col-lg-4").classList.toggle("active");
+//     };
+// }
 
-for (const btnMobileHoverGridIntElem of btnMobileHoverGridInt) {
-    btnMobileHoverGridIntElem.onclick = () => {
-        btnMobileHoverGridIntElem
-            .closest(".projects-home__card__hover__projects")
-            .classList.toggle("active");
-        // btnMobileHoverGridIntElem.parentNode.classList.toggle("active");
+// for (const btnMobileHoverGridIntElem of btnMobileHoverGridInt) {
+//     btnMobileHoverGridIntElem.onclick = () => {
+//         btnMobileHoverGridIntElem
+//             .closest(".projects-home__card__hover__projects")
+//             .classList.toggle("active");
+//         // btnMobileHoverGridIntElem.parentNode.classList.toggle("active");
 
-        btnMobileHoverGridIntElem
-            .closest(".col-lg-4")
-            .classList.remove("active");
-    };
-}
-
-///// ORDER GRID
-const descansos = () => {
-    const cardsHome = document.querySelectorAll(
-        ".projects-home .col-lg-4:not(.projects-home__acceso)"
-    );
-    const cardProject = document.querySelector(
-        ".projects-home__acceso--projects"
-    );
-    const cardAbout = document.querySelector(".projects-home__acceso--about");
-
-    const break1 = document.querySelector("#break1");
-    const break2 = document.querySelector("#break2");
-    const break3 = document.querySelector("#break3");
-    const break4 = document.querySelector("#break4");
-    const break5 = document.querySelector("#break5");
-
-    for (let index = 0; index < cardsHome.length; index++) {
-        if (cardsHome.length > 8) {
-            cardsHome[4].insertAdjacentElement("afterend", cardProject);
-            cardsHome[8].insertAdjacentElement("afterend", cardAbout);
-        }
-
-        ///// BREAKS
-        if (cardsHome.length >= 8) {
-            cardProject.insertAdjacentElement("afterend", break1);
-            // cardsHome[5].insertAdjacentElement("afterend", break1);
-            break1.classList.add("active");
-        }
-
-        if (cardsHome.length > 10) {
-            cardsHome[9].insertAdjacentElement("afterend", break2);
-            break2.classList.add("active");
-        }
-
-        if (cardsHome.length > 16) {
-            cardsHome[15].insertAdjacentElement("afterend", break3);
-            break3.classList.add("active");
-        }
-
-        if (cardsHome.length > 22) {
-            cardsHome[21].insertAdjacentElement("afterend", break4);
-            break4.classList.add("active");
-        }
-
-        if (cardsHome.length > 28) {
-            cardsHome[27].insertAdjacentElement("afterend", break5);
-            break5.classList.add("active");
-        }
-
-        console.log("12");
-    }
-};
-
-descansos();
+//         btnMobileHoverGridIntElem
+//             .closest(".col-lg-4")
+//             .classList.remove("active");
+//     };
+// }
 
 ///// SHOW FOOTER SCROLL
 
@@ -387,7 +332,6 @@ const heroCate = () => {
     );
 
     for (const cadaveresEl of cadaveres) {
-        // cadaveresEl.classList.add("valid");
         cadaveresEl.remove();
     }
 
@@ -399,6 +343,10 @@ const heroCate = () => {
         const element = newImg[index];
         // element.classList.add("remove");
         element.remove();
+    }
+
+    for (const newImgElm of newImg) {
+        newImgElm.classList.add("show");
     }
 
     // link
@@ -455,31 +403,3 @@ const cambioLink = () => {
 };
 
 cambioLink();
-
-////////// PRIMERA CATEGORIA
-
-const primeraCate = () => {
-    const cadaveres = document.querySelectorAll(
-        ".projects-home .col-lg-4:not(.projects-home__acceso)"
-    );
-
-    for (const cadaveresEl of cadaveres) {
-        let hijos = cadaveresEl.querySelectorAll(
-            ".projects-home__card__images__img"
-        );
-
-        for (let index = 0; index < hijos.length; index++) {
-            const element = hijos[0].getAttribute("categoria");
-            const padreCadaver = hijos[0].closest(".col-lg-4");
-            padreCadaver.querySelector(
-                ".projects-home__card__title"
-            ).innerText = element;
-
-            padreCadaver.querySelector(
-                ".projects-home__card__hover__projects h4 span"
-            ).innerText = element;
-        }
-    }
-};
-
-primeraCate();

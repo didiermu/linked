@@ -135,32 +135,32 @@ objParallaxArray("#grid--wrap-two", "#grid--wrap-two .project__item");
 
 //////////// EVENTS LISTENERS ////////////
 
-const btnMobileHoverGrid = document.querySelectorAll(".projects-grid--wrap");
-const btnMobileHoverGridInt = document.querySelectorAll(".btnHoverGridInt");
+// const btnMobileHoverGrid = document.querySelectorAll(".projects-grid--wrap");
+// const btnMobileHoverGridInt = document.querySelectorAll(".btnHoverGridInt");
 
-for (const btnMobileHoverGridElem of btnMobileHoverGrid) {
-    btnMobileHoverGridElem.onclick = () => {
-        btnMobileHoverGridElem
-            .closest(".col-lg-4")
-            .querySelector(".projects-home__card__hover__projects")
-            .classList.toggle("active");
+// for (const btnMobileHoverGridElem of btnMobileHoverGrid) {
+//     btnMobileHoverGridElem.onclick = () => {
+//         btnMobileHoverGridElem
+//             .closest(".col-lg-4")
+//             .querySelector(".projects-home__card__hover__projects")
+//             .classList.toggle("active");
 
-        btnMobileHoverGridElem.closest(".col-lg-4").classList.toggle("active");
-    };
-}
+//         btnMobileHoverGridElem.closest(".col-lg-4").classList.toggle("active");
+//     };
+// }
 
-for (const btnMobileHoverGridIntElem of btnMobileHoverGridInt) {
-    btnMobileHoverGridIntElem.onclick = () => {
-        // btnMobileHoverGridIntElem.parentNode.classList.toggle("active");
-        btnMobileHoverGridIntElem
-            .closest(".projects-home__card__hover__projects")
-            .classList.toggle("active");
+// for (const btnMobileHoverGridIntElem of btnMobileHoverGridInt) {
+//     btnMobileHoverGridIntElem.onclick = () => {
+//         // btnMobileHoverGridIntElem.parentNode.classList.toggle("active");
+//         btnMobileHoverGridIntElem
+//             .closest(".projects-home__card__hover__projects")
+//             .classList.toggle("active");
 
-        btnMobileHoverGridIntElem
-            .closest(".col-lg-4")
-            .classList.remove("active");
-    };
-}
+//         btnMobileHoverGridIntElem
+//             .closest(".col-lg-4")
+//             .classList.remove("active");
+//     };
+// }
 
 /// RANDOM COLUMNS
 
@@ -175,43 +175,43 @@ for (const btnMobileHoverGridIntElem of btnMobileHoverGridInt) {
 
 ///// ORDER GRID
 
-const cardsHome = document.querySelectorAll(".projects-home .col-lg-4");
+// const cardsHome = document.querySelectorAll(".projects-home .col-lg-4");
 
-const break1 = document.querySelector("#break1");
-const break2 = document.querySelector("#break2");
-const break3 = document.querySelector("#break3");
-const break4 = document.querySelector("#break4");
-const break5 = document.querySelector("#break5");
+// const break1 = document.querySelector("#break1");
+// const break2 = document.querySelector("#break2");
+// const break3 = document.querySelector("#break3");
+// const break4 = document.querySelector("#break4");
+// const break5 = document.querySelector("#break5");
 
-///// BREAKS
+// ///// BREAKS
 
-for (let index = 0; index < cardsHome.length; index++) {
-    console.log("k");
-    if (cardsHome.length > 6) {
-        cardsHome[5].insertAdjacentElement("afterend", break1);
-        break1.classList.add("active");
-    }
+// for (let index = 0; index < cardsHome.length; index++) {
+//     console.log("k");
+//     if (cardsHome.length > 6) {
+//         cardsHome[5].insertAdjacentElement("afterend", break1);
+//         break1.classList.add("active");
+//     }
 
-    if (cardsHome.length > 12) {
-        cardsHome[11].insertAdjacentElement("afterend", break2);
-        break2.classList.add("active");
-    }
+//     if (cardsHome.length > 12) {
+//         cardsHome[11].insertAdjacentElement("afterend", break2);
+//         break2.classList.add("active");
+//     }
 
-    if (cardsHome.length > 18) {
-        cardsHome[17].insertAdjacentElement("afterend", break3);
-        break3.classList.add("active");
-    }
+//     if (cardsHome.length > 18) {
+//         cardsHome[17].insertAdjacentElement("afterend", break3);
+//         break3.classList.add("active");
+//     }
 
-    if (cardsHome.length > 21) {
-        cardsHome[20].insertAdjacentElement("afterend", break4);
-        break4.classList.add("active");
-    }
+//     if (cardsHome.length > 21) {
+//         cardsHome[20].insertAdjacentElement("afterend", break4);
+//         break4.classList.add("active");
+//     }
 
-    if (cardsHome.length > 27) {
-        cardsHome[26].insertAdjacentElement("afterend", break5);
-        break5.classList.add("active");
-    }
-}
+//     if (cardsHome.length > 27) {
+//         cardsHome[26].insertAdjacentElement("afterend", break5);
+//         break5.classList.add("active");
+//     }
+// }
 
 ////////// PRIMERA CATEGORIA
 
@@ -237,4 +237,4 @@ const primeraCate = () => {
     }
 };
 
-primeraCate();
+// primeraCate();
